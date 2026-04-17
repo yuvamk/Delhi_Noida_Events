@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>DE·NE | The Electric Curator of NCR</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@600;700;800;900&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "error": "#ff6e84",
+                      "surface-bright": "#2b2b35",
+                      "on-secondary-fixed-variant": "#932e00",
+                      "tertiary-fixed": "#00d2fd",
+                      "tertiary-dim": "#00c3eb",
+                      "tertiary-container": "#00d2fd",
+                      "on-tertiary-fixed": "#002c37",
+                      "primary-dim": "#8a4cfc",
+                      "on-primary-fixed-variant": "#390083",
+                      "on-error": "#490013",
+                      "secondary-dim": "#ff7440",
+                      "tertiary": "#6dddff",
+                      "secondary-fixed-dim": "#ffb196",
+                      "outline": "#76747d",
+                      "primary": "#bd9dff",
+                      "on-background": "#f5f2fb",
+                      "surface-container-high": "#1f1f27",
+                      "on-primary-container": "#2e006c",
+                      "on-tertiary": "#004c5e",
+                      "error-container": "#a70138",
+                      "outline-variant": "#48474f",
+                      "tertiary-fixed-dim": "#00c3eb",
+                      "secondary": "#ff7440",
+                      "on-surface-variant": "#acaab3",
+                      "secondary-container": "#aa3600",
+                      "primary-container": "#b28cff",
+                      "surface-dim": "#0e0e14",
+                      "primary-fixed-dim": "#a67aff",
+                      "on-primary": "#3c0089",
+                      "surface-tint": "#bd9dff",
+                      "secondary-fixed": "#ffc4b1",
+                      "inverse-surface": "#fcf8ff",
+                      "on-primary-fixed": "#000000",
+                      "on-tertiary-fixed-variant": "#004c5d",
+                      "surface": "#0e0e14",
+                      "inverse-primary": "#742fe5",
+                      "on-secondary": "#400f00",
+                      "on-error-container": "#ffb2b9",
+                      "on-tertiary-container": "#004352",
+                      "surface-container": "#191920",
+                      "on-secondary-fixed": "#621c00",
+                      "surface-container-low": "#13131a",
+                      "surface-container-lowest": "#000000",
+                      "on-surface": "#f5f2fb",
+                      "primary-fixed": "#b28cff",
+                      "on-secondary-container": "#fff6f3",
+                      "surface-container-highest": "#25252e",
+                      "surface-variant": "#25252e",
+                      "background": "#0e0e14",
+                      "error-dim": "#d73357",
+                      "inverse-on-surface": "#55545c"
+              },
+              "borderRadius": {
+                      "DEFAULT": "1rem",
+                      "lg": "2rem",
+                      "xl": "3rem",
+                      "full": "9999px"
+              },
+              "fontFamily": {
+                      "headline": ["Epilogue"],
+                      "body": ["Inter"],
+                      "label": ["Inter"]
+              }
+            },
+          },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .hero-mesh {
+            background-color: #0e0e14;
+            background-image: 
+                radial-gradient(at 0% 0%, rgba(189, 157, 255, 0.15) 0px, transparent 50%),
+                radial-gradient(at 100% 0%, rgba(255, 116, 64, 0.1) 0px, transparent 50%),
+                radial-gradient(at 50% 100%, rgba(109, 221, 255, 0.1) 0px, transparent 50%);
+        }
+        .text-gradient-electric {
+            background: linear-gradient(to right, #ff7440, #bd9dff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .ghost-border {
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        .masonry-grid {
+            columns: 1;
+            column-gap: 1.5rem;
+        }
+        @media (min-width: 768px) {
+            .masonry-grid { columns: 2; }
+        }
+        @media (min-width: 1024px) {
+            .masonry-grid { columns: 3; }
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body selection:bg-primary selection:text-on-primary">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 border-b border-white/10 bg-[#191920]/60 backdrop-blur-md">
+<div class="flex justify-between items-center px-8 h-20 w-full max-w-none mx-auto">
+<div class="flex items-center gap-8">
+<a class="text-2xl font-black text-white flex items-center gap-2 after:content-[''] after:w-2 after:h-2 after:bg-[#ff7440] after:rounded-full font-headline tracking-tight" href="#">DE·NE</a>
+<nav class="hidden md:flex gap-6">
+<a class="text-[#bd9dff] font-bold border-b-2 border-[#bd9dff] pb-1 font-inter" href="#">Explore</a>
+<a class="text-[#acaab3] hover:text-white transition-colors font-inter" href="#">Editorial</a>
+<a class="text-[#acaab3] hover:text-white transition-colors font-inter" href="#">Venues</a>
+<a class="text-[#acaab3] hover:text-white transition-colors font-inter" href="#">Members</a>
+</nav>
+</div>
+<div class="flex items-center gap-6">
+<div class="hidden lg:flex items-center bg-white/5 ghost-border rounded-full px-4 py-2">
+<span class="material-symbols-outlined text-on-surface-variant mr-2" data-icon="search">search</span>
+<input class="bg-transparent border-none focus:ring-0 text-sm w-48 text-on-surface" placeholder="Search the scene..." type="text"/>
+</div>
+<button class="material-symbols-outlined text-on-surface-variant hover:text-primary transition-colors" data-icon="notifications">notifications</button>
+<button class="bg-primary text-on-primary-container px-6 py-2 rounded-full font-bold text-sm hover:scale-105 active:scale-95 transition-all shadow-[0_0_20px_rgba(189,157,255,0.3)]">Sign In</button>
+</div>
+</div>
+</header>
+<main>
+<!-- Hero Section -->
+<section class="relative h-[90vh] flex flex-col items-center justify-center overflow-hidden hero-mesh px-6">
+<!-- City Toggle -->
+<div class="absolute top-32 z-10">
+<div class="flex bg-surface-container-highest/40 backdrop-blur-xl ghost-border p-1.5 rounded-full">
+<button class="flex items-center gap-2 px-6 py-2 rounded-full bg-white/10 text-white font-medium text-sm transition-all shadow-lg">
+<span>🏙️</span> Delhi
+                </button>
+<button class="flex items-center gap-2 px-6 py-2 rounded-full text-on-surface-variant font-medium text-sm hover:bg-white/5 transition-all">
+<span>🌆</span> Noida
+                </button>
+<button class="flex items-center gap-2 px-6 py-2 rounded-full text-on-surface-variant font-medium text-sm hover:bg-white/5 transition-all">
+<span>📍</span> Both
+                </button>
+</div>
+</div>
+<!-- Content -->
+<div class="relative z-10 text-center max-w-5xl">
+<h1 class="font-headline text-6xl md:text-8xl font-black tracking-tighter mb-8 text-gradient-electric">
+                Discover Events <br/> In Delhi &amp; Noida
+            </h1>
+<!-- Search Bar -->
+<div class="relative max-w-2xl mx-auto mb-12 group">
+<div class="flex items-center bg-surface-container-highest/60 backdrop-blur-2xl rounded-full p-2 ghost-border group-hover:border-primary/30 transition-all shadow-2xl">
+<span class="material-symbols-outlined ml-6 text-on-surface-variant" data-icon="search">search</span>
+<input class="bg-transparent border-none focus:ring-0 w-full px-4 text-lg text-on-surface" placeholder="Concerts, Tech Summits, Art Walks..." type="text"/>
+<button class="bg-gradient-to-r from-secondary to-primary text-white px-8 py-3 rounded-full font-bold hover:scale-105 active:scale-95 transition-all">Search</button>
+</div>
+</div>
+<!-- Hero Stats -->
+<div class="flex flex-wrap justify-center gap-8 md:gap-16">
+<div class="text-center">
+<p class="font-headline text-2xl font-bold text-white">🎪 15,000+</p>
+<p class="text-on-surface-variant text-sm font-label uppercase tracking-widest mt-1">Events</p>
+</div>
+<div class="text-center">
+<p class="font-headline text-2xl font-bold text-white">🏙️ 2 Cities</p>
+<p class="text-on-surface-variant text-sm font-label uppercase tracking-widest mt-1">Coverage</p>
+</div>
+<div class="text-center">
+<p class="font-headline text-2xl font-bold text-white">📅 Every 6h</p>
+<p class="text-on-surface-variant text-sm font-label uppercase tracking-widest mt-1">Updated</p>
+</div>
+</div>
+</div>
+<!-- Decorative Elements -->
+<div class="absolute inset-0 pointer-events-none">
+<div class="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/10 blur-[120px] rounded-full"></div>
+<div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-secondary/10 blur-[120px] rounded-full"></div>
+</div>
+</section>
+<!-- Trending Section -->
+<section class="py-24 bg-surface px-6 md:px-12">
+<div class="flex justify-between items-end mb-12 max-w-7xl mx-auto">
+<div>
+<h2 class="font-headline text-4xl font-bold mb-2">Trending Now</h2>
+<p class="text-on-surface-variant text-lg">The pulse of NCR right this minute.</p>
+</div>
+<button class="text-primary font-bold flex items-center gap-2 hover:gap-4 transition-all">
+                View All <span class="material-symbols-outlined" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+<div class="flex gap-8 overflow-x-auto pb-8 snap-x no-scrollbar max-w-[100vw]">
+<!-- Card 1 -->
+<div class="min-w-[320px] md:min-w-[400px] snap-start group relative transition-all duration-500 hover:-translate-y-2">
+<div class="relative h-[500px] rounded-lg overflow-hidden bg-surface-container">
+<img alt="" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="vibrant nightlife concert stage with colorful spotlights and energetic crowd silhouettes in Delhi club" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD4yBQrnxJxiWUkGDti-vJlHww9W_Nr_UQT9Mhu7Tq8ojIyFiM7l4q2YwelQOPIL8rlUrIxSVl9RJ9OvlYxAmC6i1F0oGVIokRnEMz-vpIDBF6vk0ShqQTM7t8mprQygkv-uX49Ih7Xye_A-FGVuSkd6UeZGqc9X0ndzYCgeQ4hYUMl5APPwsXSOAE26zRAL5c5KnaWPDocq-Tdj15WPN3X-YqafzkLIKkzL-AIBOOst2ol0Qd_EA-UP4iV_yptseES2vkdO_wpaiA"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface via-surface/20 to-transparent"></div>
+<div class="absolute bottom-0 p-8 w-full">
+<span class="inline-block bg-secondary text-on-secondary px-3 py-1 rounded-sm text-[10px] font-bold uppercase tracking-widest mb-4">LIVE NOW</span>
+<h3 class="font-headline text-2xl font-bold text-white mb-2 leading-tight">Neon Pulse: Underground Techno Night</h3>
+<div class="flex items-center gap-4 text-on-surface-variant text-sm font-medium">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-xs" data-icon="calendar_today">calendar_today</span> 24 Oct</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-xs" data-icon="location_on">location_on</span> DLF Cyberhub</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="min-w-[320px] md:min-w-[400px] snap-start group relative transition-all duration-500 hover:-translate-y-2">
+<div class="relative h-[500px] rounded-lg overflow-hidden bg-surface-container">
+<img alt="" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="modern tech expo hall with glowing digital displays and professional attendees in Noida convention center" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDMjBfILSJulWUycZrPEfsyw6JJdkjogqi6iVrf1pc94QHxh-qVLCZsL1RPDtlHiSwgf5GeOwT6ddTFwVPcLZzxod_VaCbjrS9XMi9KKL2CYWuqH19chB5pwi6c7r_eog8hM7jHEM42kux_YbgnJELbbhovKejVCd0agSfpvtU2aBNcFECNPiVJ3YfPvsi8S2YwdGcvEOCG-MkHPXtqJjy--JgVpO6LR5q93QNQft3Mxaivid4qZrMqcJ5TQbW_jqIqvyvf-kfpUGE"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface via-surface/20 to-transparent"></div>
+<div class="absolute bottom-0 p-8 w-full">
+<span class="inline-block bg-tertiary text-on-tertiary px-3 py-1 rounded-sm text-[10px] font-bold uppercase tracking-widest mb-4">TRENDING</span>
+<h3 class="font-headline text-2xl font-bold text-white mb-2 leading-tight">Future-Forward AI Summit 2024</h3>
+<div class="flex items-center gap-4 text-on-surface-variant text-sm font-medium">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-xs" data-icon="calendar_today">calendar_today</span> 28 Oct</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-xs" data-icon="location_on">location_on</span> Noida Sec 62</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="min-w-[320px] md:min-w-[400px] snap-start group relative transition-all duration-500 hover:-translate-y-2">
+<div class="relative h-[500px] rounded-lg overflow-hidden bg-surface-container">
+<img alt="" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="vibrant street art and craft bazaar with colorful lanterns and diverse people in New Delhi" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBekLdEFGjOD8zK4m3w1YPPPwjdr1IfnwvW4aLTX14hJ2GlckqML4mBzv7UDmc92s-Dg_p-3JgsUw_-accjdeov59EeVQlWk0Kmu4i5hQ7TRp7JHdeODc8mo_lmKGP7qFC-pO8dIfpOosKYrwzCz1yyD2tWGnezCF1VEIV8c1OJG6iAJv8rZS2oVSq5QjUNERqdykJiZElHy9SzXNeAZL1XTdL15-e2mLrVN42JHrDKlUbu3EEV0Y5xQghg7epR6L8EpCqNNgrxInE"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface via-surface/20 to-transparent"></div>
+<div class="absolute bottom-0 p-8 w-full">
+<span class="inline-block bg-primary text-on-primary-container px-3 py-1 rounded-sm text-[10px] font-bold uppercase tracking-widest mb-4">EXCLUSIVE</span>
+<h3 class="font-headline text-2xl font-bold text-white mb-2 leading-tight">The Heritage Art Walk &amp; Fair</h3>
+<div class="flex items-center gap-4 text-on-surface-variant text-sm font-medium">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-xs" data-icon="calendar_today">calendar_today</span> 30 Oct</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-xs" data-icon="location_on">location_on</span> Old Delhi</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Featured Organizers Section -->
+<section class="py-24 bg-surface-container-low px-6 md:px-12 overflow-hidden">
+<div class="max-w-7xl mx-auto mb-12">
+<h2 class="font-headline text-4xl font-bold mb-2">Curated Organizers</h2>
+<p class="text-on-surface-variant text-lg">The tastemakers behind the city's best experiences.</p>
+</div>
+<div class="flex gap-6 overflow-x-auto no-scrollbar pb-6">
+<div class="min-w-[280px] bg-surface-container p-6 rounded-lg ghost-border flex items-center gap-4 hover:border-primary transition-all cursor-pointer">
+<div class="w-16 h-16 rounded-full bg-primary/20 flex items-center justify-center font-black text-primary text-xl">ZP</div>
+<div>
+<h4 class="font-bold text-white">Zodiac Productions</h4>
+<p class="text-sm text-on-surface-variant">Electronic &amp; Techno</p>
+</div>
+</div>
+<div class="min-w-[280px] bg-surface-container p-6 rounded-lg ghost-border flex items-center gap-4 hover:border-secondary transition-all cursor-pointer">
+<div class="w-16 h-16 rounded-full bg-secondary/20 flex items-center justify-center font-black text-secondary text-xl">HC</div>
+<div>
+<h4 class="font-bold text-white">Heritage Collective</h4>
+<p class="text-sm text-on-surface-variant">Culture &amp; History</p>
+</div>
+</div>
+<div class="min-w-[280px] bg-surface-container p-6 rounded-lg ghost-border flex items-center gap-4 hover:border-tertiary transition-all cursor-pointer">
+<div class="w-16 h-16 rounded-full bg-tertiary/20 flex items-center justify-center font-black text-tertiary text-xl">TF</div>
+<div>
+<h4 class="font-bold text-white">The Foundry</h4>
+<p class="text-sm text-on-surface-variant">Tech &amp; Networking</p>
+</div>
+</div>
+<div class="min-w-[280px] bg-surface-container p-6 rounded-lg ghost-border flex items-center gap-4 hover:border-primary transition-all cursor-pointer">
+<div class="w-16 h-16 rounded-full bg-primary/20 flex items-center justify-center font-black text-primary text-xl">MA</div>
+<div>
+<h4 class="font-bold text-white">Modern Art India</h4>
+<p class="text-sm text-on-surface-variant">Gallery &amp; Fine Arts</p>
+</div>
+</div>
+<div class="min-w-[280px] bg-surface-container p-6 rounded-lg ghost-border flex items-center gap-4 hover:border-secondary transition-all cursor-pointer">
+<div class="w-16 h-16 rounded-full bg-secondary/20 flex items-center justify-center font-black text-secondary text-xl">EB</div>
+<div>
+<h4 class="font-bold text-white">Epicurean Box</h4>
+<p class="text-sm text-on-surface-variant">Food &amp; Mixology</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Category Grid -->
+<section class="py-24 bg-surface px-6 md:px-12">
+<h2 class="font-headline text-4xl font-bold mb-16 text-center">Explore by Vibe</h2>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-7xl mx-auto">
+<!-- Tech Card -->
+<div class="group relative p-8 rounded-lg bg-surface-container ghost-border hover:border-primary transition-all duration-300 flex flex-col items-center text-center">
+<div class="w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-primary text-4xl" data-icon="memory">memory</span>
+</div>
+<h4 class="font-headline text-xl font-bold mb-2">Tech &amp; Startup</h4>
+<p class="text-on-surface-variant text-sm">Networking, hackathons, and demo days.</p>
+</div>
+<!-- Music Card -->
+<div class="group relative p-8 rounded-lg bg-surface-container ghost-border hover:border-secondary transition-all duration-300 flex flex-col items-center text-center">
+<div class="w-16 h-16 rounded-2xl bg-secondary/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-secondary text-4xl" data-icon="music_note">music_note</span>
+</div>
+<h4 class="font-headline text-xl font-bold mb-2">Music &amp; Arts</h4>
+<p class="text-on-surface-variant text-sm">Live gigs, galleries, and theater.</p>
+</div>
+<!-- Food Card -->
+<div class="group relative p-8 rounded-lg bg-surface-container ghost-border hover:border-tertiary transition-all duration-300 flex flex-col items-center text-center">
+<div class="w-16 h-16 rounded-2xl bg-tertiary/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-tertiary text-4xl" data-icon="restaurant">restaurant</span>
+</div>
+<h4 class="font-headline text-xl font-bold mb-2">Food &amp; Drink</h4>
+<p class="text-on-surface-variant text-sm">Pop-ups, brewery tours, and tastings.</p>
+</div>
+<!-- Nightlife -->
+<div class="group relative p-8 rounded-lg bg-surface-container ghost-border hover:border-primary transition-all duration-300 flex flex-col items-center text-center">
+<div class="w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-primary text-4xl" data-icon="nightlife">nightlife</span>
+</div>
+<h4 class="font-headline text-xl font-bold mb-2">Nightlife</h4>
+<p class="text-on-surface-variant text-sm">Clubbing, late-night lounges, and DJs.</p>
+</div>
+</div>
+</section>
+<!-- Community Stories Section (Masonry) -->
+<section class="py-24 bg-surface-container-low px-6 md:px-12">
+<div class="max-w-7xl mx-auto mb-16 text-center">
+<h2 class="font-headline text-5xl font-black mb-4">The Editorial Pulse</h2>
+<p class="text-on-surface-variant text-xl">Diving deep into the subcultures of Delhi and Noida.</p>
+</div>
+<div class="masonry-grid max-w-7xl mx-auto">
+<!-- Article 1 -->
+<div class="break-inside-avoid mb-6 group cursor-pointer">
+<div class="relative rounded-lg overflow-hidden mb-4 aspect-[4/5]">
+<img alt="Tech culture" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAMjBfILSJulWUycZrPEfsyw6JJdkjogqi6iVrf1pc94QHxh-qVLCZsL1RPDtlHiSwgf5GeOwT6ddTFwVPcLZzxod_VaCbjrS9XMi9KKL2CYWuqH19chB5pwi6c7r_eog8hM7jHEM42kux_YbgnJELbbhovKejVCd0agSfpvtU2aBNcFECNPiVJ3YfPvsi8S2YwdGcvEOCG-MkHPXtqJjy--JgVpO6LR5q93QNQft3Mxaivid4qZrMqcJ5TQbW_jqIqvyvf-kfpUGE"/>
+<div class="absolute top-4 left-4 bg-primary text-on-primary-container px-3 py-1 rounded-sm text-[10px] font-bold uppercase tracking-widest">SUB-CULTURE</div>
+</div>
+<h3 class="font-headline text-2xl font-bold text-white mb-2 leading-tight">The 3AM Coder: Noida's Midnight Innovation Hubs</h3>
+<p class="text-on-surface-variant text-sm leading-relaxed mb-4">Exploring the underground cafes where the next big unicorns are being built between midnight and dawn.</p>
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-full bg-white/10"></div>
+<span class="text-xs text-on-surface-variant font-bold uppercase tracking-widest">Words by Arjun Varma</span>
+</div>
+</div>
+<!-- Article 2 -->
+<div class="break-inside-avoid mb-6 group cursor-pointer">
+<div class="relative rounded-lg overflow-hidden mb-4 aspect-[1/1]">
+<img alt="Music scene" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD4yBQrnxJxiWUkGDti-vJlHww9W_Nr_UQT9Mhu7Tq8ojIyFiM7l4q2YwelQOPIL8rlUrIxSVl9RJ9OvlYxAmC6i1F0oGVIokRnEMz-vpIDBF6vk0ShqQTM7t8mprQygkv-uX49Ih7Xye_A-FGVuSkd6UeZGqc9X0ndzYCgeQ4hYUMl5APPwsXSOAE26zRAL5c5KnaWPDocq-Tdj15WPN3X-YqafzkLIKkzL-AIBOOst2ol0Qd_EA-UP4iV_yptseES2vkdO_wpaiA"/>
+<div class="absolute top-4 left-4 bg-secondary text-on-secondary px-3 py-1 rounded-sm text-[10px] font-bold uppercase tracking-widest">MUSIC</div>
+</div>
+<h3 class="font-headline text-2xl font-bold text-white mb-2 leading-tight">Neon &amp; Noise: The Return of Warehouse Techno</h3>
+<p class="text-on-surface-variant text-sm leading-relaxed mb-4">How Delhi's industrial outskirts became the unexpected home for the country's most vibrant rave scene.</p>
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-full bg-white/10"></div>
+<span class="text-xs text-on-surface-variant font-bold uppercase tracking-widest">Words by Sarah Khan</span>
+</div>
+</div>
+<!-- Article 3 -->
+<div class="break-inside-avoid mb-6 group cursor-pointer">
+<div class="relative rounded-lg overflow-hidden mb-4 aspect-[3/4]">
+<img alt="Art scene" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBekLdEFGjOD8zK4m3w1YPPPwjdr1IfnwvW4aLTX14hJ2GlckqML4mBzv7UDmc92s-Dg_p-3JgsUw_-accjdeov59EeVQlWk0Kmu4i5hQ7TRp7JHdeODc8mo_lmKGP7qFC-pO8dIfpOosKYrwzCz1yyD2tWGnezCF1VEIV8c1OJG6iAJv8rZS2oVSq5QjUNERqdykJiZElHy9SzXNeAZL1XTdL15-e2mLrVN42JHrDKlUbu3EEV0Y5xQghg7epR6L8EpCqNNgrxInE"/>
+<div class="absolute top-4 left-4 bg-tertiary text-on-tertiary px-3 py-1 rounded-sm text-[10px] font-bold uppercase tracking-widest">URBAN ART</div>
+</div>
+<h3 class="font-headline text-2xl font-bold text-white mb-2 leading-tight">Murals of the Metro: A Gallery Without Walls</h3>
+<p class="text-on-surface-variant text-sm leading-relaxed mb-4">Tracing the stories behind the giant street art pieces transforming our daily commute into a visual journey.</p>
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-full bg-white/10"></div>
+<span class="text-xs text-on-surface-variant font-bold uppercase tracking-widest">Words by Devika Singh</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Newsletter / CTA -->
+<section class="py-24 px-6 md:px-12">
+<div class="max-w-5xl mx-auto bg-gradient-to-br from-primary/20 via-surface-container to-secondary/20 rounded-lg p-10 md:p-16 relative overflow-hidden ghost-border">
+<div class="relative z-10 flex flex-col md:flex-row items-center justify-between gap-12">
+<div class="max-w-lg text-center md:text-left">
+<h2 class="font-headline text-4xl font-black mb-4">Never Miss a Pulse.</h2>
+<p class="text-on-surface-variant text-lg leading-relaxed">Join 50k+ urbanites receiving curated weekly lists of the best happenings in NCR. Direct to your inbox.</p>
+</div>
+<div class="w-full md:w-auto">
+<div class="flex flex-col sm:flex-row gap-4">
+<input class="bg-black/40 border-b-2 border-white/10 focus:border-primary focus:ring-0 px-6 py-4 rounded-lg text-white w-full sm:w-80" placeholder="email@address.com" type="email"/>
+<button class="bg-white text-black font-black px-10 py-4 rounded-full hover:scale-105 transition-all">JOIN NOW</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full pt-20 pb-10 border-t border-white/5 bg-[#0e0e14] font-inter">
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 px-8 md:px-12 max-w-7xl mx-auto">
+<div class="col-span-1 lg:col-span-1">
+<div class="text-3xl font-black text-white mb-6 font-headline tracking-tight flex items-center gap-2">DE·NE<span class="w-2 h-2 bg-secondary rounded-full"></span></div>
+<p class="text-[#acaab3] text-sm mb-8 leading-relaxed max-w-xs">The Electric Curator of NCR. We map the cultural heartbeat of the capital region through curated events and stories.</p>
+<div class="flex gap-4">
+<a class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-[#acaab3] hover:text-white hover:bg-white/10 transition-all" href="#"><i class="material-symbols-outlined text-xl">share</i></a>
+<a class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-[#acaab3] hover:text-white hover:bg-white/10 transition-all" href="#"><i class="material-symbols-outlined text-xl">camera_alt</i></a>
+<a class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-[#acaab3] hover:text-white hover:bg-white/10 transition-all" href="#"><i class="material-symbols-outlined text-xl">alternate_email</i></a>
+</div>
+</div>
+<div>
+<h4 class="text-white font-black mb-8 text-xs uppercase tracking-[0.2em]">The Magazine</h4>
+<ul class="space-y-4">
+<li><a class="text-[#acaab3] hover:text-primary transition-colors text-sm" href="#">Cultural Reports</a></li>
+<li><a class="text-[#acaab3] hover:text-primary transition-colors text-sm" href="#">Artist Spotlights</a></li>
+<li><a class="text-[#acaab3] hover:text-primary transition-colors text-sm" href="#">The Weekend List</a></li>
+<li><a class="text-[#acaab3] hover:text-primary transition-colors text-sm" href="#">Underground Guides</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-white font-black mb-8 text-xs uppercase tracking-[0.2em]">Explore</h4>
+<ul class="space-y-4">
+<li><a class="text-[#acaab3] hover:text-secondary transition-colors text-sm" href="#">Live Concerts</a></li>
+<li><a class="text-[#acaab3] hover:text-secondary transition-colors text-sm" href="#">Art Exhibitions</a></li>
+<li><a class="text-[#acaab3] hover:text-secondary transition-colors text-sm" href="#">Tech Summits</a></li>
+<li><a class="text-[#acaab3] hover:text-secondary transition-colors text-sm" href="#">Culinary Pop-ups</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-white font-black mb-8 text-xs uppercase tracking-[0.2em]">Contact</h4>
+<ul class="space-y-4">
+<li><a class="text-[#acaab3] hover:text-tertiary transition-colors text-sm" href="#">Submit Event</a></li>
+<li><a class="text-[#acaab3] hover:text-tertiary transition-colors text-sm" href="#">Partnerships</a></li>
+<li><a class="text-[#acaab3] hover:text-tertiary transition-colors text-sm" href="#">Press Kit</a></li>
+<li><a class="text-[#acaab3] hover:text-tertiary transition-colors text-sm" href="#">Careers</a></li>
+</ul>
+</div>
+</div>
+<div class="mt-20 border-t border-white/5 pt-10 text-center px-6">
+<p class="text-[#acaab3] text-xs font-medium tracking-widest">© 2024 DE·NE EDITORIAL. DESIGNED FOR THE ELECTRIC GENERATION.</p>
+</div>
+</footer>
+</body></html>

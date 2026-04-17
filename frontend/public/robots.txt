@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /admin
+Disallow: /bookmarks
+Disallow: /profile
+Disallow: /auth/
+
+Sitemap: https://delhi-noida-events.vercel.app/sitemap.xml

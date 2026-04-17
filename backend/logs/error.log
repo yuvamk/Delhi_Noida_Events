@@ -1,0 +1,187 @@
+2026-04-15 23:37:25 [error]: MongoDB connection failed (attempt 1/5): connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2026-04-15 23:37:25 [error]: ❌ MongoDB error: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2026-04-15 23:37:37 [error]: MongoDB connection failed (attempt 2/5): connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2026-04-15 23:37:37 [error]: ❌ MongoDB error: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2026-04-15 23:37:37 [error]: ❌ MongoDB error: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2026-04-15 23:37:51 [error]: MongoDB connection failed (attempt 3/5): connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2026-04-15 23:37:51 [error]: ❌ MongoDB error: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2026-04-15 23:37:51 [error]: ❌ MongoDB error: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2026-04-15 23:37:51 [error]: ❌ MongoDB error: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2026-04-15 23:38:09 [error]: MongoDB connection failed (attempt 4/5): connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2026-04-15 23:38:09 [error]: ❌ MongoDB error: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2026-04-15 23:38:09 [error]: ❌ MongoDB error: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2026-04-15 23:38:09 [error]: ❌ MongoDB error: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2026-04-15 23:38:09 [error]: ❌ MongoDB error: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2026-04-15 23:38:35 [error]: MongoDB connection failed (attempt 5/5): connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2026-04-16 22:30:46 [error]: MongoDB connection failed (attempt 1/5): connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2026-04-16 22:30:46 [error]: ❌ MongoDB error: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2026-04-16 22:30:58 [error]: MongoDB connection failed (attempt 2/5): connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2026-04-16 22:30:58 [error]: ❌ MongoDB error: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2026-04-16 22:30:58 [error]: ❌ MongoDB error: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2026-04-16 22:31:12 [error]: MongoDB connection failed (attempt 3/5): connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2026-04-16 22:31:12 [error]: ❌ MongoDB error: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2026-04-16 22:31:12 [error]: ❌ MongoDB error: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2026-04-16 22:31:12 [error]: ❌ MongoDB error: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2026-04-16 22:31:30 [error]: MongoDB connection failed (attempt 4/5): connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2026-04-16 22:31:30 [error]: ❌ MongoDB error: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2026-04-16 22:31:30 [error]: ❌ MongoDB error: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2026-04-16 22:31:30 [error]: ❌ MongoDB error: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2026-04-16 22:31:30 [error]: ❌ MongoDB error: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2026-04-16 22:31:56 [error]: MongoDB connection failed (attempt 5/5): connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2026-04-16 22:42:36 [error]: MongoDB connection failed (attempt 1/5): connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2026-04-16 22:42:36 [error]: ❌ MongoDB error: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2026-04-16 22:42:48 [error]: MongoDB connection failed (attempt 2/5): connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2026-04-16 22:42:48 [error]: ❌ MongoDB error: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2026-04-16 22:42:48 [error]: ❌ MongoDB error: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2026-04-16 22:43:02 [error]: MongoDB connection failed (attempt 3/5): connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2026-04-16 22:43:02 [error]: ❌ MongoDB error: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2026-04-16 22:43:02 [error]: ❌ MongoDB error: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2026-04-16 22:43:02 [error]: ❌ MongoDB error: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2026-04-16 22:43:26 [error]: MongoDB connection failed (attempt 1/5): connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2026-04-16 22:43:26 [error]: ❌ MongoDB error: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2026-04-16 22:43:26 [error]: MongoDB connection failed (attempt 1/5): connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2026-04-16 22:43:26 [error]: ❌ MongoDB error: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2026-04-16 22:43:38 [error]: MongoDB connection failed (attempt 2/5): connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2026-04-16 22:43:38 [error]: ❌ MongoDB error: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2026-04-16 22:43:38 [error]: ❌ MongoDB error: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2026-04-16 22:43:38 [error]: MongoDB connection failed (attempt 2/5): connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2026-04-16 22:43:38 [error]: ❌ MongoDB error: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2026-04-16 22:43:38 [error]: ❌ MongoDB error: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2026-04-16 22:43:52 [error]: MongoDB connection failed (attempt 3/5): connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2026-04-16 22:43:52 [error]: ❌ MongoDB error: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2026-04-16 22:43:52 [error]: ❌ MongoDB error: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2026-04-16 22:43:52 [error]: ❌ MongoDB error: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2026-04-16 22:43:52 [error]: MongoDB connection failed (attempt 3/5): connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2026-04-16 22:43:52 [error]: ❌ MongoDB error: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2026-04-16 22:43:52 [error]: ❌ MongoDB error: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2026-04-16 22:43:52 [error]: ❌ MongoDB error: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2026-04-16 22:44:10 [error]: MongoDB connection failed (attempt 4/5): connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2026-04-16 22:44:10 [error]: ❌ MongoDB error: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2026-04-16 22:44:10 [error]: ❌ MongoDB error: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2026-04-16 22:44:10 [error]: ❌ MongoDB error: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2026-04-16 22:44:10 [error]: ❌ MongoDB error: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2026-04-16 22:44:10 [error]: MongoDB connection failed (attempt 4/5): connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2026-04-16 22:44:10 [error]: ❌ MongoDB error: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2026-04-16 22:44:10 [error]: ❌ MongoDB error: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2026-04-16 22:44:10 [error]: ❌ MongoDB error: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2026-04-16 22:44:10 [error]: ❌ MongoDB error: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2026-04-16 22:44:42 [error]: MongoDB connection failed (attempt 1/5): connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2026-04-16 22:44:42 [error]: ❌ MongoDB error: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2026-04-16 22:44:42 [error]: MongoDB connection failed (attempt 1/5): connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2026-04-16 22:44:42 [error]: ❌ MongoDB error: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2026-04-16 22:45:57 [error]: MongoDB connection failed (attempt 1/5): connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2026-04-16 22:45:57 [error]: ❌ MongoDB error: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2026-04-16 22:45:57 [error]: MongoDB connection failed (attempt 1/5): connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2026-04-16 22:45:57 [error]: ❌ MongoDB error: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2026-04-16 22:46:09 [error]: MongoDB connection failed (attempt 2/5): connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2026-04-16 22:46:09 [error]: ❌ MongoDB error: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2026-04-16 22:46:09 [error]: ❌ MongoDB error: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2026-04-16 22:46:09 [error]: MongoDB connection failed (attempt 2/5): connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2026-04-16 22:46:09 [error]: ❌ MongoDB error: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2026-04-16 22:46:09 [error]: ❌ MongoDB error: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2026-04-16 22:46:23 [error]: MongoDB connection failed (attempt 3/5): connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2026-04-16 22:46:23 [error]: ❌ MongoDB error: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2026-04-16 22:46:23 [error]: ❌ MongoDB error: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2026-04-16 22:46:23 [error]: ❌ MongoDB error: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2026-04-16 22:46:23 [error]: MongoDB connection failed (attempt 3/5): connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2026-04-16 22:46:23 [error]: ❌ MongoDB error: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2026-04-16 22:46:23 [error]: ❌ MongoDB error: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2026-04-16 22:46:23 [error]: ❌ MongoDB error: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2026-04-16 22:46:41 [error]: MongoDB connection failed (attempt 4/5): connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2026-04-16 22:46:41 [error]: ❌ MongoDB error: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2026-04-16 22:46:41 [error]: ❌ MongoDB error: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2026-04-16 22:46:41 [error]: ❌ MongoDB error: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2026-04-16 22:46:41 [error]: ❌ MongoDB error: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2026-04-16 22:46:41 [error]: MongoDB connection failed (attempt 4/5): connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2026-04-16 22:46:41 [error]: ❌ MongoDB error: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2026-04-16 22:46:41 [error]: ❌ MongoDB error: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2026-04-16 22:46:41 [error]: ❌ MongoDB error: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2026-04-16 22:46:41 [error]: ❌ MongoDB error: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2026-04-16 22:47:07 [error]: MongoDB connection failed (attempt 5/5): connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2026-04-16 22:47:07 [error]: MongoDB: max retries exceeded. Proceeding without database (Some features will be disabled).
+2026-04-16 22:47:07 [error]: ❌ MongoDB error: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2026-04-16 22:47:07 [error]: ❌ MongoDB error: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2026-04-16 22:47:07 [error]: ❌ MongoDB error: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2026-04-16 22:47:07 [error]: ❌ MongoDB error: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2026-04-16 22:47:07 [error]: ❌ MongoDB error: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2026-04-16 22:47:07 [error]: Uncaught Exception: listen EADDRINUSE: address already in use 0.0.0.0:5000
+Error: listen EADDRINUSE: address already in use 0.0.0.0:5000
+    at Server.setupListenHandle [as _listen2] (node:net:1872:16)
+    at listenInCluster (node:net:1920:12)
+    at doListen (node:net:2075:7)
+    at processTicksAndRejections (node:internal/process/task_queues:83:21)
+2026-04-16 22:47:07 [error]: MongoDB connection failed (attempt 5/5): connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2026-04-16 22:47:07 [error]: MongoDB: max retries exceeded. Proceeding without database (Some features will be disabled).
+2026-04-16 22:47:07 [error]: ❌ MongoDB error: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2026-04-16 22:47:07 [error]: ❌ MongoDB error: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2026-04-16 22:47:07 [error]: ❌ MongoDB error: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2026-04-16 22:47:07 [error]: ❌ MongoDB error: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2026-04-16 22:47:07 [error]: ❌ MongoDB error: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2026-04-16 22:47:07 [error]: Uncaught Exception: listen EADDRINUSE: address already in use 0.0.0.0:5000
+Error: listen EADDRINUSE: address already in use 0.0.0.0:5000
+    at Server.setupListenHandle [as _listen2] (node:net:1872:16)
+    at listenInCluster (node:net:1920:12)
+    at doListen (node:net:2075:7)
+    at processTicksAndRejections (node:internal/process/task_queues:83:21)
+2026-04-16 22:53:00 [error]: MongoDB connection failed (attempt 1/5): connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2026-04-16 22:53:00 [error]: ❌ MongoDB error: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2026-04-16 22:53:00 [error]: MongoDB connection failed (attempt 1/5): connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2026-04-16 22:53:00 [error]: ❌ MongoDB error: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2026-04-16 22:53:12 [error]: MongoDB connection failed (attempt 2/5): connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2026-04-16 22:53:12 [error]: ❌ MongoDB error: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2026-04-16 22:53:12 [error]: ❌ MongoDB error: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2026-04-16 22:53:12 [error]: MongoDB connection failed (attempt 2/5): connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2026-04-16 22:53:12 [error]: ❌ MongoDB error: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2026-04-16 22:53:12 [error]: ❌ MongoDB error: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2026-04-16 22:53:28 [error]: MongoDB connection failed (attempt 1/5): connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2026-04-16 22:53:28 [error]: ❌ MongoDB error: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2026-04-16 22:53:28 [error]: MongoDB connection failed (attempt 1/5): connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2026-04-16 22:53:28 [error]: ❌ MongoDB error: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2026-04-16 22:53:40 [error]: MongoDB connection failed (attempt 2/5): connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2026-04-16 22:53:40 [error]: ❌ MongoDB error: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2026-04-16 22:53:40 [error]: ❌ MongoDB error: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2026-04-16 22:53:40 [error]: MongoDB connection failed (attempt 2/5): connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2026-04-16 22:53:40 [error]: ❌ MongoDB error: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2026-04-16 22:53:40 [error]: ❌ MongoDB error: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2026-04-16 22:53:44 [error]: MongoDB connection failed (attempt 1/5): connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2026-04-16 22:53:44 [error]: ❌ MongoDB error: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2026-04-16 22:53:57 [error]: Uncaught Exception: listen EADDRINUSE: address already in use 0.0.0.0:5000
+Error: listen EADDRINUSE: address already in use 0.0.0.0:5000
+    at Server.setupListenHandle [as _listen2] (node:net:1872:16)
+    at listenInCluster (node:net:1920:12)
+    at doListen (node:net:2075:7)
+    at processTicksAndRejections (node:internal/process/task_queues:83:21)
+2026-04-16 22:53:57 [error]: Uncaught Exception: listen EADDRINUSE: address already in use 0.0.0.0:5000
+Error: listen EADDRINUSE: address already in use 0.0.0.0:5000
+    at Server.setupListenHandle [as _listen2] (node:net:1872:16)
+    at listenInCluster (node:net:1920:12)
+    at doListen (node:net:2075:7)
+    at processTicksAndRejections (node:internal/process/task_queues:83:21)
+2026-04-16 22:53:57 [error]: Uncaught Exception: listen EADDRINUSE: address already in use 0.0.0.0:5000
+Error: listen EADDRINUSE: address already in use 0.0.0.0:5000
+    at Server.setupListenHandle [as _listen2] (node:net:1872:16)
+    at listenInCluster (node:net:1920:12)
+    at doListen (node:net:2075:7)
+    at processTicksAndRejections (node:internal/process/task_queues:83:21)
+2026-04-16 22:54:07 [error]: MongoDB connection failed (attempt 1/5): connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2026-04-16 22:54:07 [error]: MongoDB connection failed (attempt 1/5): connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2026-04-16 22:54:07 [error]: MongoDB connection failed (attempt 1/5): connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2026-04-16 22:59:31 [error]: MongoDB connection failed (attempt 1/5): connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2026-04-16 22:59:31 [error]: ❌ MongoDB error: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2026-04-16 22:59:43 [error]: MongoDB connection failed (attempt 2/5): connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2026-04-16 22:59:43 [error]: ❌ MongoDB error: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2026-04-16 22:59:43 [error]: ❌ MongoDB error: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2026-04-16 22:59:57 [error]: MongoDB connection failed (attempt 3/5): connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2026-04-16 22:59:57 [error]: ❌ MongoDB error: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2026-04-16 22:59:57 [error]: ❌ MongoDB error: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2026-04-16 22:59:57 [error]: ❌ MongoDB error: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2026-04-16 22:59:59 [error]: Uncaught Exception: Cannot set headers after they are sent to the client
+Error: Cannot set headers after they are sent to the client
+    at ServerResponse.setHeader (node:_http_outgoing:652:11)
+    at ServerResponse.<anonymous> (/Users/yuvamrajput/.gemini/antigravity/scratch/delhi-noida-events/backend/src/server.ts:95:9)
+    at ServerResponse.emit (node:events:530:35)
+    at ServerResponse.emit (node:domain:488:12)
+    at onFinish (node:_http_outgoing:1005:10)
+    at afterWrite (node:internal/streams/writable:701:5)
+    at afterWriteTick (node:internal/streams/writable:687:10)
+    at processTicksAndRejections (node:internal/process/task_queues:81:21)
