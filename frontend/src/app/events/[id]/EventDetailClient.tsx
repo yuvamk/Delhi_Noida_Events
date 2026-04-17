@@ -1,53 +1,22 @@
 "use client";
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import { Calendar, MapPin, Users, Bookmark, BookmarkCheck, Share2, ExternalLink, Clock, Copy, Tag } from "lucide-react";
 import { EventData, eventsApi } from "@/lib/api";
-import { useEvents } from "@/hooks/useEvents";
 import { useBookmarks } from "@/hooks/useBookmarks";
-import { EventCard } from "@/components/events/EventCard";
-import { EventsGridSkeleton } from "@/components/ui/LoadingSkeleton";
 import EventMap from "@/components/events/EventMap";
 import toast from "react-hot-toast";
 
-const EMOJI: Record<string, string> = {
-  Tech: "💻", Startup: "🚀", Cultural: "🎭", Business: "💼",
-  Sports: "⚽", Education: "📚", Entertainment: "🎵",
-  Hackathon: "⚡", Meetup: "🤝", Conference: "🎤",
-};
-
 function formatDate(dateStr: string) {
-  return new Date(dateStr).toLocaleDateString("en-IN", { weekday: "long", day: "numeric", month: "long", year: "numeric" });
-}
-
-function getTimeUntil(dateStr: string): string {
-  const diff = new Date(dateStr).getTime() - Date.now();
-  if (diff < 0) return "Past event";
-  const days = Math.floor(diff / 86400000);
-  if (days === 0) return "Today!";
-  if (days === 1) return "Tomorrow";
-  if (days < 7) return `In ${days} days`;
-  if (days < 30) return `In ${Math.floor(days / 7)} weeks`;
-  return `In ${Math.floor(days / 30)} months`;
+  return new Date(dateStr).toLocaleDateString("en-IN", { day: "2-digit", month: "short", year: "numeric" }).toUpperCase();
 }
 
 export function EventDetailClient({ event }: { event: EventData }) {
-  const [activeImage, setActiveImage] = useState(0);
   const { toggleBookmark, isBookmarked } = useBookmarks();
   const bookmarked = isBookmarked(event._id);
 
-  // Track view
   useEffect(() => {
     eventsApi.trackView(event._id).catch(() => {});
   }, [event._id]);
-
-  // Related events
-  const { events: related, loading: relatedLoading } = useEvents({
-    category: event.category,
-    limit: 3,
-    page: 1,
-  });
-  const relatedFiltered = related.filter((e) => e._id !== event._id).slice(0, 3);
 
   const handleBookmark = async () => {
     await toggleBookmark(event._id, event.title);
@@ -57,9 +26,6 @@ export function EventDetailClient({ event }: { event: EventData }) {
     navigator.clipboard.writeText(window.location.href);
     toast.success("Link copied!");
   };
-
-  const timeUntil = getTimeUntil(event.date);
-  const isPast = timeUntil === "Past event";
 
   const schemaJson = {
     "@context": "https://schema.org",
@@ -81,245 +47,177 @@ export function EventDetailClient({ event }: { event: EventData }) {
   };
 
   return (
-    <>
+    <div className="bg-background min-h-screen pb-24">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaJson) }} />
 
-      <div className="min-h-screen bg-surface pb-24">
-        <div className="max-w-7xl mx-auto px-6 md:px-12 pt-32">
-          
-          {/* Breadcrumb */}
-          <nav className="flex items-center gap-2 text-sm text-on-surface-variant mb-6 font-inter overflow-hidden whitespace-nowrap">
-            <Link href="/" className="hover:text-white transition-colors">Home</Link>
-            <span className="material-symbols-outlined text-sm">chevron_right</span>
-            <Link href="/events" className="hover:text-white transition-colors">Events</Link>
-            <span className="material-symbols-outlined text-sm">chevron_right</span>
-            <Link href={`/category/${event.category.toLowerCase()}`} className="hover:text-white transition-colors">{event.category}</Link>
-            <span className="material-symbols-outlined text-sm">chevron_right</span>
-            <span className="text-primary font-bold truncate">{event.title}</span>
-          </nav>
-
-          {/* Main layout */}
-          <div className="grid grid-cols-1 lg:grid-cols-[1fr_360px] gap-10 items-start">
-            
-            {/* ─── LEFT COLUMN ─── */}
-            <div>
-              {/* Hero Image */}
-              <div className="relative h-[400px] md:h-[500px] rounded-2xl overflow-hidden mb-8 bg-surface-container border border-white/5">
-                {event.images?.[0] ? (
-                  <img src={event.images[activeImage] || event.images[0]} alt={event.title} className="w-full h-full object-cover" />
-                ) : (
-                  <div className="absolute inset-0 w-full h-full bg-gradient-to-br from-surface to-surface-container-high flex items-center justify-center text-8xl opacity-50">
-                    {EMOJI[event.category] || "📅"}
-                  </div>
-                )}
-                <div className="absolute inset-0 bg-gradient-to-t from-[#0e0e14] via-transparent to-transparent pointer-events-none"></div>
-                
-                {/* Overlay badges */}
-                <div className="absolute top-6 left-6 flex gap-3">
-                  <span className="bg-primary text-on-primary-container px-3 py-1 rounded-sm text-[10px] font-bold uppercase tracking-widest shadow-lg">
-                    {event.category}
-                  </span>
-                  {event.featured && (
-                    <span className="bg-tertiary/20 border border-tertiary text-tertiary px-3 py-1 rounded-sm text-[10px] font-bold uppercase tracking-widest backdrop-blur-md">
-                      ⭐ Featured
-                    </span>
-                  )}
-                  {isPast && (
-                    <span className="bg-error border border-error/50 text-onError px-3 py-1 rounded-sm text-[10px] font-bold uppercase tracking-widest backdrop-blur-md">
-                      Past Event
-                    </span>
-                  )}
-                </div>
-              </div>
-
-              {/* Image thumbnails */}
-              {event.images && event.images.length > 1 && (
-                <div className="flex gap-3 mb-8 overflow-x-auto no-scrollbar pb-2">
-                  {event.images.map((img, i) => (
-                    <button key={i} onClick={() => setActiveImage(i)} className={`w-20 h-14 rounded-lg overflow-hidden border-2 transition-all shrink-0 ${activeImage === i ? "border-primary scale-105" : "border-transparent opacity-50 hover:opacity-100"}`}>
-                      <img src={img} alt="" className="w-full h-full object-cover" />
-                    </button>
-                  ))}
-                </div>
+      {/* Hero Section */}
+      <header className="relative w-full h-[870px] overflow-hidden">
+        <div 
+          className="absolute inset-0 bg-cover bg-center" 
+          style={{ backgroundImage: `url('${event.images?.[0] || "https://lh3.googleusercontent.com/aida-public/AB6AXuCPdtRYsO8R33GaXNSXDoRoxx1O4LL7ndnnIchr2TaRZnnv8QcJB_sndpP216cGZO0aPChhuCWuhLfDm7TqmMvP3aGjkQu1YRTXzmdhXZwi8dl-PvpiD6gika9yTVT--EO-oGl1MgDuteJtrvFok5AkRgyl7_sEsK9KQEECHj4AiyEWHauUtCRgaFeYPodpiBPAHwQmFNTubA4Ji7FBlKF6hCJBhnEOLzM9b_lOAUMRECLlRb-qAmWeYaQRlHKuAxMZwIQc8NcnUl0"}')` }}
+        ></div>
+        <div className="absolute inset-0 hero-gradient"></div>
+        <div className="absolute bottom-0 left-0 w-full px-6 md:px-12 pb-16">
+          <div className="max-w-7xl mx-auto">
+            <div className="flex flex-wrap gap-2 mb-6">
+              <span className="bg-secondary-container text-on-secondary-container px-3 py-1 rounded-sm text-[10px] font-bold tracking-widest uppercase font-label">{event.category}</span>
+              {event.featured && (
+                <span className="bg-surface-container-highest text-tertiary px-3 py-1 rounded-sm text-[10px] font-bold tracking-widest uppercase font-label">Exclusive Access</span>
               )}
+            </div>
+            <h1 className="font-headline font-black italic text-6xl md:text-9xl tracking-tighter text-primary leading-none mb-4">{event.title}</h1>
+            <p className="text-on-surface-variant font-headline text-lg md:text-2xl max-w-2xl tracking-tight">
+              {event.shortDescription || "The ultimate nocturnal intersection of local sound and soul."}
+            </p>
+          </div>
+        </div>
+      </header>
 
-              {/* Title & badges */}
-              <div className="mb-10">
-                <h1 className="font-headline text-4xl md:text-5xl font-black text-white leading-tight mb-6 tracking-tight">
-                  {event.title}
-                </h1>
-                <div className="flex flex-wrap gap-x-8 gap-y-4">
-                  {[
-                    { icon: Calendar, text: formatDate(event.date) },
-                    { icon: Clock, text: `${event.time || "TBD"}${timeUntil !== "Past event" ? ` (${timeUntil})` : ""}` },
-                    { icon: MapPin, text: `${event.venue}, ${event.city}` },
-                    ...(event.attendees ? [{ icon: Users, text: `${event.attendees.toLocaleString("en-IN")} attending` }] : []),
-                  ].map(({ icon: Icon, text }) => (
-                    <div key={text} className="flex items-center gap-2 text-on-surface-variant font-bold text-sm">
-                      <Icon size={16} className="text-secondary" /> {text}
+      <main className="max-w-7xl mx-auto px-6 md:px-12 py-12">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 relative">
+          
+          {/* Left Column: Content */}
+          <div className="lg:col-span-8 space-y-16">
+            
+            {/* Meta Info Section */}
+            <section className="grid grid-cols-2 md:grid-cols-4 gap-8 pb-12 border-b border-white/5">
+              <div className="space-y-1">
+                <span className="text-[10px] font-bold uppercase tracking-widest text-on-surface-variant font-label">Date</span>
+                <p className="font-headline text-xl font-bold">{formatDate(event.date)}</p>
+              </div>
+              <div className="space-y-1">
+                <span className="text-[10px] font-bold uppercase tracking-widest text-on-surface-variant font-label">Time</span>
+                <p className="font-headline text-xl font-bold">{event.time || "TBD"}</p>
+              </div>
+              <div className="space-y-1">
+                <span className="text-[10px] font-bold uppercase tracking-widest text-on-surface-variant font-label">Venue</span>
+                <p className="font-headline text-lg font-bold truncate max-w-full" title={event.venue}>{event.venue}</p>
+              </div>
+              <div className="space-y-1">
+                <span className="text-[10px] font-bold uppercase tracking-widest text-on-surface-variant font-label">Organizer</span>
+                <p className="font-headline text-lg font-bold truncate max-w-full" title={event.organizer?.name}>{event.organizer?.name || "Independent"}</p>
+              </div>
+            </section>
+
+            {/* About Section */}
+            <section className="space-y-6">
+              <h2 className="font-headline text-4xl font-bold tracking-tight text-on-surface">About This Event</h2>
+              <div className="space-y-4 text-on-surface-variant text-lg leading-relaxed whitespace-pre-wrap font-body">
+                {event.description}
+              </div>
+            </section>
+
+            {/* Agenda Section */}
+            {event.speakers && event.speakers.length > 0 && (
+              <section className="space-y-8">
+                <h2 className="font-headline text-4xl font-bold tracking-tight text-on-surface">Agenda</h2>
+                <div className="space-y-0 border-l border-white/10 ml-4">
+                  {event.speakers.map((speaker, idx) => (
+                    <div key={idx} className="relative pl-10 pb-12 group last:pb-0">
+                      <div className={`absolute left-[-5px] top-0 w-2.5 h-2.5 rounded-full shadow-[0_0_10px_rgba(109,221,255,0.5)] group-hover:scale-125 transition-transform ${idx % 3 === 0 ? "bg-tertiary" : idx % 3 === 1 ? "bg-primary" : "bg-secondary"}`}></div>
+                      <div className="space-y-1">
+                        <span className={`font-headline text-sm font-bold tracking-tighter uppercase ${idx % 3 === 0 ? "text-tertiary" : idx % 3 === 1 ? "text-primary" : "text-secondary"}`}>Main Activation</span>
+                        <h3 className="text-xl font-bold font-headline">{speaker.name}</h3>
+                        <p className="text-on-surface-variant">{speaker.bio || speaker.designation}</p>
+                      </div>
                     </div>
                   ))}
                 </div>
-              </div>
+              </section>
+            )}
 
-              {/* Tags */}
-              {event.tags?.length > 0 && (
-                <div className="flex gap-2 flex-wrap mb-10">
-                  {event.tags.map((tag) => (
-                    <span key={tag} className="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-surface-container border border-white/5 text-xs font-bold text-on-surface-variant">
-                      <Tag size={12} className="text-primary" /> {tag}
-                    </span>
-                  ))}
-                </div>
-              )}
-
-              {/* Description */}
-              <div className="bg-surface-container border border-white/5 rounded-2xl p-8 mb-8">
-                <h2 className="font-headline text-2xl font-black text-white mb-6">About This Setup</h2>
-                <div className="text-on-surface-variant leading-loose font-inter whitespace-pre-wrap">
-                  {event.description}
-                </div>
-              </div>
-
-              {/* Map Section */}
-              <div className="bg-surface-container border border-white/5 rounded-2xl p-8 mb-8">
-                <h2 className="font-headline text-2xl font-black text-white mb-6">Coordinates</h2>
-                <div className="flex items-center gap-2 text-on-surface-variant font-bold text-sm mb-6">
-                  <MapPin size={16} className="text-secondary" /> {event.venue}, {event.address || event.city}
-                </div>
-                <div className="rounded-xl overflow-hidden border border-white/5">
+            {/* Location Section */}
+            <section className="space-y-6">
+              <h2 className="font-headline text-4xl font-bold tracking-tight text-on-surface">Location</h2>
+              <div className="w-full h-80 rounded-lg overflow-hidden glass-card relative group p-1 z-0 bg-surface">
                   <EventMap 
                     events={[event]} 
                     center={event.location?.coordinates ? [event.location.coordinates[1], event.location.coordinates[0]] : [28.6139, 77.2090]} 
                     zoom={15} 
-                    height={300} 
+                    height={310} 
                   />
+                <div className="absolute inset-0 pointer-events-none rounded-lg ring-1 ring-inset ring-white/10"></div>
+                <div className="absolute bottom-6 left-6 p-4 glass-card rounded-md pointer-events-none z-10 hidden md:block">
+                  <p className="font-headline font-bold text-sm text-white">{event.venue}</p>
+                  <p className="text-xs text-on-surface-variant">{event.address || event.city}</p>
                 </div>
               </div>
+            </section>
+            
+          </div>
 
-              {/* Share buttons */}
-              <div className="flex gap-3 flex-wrap">
-                <button onClick={handleCopyLink} className="bg-surface-container hover:bg-surface-container-high border border-white/10 text-white text-sm font-bold px-6 py-3 rounded-lg flex items-center gap-2 transition-colors">
-                  <Copy size={16} /> Copy URL
-                </button>
-                <a href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(event.title)}&url=${encodeURIComponent(typeof window !== "undefined" ? window.location.href : "")}`} target="_blank" rel="noopener noreferrer" className="bg-surface-container hover:bg-surface-container-high border border-white/10 text-[#1DA1F2] text-sm font-bold px-6 py-3 rounded-lg flex items-center gap-2 transition-colors">
-                  <Share2 size={16} /> Twitter
-                </a>
-                <a href={`https://wa.me/?text=${encodeURIComponent(`${event.title} - ${typeof window !== "undefined" ? window.location.href : ""}`)}`} target="_blank" rel="noopener noreferrer" className="bg-surface-container hover:bg-surface-container-high border border-white/10 text-[#25D366] text-sm font-bold px-6 py-3 rounded-lg flex items-center gap-2 transition-colors">
-                  <Share2 size={16} /> WhatsApp
-                </a>
-              </div>
-            </div>
-
-            {/* ─── RIGHT SIDEBAR ─── */}
-            <div className="sticky top-28">
-              {/* Action Box */}
-              <div className="bg-surface-container border border-white/5 rounded-2xl p-6 mb-6 shadow-2xl relative overflow-hidden">
-                <div className="absolute top-0 right-0 w-32 h-32 bg-primary/10 rounded-full blur-2xl blur-3xl pointer-events-none"></div>
-                
-                <div className="mb-6 relative z-10">
-                  <div className={`font-headline text-4xl font-black mb-1 ${event.price?.type === "Free" ? "text-secondary" : "text-white"}`}>
-                    {event.price?.type === "Free" ? "FREE" : event.price?.type === "RSVP" ? "RSVP" : `₹${event.price?.amount?.toLocaleString("en-IN")}`}
+          {/* Right Column: Sticky Card */}
+          <div className="lg:col-span-4 lg:block">
+            <div className="sticky top-28 space-y-6">
+              
+              <div className="glass-card rounded-lg p-8 shadow-[0px_20px_40px_rgba(0,0,0,0.4)]">
+                <div className="flex justify-between items-start mb-8">
+                  <div className="space-y-1">
+                    <p className="text-[10px] font-bold uppercase tracking-widest text-on-surface-variant font-label">Ticket Price</p>
+                    <h2 className="text-5xl font-black font-headline text-on-surface">
+                      {event.price?.type === "Free" ? "FREE" : event.price?.type === "RSVP" ? "RSVP" : `₹${event.price?.amount?.toLocaleString("en-IN")}`}
+                    </h2>
                   </div>
-                  <div className="text-sm font-bold text-on-surface-variant flex items-center gap-2">
-                    <span className="material-symbols-outlined text-sm">confirmation_number</span>
-                    {event.capacity ? `${event.capacity.toLocaleString("en-IN")} total spots` : "Open access protocol"}
-                  </div>
-                </div>
-
-                {/* Capacity bar */}
-                {event.attendees && event.capacity && (
-                  <div className="mb-8 relative z-10">
-                    <div className="h-2 rounded-full bg-white/5 overflow-hidden mb-2">
-                      <div className={`h-full rounded-full transition-all duration-1000 ${event.attendees / event.capacity > 0.85 ? "bg-error" : "bg-primary"}`} style={{ width: `${Math.min((event.attendees / event.capacity) * 100, 100)}%` }} />
-                    </div>
-                    <div className="text-xs font-bold text-on-surface-variant flex justify-between">
-                      <span>{event.attendees.toLocaleString()} deployed</span>
-                      <span>{Math.round((event.attendees / event.capacity) * 100)}% full</span>
-                    </div>
-                  </div>
-                )}
-
-                {/* CTA Buttons */}
-                <div className="relative z-10">
-                  {!isPast ? (
-                    <>
-                      <a href={event.registrationUrl} target="_blank" rel="noopener noreferrer" className="bg-primary text-on-primary-container font-black w-full py-4 rounded-xl flex items-center justify-center gap-2 mb-3 hover:scale-[1.02] transition-transform shadow-lg">
-                        {event.price?.type === "Free" ? "Acquire Access" : event.price?.type === "RSVP" ? "Submit RSVP" : "Purchase Ticket"} <ExternalLink size={18} />
-                      </a>
-                      <button onClick={handleBookmark} className={`w-full py-4 rounded-xl font-black flex items-center justify-center gap-2 transition-all ${bookmarked ? "bg-secondary/10 border-secondary border text-secondary" : "bg-surface border border-white/10 hover:bg-surface-container-high text-white"}`}>
-                        {bookmarked ? <><BookmarkCheck size={18} /> Saved to Arsenal</> : <><Bookmark size={18} /> Save for Later</>}
-                      </button>
-                    </>
-                  ) : (
-                    <div className="text-center py-6 border border-white/5 rounded-xl bg-surface">
-                      <div className="text-4xl mb-3 opacity-50">⏰</div>
-                      <p className="text-on-surface-variant font-bold text-sm">Connection Terminated</p>
+                  {event.capacity && event.attendees && (event.attendees / event.capacity > 0.7) && (
+                    <div className="bg-secondary/10 px-3 py-1 rounded-full flex items-center gap-2">
+                        <span className="w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
+                        <span className="text-secondary text-[10px] font-bold uppercase tracking-tight">Selling fast!</span>
                     </div>
                   )}
                 </div>
+                
+                <ul className="space-y-4 mb-8">
+                  <li className="flex gap-3 items-center text-sm text-on-surface-variant">
+                    <span className="material-symbols-outlined text-tertiary scale-75">check_circle</span>
+                    Entry for 1 Guest
+                  </li>
+                  <li className="flex gap-3 items-center text-sm text-on-surface-variant">
+                    <span className="material-symbols-outlined text-tertiary scale-75">check_circle</span>
+                    Digital Event Access
+                  </li>
+                  <li className="flex gap-3 items-center text-sm text-on-surface-variant">
+                    <span className="material-symbols-outlined text-tertiary scale-75">check_circle</span>
+                    {event.capacity ? `Limited to ${event.capacity} total capacity` : "Open access protocol"}
+                  </li>
+                </ul>
+
+                <div className="space-y-3">
+                    <a href={event.registrationUrl || "#"} target="_blank" rel="noopener noreferrer" className="w-full py-5 rounded-full saffron-gradient text-white font-headline font-black text-lg tracking-tight flex justify-center items-center shadow-[0px_10px_30px_rgba(255,94,26,0.3)] hover:scale-[1.02] active:scale-95 transition-all duration-300 text-center">
+                        {event.price?.type === "Free" ? "Register Now" : "Purchase Ticket"}
+                    </a>
+                    
+                    <div className="flex gap-2">
+                        <button onClick={handleBookmark} className="flex-1 py-3 border border-white/10 rounded-full hover:bg-white/10 transition-colors text-white font-bold text-sm tracking-tight flex justify-center items-center gap-2 bg-transparent">
+                            <span className="material-symbols-outlined text-sm">{bookmarked ? "bookmark_added" : "bookmark"}</span>
+                            {bookmarked ? "Saved" : "Save"}
+                        </button>
+                        <button onClick={handleCopyLink} className="flex-1 py-3 border border-white/10 rounded-full hover:bg-white/10 transition-colors text-white font-bold text-sm tracking-tight flex justify-center items-center gap-2 bg-transparent">
+                            <span className="material-symbols-outlined text-sm">ios_share</span> Share
+                        </button>
+                    </div>
+                </div>
+
+                <p className="mt-6 text-center text-[10px] text-on-surface-variant uppercase tracking-widest">{event.source ? `Source: ${event.source}` : "Capacity Restricted."}</p>
               </div>
 
-              {/* Organizer details */}
               {event.organizer?.name && (
-                <div className="bg-surface-container border border-white/5 rounded-2xl p-6 mb-6">
-                  <h3 className="font-headline text-lg font-black text-white mb-4 uppercase tracking-widest text-xs">Origin Protocol</h3>
-                  <div className="flex items-center gap-4">
-                    <div className="w-12 h-12 rounded-xl bg-primary/20 text-primary flex items-center justify-center text-xl font-black border border-primary/30">
-                      {event.organizer.name[0]}
-                    </div>
-                    <div>
-                      <div className="font-bold text-white leading-tight">{event.organizer.name}</div>
-                      {event.organizer.website && (
-                        <a href={event.organizer.website} target="_blank" rel="noopener noreferrer" className="text-xs font-bold text-secondary hover:text-white transition-colors">
-                          Verify origin <ExternalLink size={10} className="inline" />
-                        </a>
-                      )}
-                    </div>
+                <div className="glass-card rounded-lg p-6 flex items-center gap-4">
+                  <div className="w-12 h-12 rounded-full overflow-hidden border-2 border-primary/30 flex justify-center items-center bg-surface-container-highest">
+                     <span className="font-headline font-bold text-primary text-xl">{event.organizer.name[0]}</span>
                   </div>
+                  <div>
+                    <p className="text-xs font-label uppercase font-bold tracking-widest text-on-surface-variant">Event Organizer</p>
+                    <p className="font-headline font-bold text-white">{event.organizer.name}</p>
+                  </div>
+                  {event.organizer.website && (
+                      <a href={event.organizer.website} target="_blank" rel="noopener noreferrer" className="ml-auto material-symbols-outlined text-[#acaab3] hover:text-white transition-colors">language</a>
+                  )}
                 </div>
               )}
-
-              {/* Meta Info Box */}
-              <div className="bg-surface-container border border-white/5 rounded-2xl p-6">
-                <h3 className="font-headline text-lg font-black text-white mb-4 uppercase tracking-widest text-xs">Extraction Data</h3>
-                <div className="flex flex-col gap-3">
-                  {[
-                    { label: "Date", value: new Date(event.date).toLocaleDateString("en-IN", { day: "numeric", month: "short", year: "numeric" }) },
-                    { label: "Matrix", value: event.time || "TBD" },
-                    { label: "Location", value: event.city },
-                    { label: "Class", value: event.category },
-                    ...(event.source ? [{ label: "Node", value: event.source }] : []),
-                  ].map(({ label, value }) => (
-                    <div key={label} className="flex justify-between items-center py-2 border-b border-white/5 last:border-0 last:pb-0">
-                      <span className="text-xs font-bold text-on-surface-variant uppercase">{label}</span>
-                      <span className="text-sm font-bold text-white text-right">{value}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
             </div>
-          </div>
-
-          {/* Related Events */}
-          <div className="mt-32 border-t border-white/5 pt-16">
-            <div className="flex items-center gap-4 mb-8">
-              <span className="material-symbols-outlined text-secondary text-3xl">hub</span>
-              <h2 className="font-headline text-3xl font-black text-white">Related Networks</h2>
-            </div>
-            
-            {relatedLoading ? (
-              <EventsGridSkeleton count={3} />
-            ) : relatedFiltered.length > 0 ? (
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                {relatedFiltered.map((e) => <EventCard key={e._id} event={e} />)}
-              </div>
-            ) : (
-              <p className="text-on-surface-variant bg-surface-container p-6 rounded-xl border border-white/5">No active localized networks detected.</p>
-            )}
           </div>
         </div>
-      </div>
-    </>
+      </main>
+    </div>
   );
 }

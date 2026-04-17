@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>DE·NE | NEON EDITORIAL</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;600;700;800;900&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                "surface-container-highest": "#25252e",
+                "on-surface-variant": "#acaab3",
+                "surface-container-lowest": "#000000",
+                "secondary-fixed": "#ffc4b1",
+                "inverse-surface": "#fcf8ff",
+                "surface-bright": "#2b2b35",
+                "primary": "#bd9dff",
+                "on-primary-container": "#2e006c",
+                "on-primary-fixed": "#000000",
+                "background": "#0e0e14",
+                "secondary-dim": "#ff7440",
+                "on-tertiary-fixed": "#002c37",
+                "on-secondary-fixed": "#621c00",
+                "tertiary-dim": "#00c3eb",
+                "on-tertiary-fixed-variant": "#004c5d",
+                "outline": "#76747d",
+                "on-tertiary": "#004c5e",
+                "inverse-on-surface": "#55545c",
+                "surface-container": "#191920",
+                "tertiary": "#6dddff",
+                "primary-fixed": "#b28cff",
+                "on-tertiary-container": "#004352",
+                "on-error": "#490013",
+                "error-dim": "#d73357",
+                "primary-container": "#b28cff",
+                "tertiary-fixed-dim": "#00c3eb",
+                "surface-container-high": "#1f1f27",
+                "on-primary": "#3c0089",
+                "on-background": "#f5f2fb",
+                "tertiary-fixed": "#00d2fd",
+                "on-secondary": "#400f00",
+                "error": "#ff6e84",
+                "on-primary-fixed-variant": "#390083",
+                "error-container": "#a70138",
+                "on-error-container": "#ffb2b9",
+                "inverse-primary": "#742fe5",
+                "surface-dim": "#0e0e14",
+                "surface-container-low": "#13131a",
+                "primary-fixed-dim": "#a67aff",
+                "secondary-fixed-dim": "#ffb196",
+                "tertiary-container": "#00d2fd",
+                "outline-variant": "#48474f",
+                "secondary": "#ff7440",
+                "primary-dim": "#8a4cfc",
+                "secondary-container": "#aa3600",
+                "on-surface": "#f5f2fb",
+                "on-secondary-container": "#fff6f3",
+                "on-secondary-fixed-variant": "#932e00",
+                "surface-variant": "#25252e",
+                "surface": "#0e0e14",
+                "surface-tint": "#bd9dff"
+            },
+            "borderRadius": {
+                "DEFAULT": "1rem",
+                "lg": "2rem",
+                "xl": "3rem",
+                "full": "9999px"
+            },
+            "fontFamily": {
+                "headline": ["Epilogue"],
+                "body": ["Inter"],
+                "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-card {
+            background: rgba(25, 25, 32, 0.6);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        .hero-gradient {
+            background: linear-gradient(to bottom, transparent 0%, rgba(14, 14, 20, 0.8) 70%, #0e0e14 100%);
+        }
+        .saffron-gradient {
+            background: linear-gradient(135deg, #FF5E1A 0%, #ff7440 100%);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body selection:bg-primary/30">
+<!-- TopAppBar -->
+<nav class="fixed top-0 w-full z-50 bg-transparent backdrop-blur-xl shadow-[0px_1px_0px_rgba(255,255,255,0.08)] flex justify-between items-center px-6 py-4 w-full">
+<div class="flex items-center gap-8">
+<span class="text-2xl font-black text-[#bd9dff] italic font-['Epilogue'] tracking-tighter">NEON EDITORIAL</span>
+<div class="hidden md:flex gap-6 items-center">
+<a class="text-[#acaab3] font-['Epilogue'] tracking-tighter hover:text-[#6dddff] transition-colors duration-300 scale-95 active:scale-90 transition-transform" href="#">Events</a>
+<a class="text-[#acaab3] font-['Epilogue'] tracking-tighter hover:text-[#6dddff] transition-colors duration-300 scale-95 active:scale-90 transition-transform" href="#">Explore</a>
+<a class="text-[#acaab3] font-['Epilogue'] tracking-tighter hover:text-[#6dddff] transition-colors duration-300 scale-95 active:scale-90 transition-transform" href="#">Culture</a>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<button class="material-symbols-outlined text-[#bd9dff] hover:text-[#6dddff] transition-colors duration-300">notifications</button>
+<button class="material-symbols-outlined text-[#bd9dff] hover:text-[#6dddff] transition-colors duration-300">person</button>
+</div>
+</nav>
+<!-- Hero Section -->
+<header class="relative w-full h-[870px] overflow-hidden">
+<div class="absolute inset-0 bg-cover bg-center" data-alt="vibrant neon stage lighting at a night club with silhouettes of a dancing crowd and purple atmospheric haze" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCPdtRYsO8R33GaXNSXDoRoxx1O4LL7ndnnIchr2TaRZnnv8QcJB_sndpP216cGZO0aPChhuCWuhLfDm7TqmMvP3aGjkQu1YRTXzmdhXZwi8dl-PvpiD6gika9yTVT--EO-oGl1MgDuteJtrvFok5AkRgyl7_sEsK9KQEECHj4AiyEWHauUtCRgaFeYPodpiBPAHwQmFNTubA4Ji7FBlKF6hCJBhnEOLzM9b_lOAUMRECLlRb-qAmWeYaQRlHKuAxMZwIQc8NcnUl0')"></div>
+<div class="absolute inset-0 hero-gradient"></div>
+<div class="absolute bottom-0 left-0 w-full px-6 md:px-12 pb-16">
+<div class="max-w-7xl mx-auto">
+<div class="flex flex-wrap gap-2 mb-6">
+<span class="bg-secondary-container text-on-secondary-container px-3 py-1 rounded-sm text-[10px] font-bold tracking-widest uppercase font-label">Trending</span>
+<span class="bg-surface-container-highest text-tertiary px-3 py-1 rounded-sm text-[10px] font-bold tracking-widest uppercase font-label">Exclusive Access</span>
+</div>
+<h1 class="font-headline font-black italic text-6xl md:text-9xl tracking-tighter text-primary leading-none mb-4">DE·NE</h1>
+<p class="text-on-surface-variant font-headline text-lg md:text-2xl max-w-2xl tracking-tight">The ultimate nocturnal intersection of Delhi sound and Noida soul.</p>
+</div>
+</div>
+</header>
+<main class="max-w-7xl mx-auto px-6 md:px-12 py-12">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 relative">
+<!-- Left Column: Content -->
+<div class="lg:col-span-8 space-y-16">
+<!-- Meta Info Section -->
+<section class="grid grid-cols-2 md:grid-cols-4 gap-8 pb-12 border-b border-white/5">
+<div class="space-y-1">
+<span class="text-[10px] font-bold uppercase tracking-widest text-on-surface-variant font-label">Date</span>
+<p class="font-headline text-xl font-bold">24 OCT 2024</p>
+</div>
+<div class="space-y-1">
+<span class="text-[10px] font-bold uppercase tracking-widest text-on-surface-variant font-label">Time</span>
+<p class="font-headline text-xl font-bold">22:00 - 04:00</p>
+</div>
+<div class="space-y-1">
+<span class="text-[10px] font-bold uppercase tracking-widest text-on-surface-variant font-label">Venue</span>
+<p class="font-headline text-xl font-bold">The Obsidian, Noida</p>
+</div>
+<div class="space-y-1">
+<span class="text-[10px] font-bold uppercase tracking-widest text-on-surface-variant font-label">Organizer</span>
+<p class="font-headline text-xl font-bold">Electric Delhi</p>
+</div>
+</section>
+<!-- About Section -->
+<section class="space-y-6">
+<h2 class="font-headline text-4xl font-bold tracking-tight text-on-surface">About This Event</h2>
+<div class="space-y-4 text-on-surface-variant text-lg leading-relaxed">
+<p>Experience the dark heart of the city at <span class="text-primary font-semibold">DE·NE</span>. We are bringing together the most influential underground techno artists from the NCR region for a one-night-only showcase of industrial soundscapes and immersive visual art.</p>
+<p>This isn't just a party; it's a curated editorial experience. Featuring 4D spatial audio and a 360-degree LED installation designed by the 'Neon Collective', we are redefining what nightlife means in the capital.</p>
+</div>
+</section>
+<!-- Agenda Section -->
+<section class="space-y-8">
+<h2 class="font-headline text-4xl font-bold tracking-tight text-on-surface">Agenda</h2>
+<div class="space-y-0 border-l border-white/10 ml-4">
+<div class="relative pl-10 pb-12 group">
+<div class="absolute left-[-5px] top-0 w-2.5 h-2.5 rounded-full bg-tertiary shadow-[0_0_10px_rgba(109,221,255,0.5)] group-hover:scale-125 transition-transform"></div>
+<div class="space-y-1">
+<span class="font-headline text-sm font-bold text-tertiary tracking-tighter">22:00 — 23:30</span>
+<h3 class="text-xl font-bold font-headline">The Arrival</h3>
+<p class="text-on-surface-variant">Ambient modular synth set by <span class="text-white italic">Zero State</span>. Visual warm-up begins.</p>
+</div>
+</div>
+<div class="relative pl-10 pb-12 group">
+<div class="absolute left-[-5px] top-0 w-2.5 h-2.5 rounded-full bg-primary shadow-[0_0_10px_rgba(189,157,255,0.5)] group-hover:scale-125 transition-transform"></div>
+<div class="space-y-1">
+<span class="font-headline text-sm font-bold text-primary tracking-tighter">23:30 — 02:00</span>
+<h3 class="text-xl font-bold font-headline">Main Activation</h3>
+<p class="text-on-surface-variant">Industrial Techno showcase by <span class="text-white italic">Aether Flow</span> and <span class="text-white italic">Kinesis</span>.</p>
+</div>
+</div>
+<div class="relative pl-10 group">
+<div class="absolute left-[-5px] top-0 w-2.5 h-2.5 rounded-full bg-secondary shadow-[0_0_10px_rgba(255,116,64,0.5)] group-hover:scale-125 transition-transform"></div>
+<div class="space-y-1">
+<span class="font-headline text-sm font-bold text-secondary tracking-tighter">02:00 — CLOSE</span>
+<h3 class="text-xl font-bold font-headline">The Void</h3>
+<p class="text-on-surface-variant">High-bpm hard techno closing set by <span class="text-white italic">Neon Curator</span>.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Map / Location -->
+<section class="space-y-6">
+<h2 class="font-headline text-4xl font-bold tracking-tight text-on-surface">Location</h2>
+<div class="w-full h-80 rounded-lg overflow-hidden glass-card relative group">
+<div class="absolute inset-0 bg-cover bg-center grayscale opacity-60 group-hover:grayscale-0 transition-all duration-700" data-alt="a dark stylized map view of a city grid with glowing purple arteries representing main roads" data-location="Noida, India" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAvoLhw95jklrHtipt2mVhR6oZPTTWWXkSgsc4FbBlWN3wHLSAVWL-4LeWAln6ZYXzbu69KBN3lA0IxacY_nPYoZbA9RUZTLShIWwrCOAfCdhGKHK68l4L2G0K_QOyVoZMGFokeJgNPErHXRi3Qhjv8RHrpo5weDuthQZM6wD1MaElVVb1wE89pbVX4XJS2Y2U8Jq2b4mAVaIvQEpHAJ7QCq60rHPG6op0KrQiOlbHZcaVv6epFzQM6KX4LilDparw__RcEYIUhSJM')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent"></div>
+<div class="absolute bottom-6 left-6 p-4 glass-card rounded-md">
+<p class="font-headline font-bold text-sm">The Obsidian</p>
+<p class="text-xs text-on-surface-variant">Plot 12, Sector 144, Noida Expressway</p>
+</div>
+</div>
+</section>
+</div>
+<!-- Right Column: Sticky Card -->
+<div class="lg:col-span-4 lg:block">
+<div class="sticky top-28 space-y-6">
+<div class="glass-card rounded-lg p-8 shadow-[0px_20px_40px_rgba(0,0,0,0.4)]">
+<div class="flex justify-between items-start mb-8">
+<div class="space-y-1">
+<p class="text-[10px] font-bold uppercase tracking-widest text-on-surface-variant font-label">Ticket Price</p>
+<h2 class="text-5xl font-black font-headline text-on-surface">FREE</h2>
+</div>
+<div class="bg-secondary/10 px-3 py-1 rounded-full flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
+<span class="text-secondary text-[10px] font-bold uppercase tracking-tight">Selling fast!</span>
+</div>
+</div>
+<ul class="space-y-4 mb-8">
+<li class="flex gap-3 items-center text-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-tertiary scale-75">check_circle</span>
+                                Entry for 1 Guest
+                            </li>
+<li class="flex gap-3 items-center text-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-tertiary scale-75">check_circle</span>
+                                Digital Collectible (NFT)
+                            </li>
+<li class="flex gap-3 items-center text-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-tertiary scale-75">check_circle</span>
+                                Welcome Drink on Arrival
+                            </li>
+</ul>
+<button class="w-full py-5 rounded-full saffron-gradient text-white font-headline font-black text-lg tracking-tight shadow-[0px_10px_30px_rgba(255,94,26,0.3)] hover:scale-[1.02] active:scale-95 transition-all duration-300">
+                            Register Now
+                        </button>
+<p class="mt-6 text-center text-[10px] text-on-surface-variant uppercase tracking-widest">Limited Capacity. 21+ Only.</p>
+</div>
+<div class="glass-card rounded-lg p-6 flex items-center gap-4">
+<div class="w-12 h-12 rounded-full overflow-hidden border-2 border-primary/30">
+<img class="w-full h-full object-cover" data-alt="portrait of a young man with stylish glasses and modern haircut in studio lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCY1HGNLQ2lc6vXKBhKPh_cE8uddXzYVlT3LD3RrYWrNi9_2jI9YksKApXn5FNDpy71eB2EnOnwrJ6mxOgsppOanqj2Yt2GTESgczQSg4M90fVY9b-7W7xV6mOvfb4NyMsH9zdAqpU2_PXQnpluRl-GD4YCE2OhIpQM4zG7twC8YqPn3w9r0QbjAh9LoGCNJm5LU0Oa0CUtoNQzEfuQs7nUsrmPnKnC9RQ2wuUBRUc5fu1zt52526V7nLfzX9zH2QuOyEEqQxlNj1g"/>
+</div>
+<div>
+<p class="text-xs font-label uppercase font-bold tracking-widest text-on-surface-variant">Guest List Curator</p>
+<p class="font-headline font-bold">Karan Sharma</p>
+</div>
+<button class="ml-auto material-symbols-outlined text-[#acaab3] hover:text-white transition-colors">chat_bubble</button>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer Space for Mobile Padding -->
+<div class="h-24 md:hidden"></div>
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full flex justify-around items-center px-4 pb-6 pt-2 bg-[#191920]/60 backdrop-blur-2xl rounded-t-3xl border-t border-white/10 z-50 shadow-[0px_-10px_30px_rgba(255,116,64,0.15)]">
+<a class="flex flex-col items-center justify-center text-[#acaab3] p-3 hover:text-[#6dddff] transition-transform duration-200" href="#">
+<span class="material-symbols-outlined">local_activity</span>
+<span class="font-['Inter'] text-[10px] font-bold tracking-tighter">Events</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#acaab3] p-3 hover:text-[#6dddff] transition-transform duration-200" href="#">
+<span class="material-symbols-outlined">search</span>
+<span class="font-['Inter'] text-[10px] font-bold tracking-tighter">Search</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#acaab3] p-3 hover:text-[#6dddff] transition-transform duration-200" href="#">
+<span class="material-symbols-outlined">style</span>
+<span class="font-['Inter'] text-[10px] font-bold tracking-tighter">Tickets</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#acaab3] p-3 hover:text-[#6dddff] transition-transform duration-200" href="#">
+<span class="material-symbols-outlined">account_circle</span>
+<span class="font-['Inter'] text-[10px] font-bold tracking-tighter">Me</span>
+</a>
+</nav>
+</body></html>

@@ -46,3 +46,7 @@ html, body {
 @media (min-width: 1024px) {
   .masonry-grid { columns: 3; }
 }
+
+.glass-card { background: rgba(25, 25, 32, 0.6); backdrop-filter: blur(20px); border: 1px solid rgba(255, 255, 255, 0.08); }
+.hero-gradient { background: linear-gradient(to bottom, transparent 0%, rgba(14, 14, 20, 0.8) 70%, #0e0e14 100%); }
+.saffron-gradient { background: linear-gradient(135deg, #FF5E1A 0%, #ff7440 100%); }

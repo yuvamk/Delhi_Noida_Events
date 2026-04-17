@@ -1,7 +1,11 @@
 "use client";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 export function Footer() {
+  const pathname = usePathname();
+  if (pathname?.startsWith("/admin")) return null;
+
   return (
     <footer className="w-full pt-20 pb-10 border-t border-white/5 bg-[#0e0e14] font-inter">
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 px-8 md:px-12 max-w-7xl mx-auto">
@@ -24,17 +28,17 @@ export function Footer() {
             </Link>
           </div>
         </div>
-        
+
         <div>
           <h4 className="text-white font-black mb-8 text-xs uppercase tracking-[0.2em]">The Magazine</h4>
           <ul className="space-y-4">
+            <li><Link className="text-primary hover:text-white font-bold transition-colors text-sm" href="/about">Our Story</Link></li>
             <li><Link className="text-[#acaab3] hover:text-primary transition-colors text-sm" href="#">Cultural Reports</Link></li>
             <li><Link className="text-[#acaab3] hover:text-primary transition-colors text-sm" href="#">Artist Spotlights</Link></li>
             <li><Link className="text-[#acaab3] hover:text-primary transition-colors text-sm" href="#">The Weekend List</Link></li>
-            <li><Link className="text-[#acaab3] hover:text-primary transition-colors text-sm" href="#">Underground Guides</Link></li>
           </ul>
         </div>
-        
+
         <div>
           <h4 className="text-white font-black mb-8 text-xs uppercase tracking-[0.2em]">Explore</h4>
           <ul className="space-y-4">
@@ -44,7 +48,7 @@ export function Footer() {
             <li><Link className="text-[#acaab3] hover:text-secondary transition-colors text-sm" href="#">Culinary Pop-ups</Link></li>
           </ul>
         </div>
-        
+
         <div>
           <h4 className="text-white font-black mb-8 text-xs uppercase tracking-[0.2em]">Contact</h4>
           <ul className="space-y-4">
@@ -55,7 +59,7 @@ export function Footer() {
           </ul>
         </div>
       </div>
-      
+
       <div className="mt-20 border-t border-white/5 pt-10 text-center px-6">
         <p className="text-[#acaab3] text-xs font-medium tracking-widest">
           © {new Date().getFullYear()} DE·NE EDITORIAL. DESIGNED FOR THE ELECTRIC GENERATION.

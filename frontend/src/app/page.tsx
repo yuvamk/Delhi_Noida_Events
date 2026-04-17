@@ -110,7 +110,7 @@ export default function HomePage() {
                 <img 
                   alt={event.title} 
                   className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" 
-                  src={event.image || `https://picsum.photos/seed/${event._id}/600/800`} 
+                  src={event.images?.[0] || `https://picsum.photos/seed/${event._id}/600/800`} 
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-surface via-surface/20 to-transparent"></div>
                 <div className="absolute bottom-0 p-8 w-full">
@@ -132,9 +132,8 @@ export default function HomePage() {
               </div>
             </Link>
           ))}
-          {/* Fallback Static Cards exactly as modeled by Stitch if API hasn't generated enough events */}
           {trending.length < 3 && !loadingTrending && (
-             <div className="min-w-[320px] md:min-w-[400px] snap-start group relative transition-all duration-500 hover:-translate-y-2">
+             <Link href="/events/mock-event" className="min-w-[320px] md:min-w-[400px] snap-start group relative transition-all duration-500 hover:-translate-y-2 block">
                 <div className="relative h-[500px] rounded-lg overflow-hidden bg-surface-container">
                   <img alt="" className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBekLdEFGjOD8zK4m3w1YPPPwjdr1IfnwvW4aLTX14hJ2GlckqML4mBzv7UDmc92s-Dg_p-3JgsUw_-accjdeov59EeVQlWk0Kmu4i5hQ7TRp7JHdeODc8mo_lmKGP7qFC-pO8dIfpOosKYrwzCz1yyD2tWGnezCF1VEIV8c1OJG6iAJv8rZS2oVSq5QjUNERqdykJiZElHy9SzXNeAZL1XTdL15-e2mLrVN42JHrDKlUbu3EEV0Y5xQghg7epR6L8EpCqNNgrxInE"/>
                   <div className="absolute inset-0 bg-gradient-to-t from-surface via-surface/20 to-transparent"></div>
@@ -147,7 +146,7 @@ export default function HomePage() {
                     </div>
                   </div>
                 </div>
-              </div>
+              </Link>
           )}
         </div>
       </section>

@@ -11,6 +11,8 @@ export function Header() {
   const { user, isAuthenticated, logout } = useAuth();
   const { openSearch, openLogin } = useUI();
 
+  if (pathname?.startsWith("/admin")) return null;
+
   return (
     <header className="fixed top-0 w-full z-50 bg-[#0e0e14]/60 backdrop-blur-md border-b border-white/5">
       <div className="flex justify-between items-center px-6 md:px-12 h-20 w-full max-w-none mx-auto">
@@ -23,6 +25,7 @@ export function Header() {
             <Link href="/events" className={`${pathname === '/events' ? 'text-primary font-black italic tracking-tight' : 'text-on-surface-variant hover:text-white transition-colors'} font-headline text-sm uppercase`}>All Events</Link>
             <Link href="/delhi-events" className={`${pathname === '/delhi-events' ? 'text-primary font-black italic tracking-tight' : 'text-on-surface-variant hover:text-white transition-colors'} font-headline text-sm uppercase`}>Delhi</Link>
             <Link href="/noida-events" className={`${pathname === '/noida-events' ? 'text-primary font-black italic tracking-tight' : 'text-on-surface-variant hover:text-white transition-colors'} font-headline text-sm uppercase`}>Noida</Link>
+            <Link href="/about" className={`${pathname === '/about' ? 'text-primary font-black italic tracking-tight' : 'text-on-surface-variant hover:text-white transition-colors'} font-headline text-sm uppercase`}>About</Link>
           </nav>
         </div>
         
@@ -40,11 +43,19 @@ export function Header() {
           </button>
           
           {isAuthenticated ? (
-            <div className="flex items-center gap-4">
-               <div className="w-9 h-9 rounded-full bg-primary/20 border border-primary/20 flex items-center justify-center font-black italic text-primary text-xs shadow-[0_0_15px_rgba(189,157,255,0.2)]">
-                  {user?.name?.[0]?.toUpperCase()}
-               </div>
-               <button onClick={logout} className="hidden md:block text-on-surface-variant/60 hover:text-error transition-colors font-black text-[10px] uppercase tracking-widest">Logout</button>
+            <div className="flex items-center gap-6">
+              <Link href="/profile" className="relative group cursor-pointer block">
+                <div className="absolute -inset-1 bg-gradient-to-r from-primary via-secondary to-tertiary rounded-full blur opacity-40 group-hover:opacity-75 transition duration-500 animate-pulse"></div>
+                <div className="relative w-10 h-10 rounded-full border border-primary/30 p-[2px] bg-background overflow-hidden z-10 transition-transform duration-300 group-hover:scale-105">
+                  {user?.avatar ? (
+                    <img className="w-full h-full object-cover rounded-full" src={user.avatar} alt={user.name} />
+                  ) : (
+                    <div className="w-full h-full rounded-full bg-surface-variant flex items-center justify-center font-black text-white hover:text-primary transition-colors text-sm uppercase font-headline">
+                      {user?.name?.[0]?.toUpperCase() || "U"}
+                    </div>
+                  )}
+                </div>
+              </Link>
             </div>
           ) : (
             <button 

@@ -122,10 +122,10 @@ export const getMe = asyncHandler(async (req: AuthRequest, res: Response) => {
 
 // ─── PUT /api/v1/auth/profile ────────────────────────────────
 export const updateProfile = asyncHandler(async (req: AuthRequest, res: Response) => {
-  const { name, cityPreference, categoryPreferences, notificationsEnabled } = req.body;
+  const { name, phone, bio, avatar, cityPreference, categoryPreferences, notificationsEnabled } = req.body;
   const user = await User.findByIdAndUpdate(
     req.userId,
-    { name, cityPreference, categoryPreferences, notificationsEnabled },
+    { name, phone, bio, avatar, cityPreference, categoryPreferences, notificationsEnabled },
     { new: true, runValidators: true }
   );
   if (!user) return res.status(404).json({ success: false, error: "User not found" });

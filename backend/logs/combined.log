@@ -382,3 +382,282 @@ Error: Cannot set headers after they are sent to the client
     at afterWrite (node:internal/streams/writable:701:5)
     at afterWriteTick (node:internal/streams/writable:687:10)
     at processTicksAndRejections (node:internal/process/task_queues:81:21)
+2026-04-17 11:20:01 [warn]: ⚠️ Supabase credentials missing. Supabase integration disabled.
+2026-04-17 11:20:03 [info]: ℹ️ Redis URL not configured — caching disabled (set REDIS_URL to enable)
+2026-04-17 11:20:03 [info]: 
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+2026-04-17 11:20:03 [info]: 🚀 Delhi-Noida Events API  —  v1.0.0
+2026-04-17 11:20:03 [info]: 🌍 http://0.0.0.0:5005/api/v1
+2026-04-17 11:20:03 [info]: 🏥 Health:   http://localhost:5005/api/v1/health
+2026-04-17 11:20:03 [info]: ✅ Ready:    http://localhost:5005/api/v1/ready
+2026-04-17 11:20:03 [info]: 📊 Metrics:  http://localhost:5005/api/v1/metrics
+2026-04-17 11:20:03 [info]: 🌆 ENV:      development
+2026-04-17 11:20:03 [info]: 🔧 Worker:   standalone
+2026-04-17 11:20:03 [warn]: 🛡️  MODE:     SAFE MODE (Database Disconnected)
+2026-04-17 11:20:03 [info]: ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+2026-04-17 11:20:13 [warn]: ⚠️ MongoDB disconnected
+2026-04-17 11:20:13 [error]: MongoDB connection failed (attempt 1/5): connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2026-04-17 11:20:13 [info]: Retrying MongoDB in 2s...
+2026-04-17 11:20:13 [error]: ❌ MongoDB error: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2026-04-17 11:20:25 [warn]: ⚠️ MongoDB disconnected
+2026-04-17 11:20:25 [warn]: ⚠️ MongoDB disconnected
+2026-04-17 11:20:25 [error]: MongoDB connection failed (attempt 2/5): connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2026-04-17 11:20:25 [info]: Retrying MongoDB in 4s...
+2026-04-17 11:20:25 [error]: ❌ MongoDB error: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2026-04-17 11:20:25 [error]: ❌ MongoDB error: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2026-04-17 11:20:39 [warn]: ⚠️ MongoDB disconnected
+2026-04-17 11:20:39 [warn]: ⚠️ MongoDB disconnected
+2026-04-17 11:20:39 [warn]: ⚠️ MongoDB disconnected
+2026-04-17 11:20:39 [error]: MongoDB connection failed (attempt 3/5): connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2026-04-17 11:20:39 [info]: Retrying MongoDB in 8s...
+2026-04-17 11:20:39 [error]: ❌ MongoDB error: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2026-04-17 11:20:39 [error]: ❌ MongoDB error: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2026-04-17 11:20:39 [error]: ❌ MongoDB error: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2026-04-17 11:20:57 [warn]: ⚠️ MongoDB disconnected
+2026-04-17 11:20:57 [warn]: ⚠️ MongoDB disconnected
+2026-04-17 11:20:57 [warn]: ⚠️ MongoDB disconnected
+2026-04-17 11:20:57 [warn]: ⚠️ MongoDB disconnected
+2026-04-17 11:20:57 [error]: MongoDB connection failed (attempt 4/5): connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2026-04-17 11:20:57 [info]: Retrying MongoDB in 16s...
+2026-04-17 11:20:57 [error]: ❌ MongoDB error: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2026-04-17 11:20:57 [error]: ❌ MongoDB error: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2026-04-17 11:20:57 [error]: ❌ MongoDB error: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2026-04-17 11:20:57 [error]: ❌ MongoDB error: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2026-04-17 11:21:20 [warn]: Safe Mode: Database disconnected. Serving MOCK_EVENTS for Listing.
+2026-04-17 11:21:20 [error]: Uncaught Exception: Cannot set headers after they are sent to the client
+Error: Cannot set headers after they are sent to the client
+    at ServerResponse.setHeader (node:_http_outgoing:699:11)
+    at ServerResponse.<anonymous> (C:\Users\pc\Downloads\DE_NE_Events\backend\src\server.ts:95:9)
+    at ServerResponse.emit (node:events:530:35)
+    at ServerResponse.emit (node:domain:489:12)
+    at onFinish (node:_http_outgoing:1081:10)
+    at afterWrite (node:internal/streams/writable:710:5)
+    at afterWriteTick (node:internal/streams/writable:696:10)
+    at processTicksAndRejections (node:internal/process/task_queues:89:21)
+2026-04-17 11:21:20 [info]: 
+📴 UNCAUGHT_EXCEPTION received. Graceful shutdown...
+2026-04-17 11:21:20 [error]: Uncaught Exception: Cannot set headers after they are sent to the client
+Error: Cannot set headers after they are sent to the client
+    at ServerResponse.setHeader (node:_http_outgoing:699:11)
+    at ServerResponse.<anonymous> (C:\Users\pc\Downloads\DE_NE_Events\backend\src\server.ts:95:9)
+    at ServerResponse.emit (node:events:530:35)
+    at ServerResponse.emit (node:domain:489:12)
+    at onFinish (node:_http_outgoing:1081:10)
+    at afterWrite (node:internal/streams/writable:710:5)
+    at afterWriteTick (node:internal/streams/writable:696:10)
+    at processTicksAndRejections (node:internal/process/task_queues:89:21)
+2026-04-17 11:21:20 [error]: Uncaught Exception: Cannot set headers after they are sent to the client
+Error: Cannot set headers after they are sent to the client
+    at ServerResponse.setHeader (node:_http_outgoing:699:11)
+    at ServerResponse.<anonymous> (C:\Users\pc\Downloads\DE_NE_Events\backend\src\server.ts:95:9)
+    at ServerResponse.emit (node:events:530:35)
+    at ServerResponse.emit (node:domain:489:12)
+    at onFinish (node:_http_outgoing:1081:10)
+    at afterWrite (node:internal/streams/writable:710:5)
+    at afterWriteTick (node:internal/streams/writable:696:10)
+    at processTicksAndRejections (node:internal/process/task_queues:89:21)
+2026-04-17 11:21:20 [info]: GET /api/v1/events/trending 200 - - 1.264 ms [w:0]
+2026-04-17 11:21:23 [warn]: ⚠️ MongoDB disconnected
+2026-04-17 11:21:23 [warn]: ⚠️ MongoDB disconnected
+2026-04-17 11:21:23 [warn]: ⚠️ MongoDB disconnected
+2026-04-17 11:21:23 [warn]: ⚠️ MongoDB disconnected
+2026-04-17 11:21:23 [warn]: ⚠️ MongoDB disconnected
+2026-04-17 11:21:23 [error]: MongoDB connection failed (attempt 5/5): connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2026-04-17 11:21:23 [error]: MongoDB: max retries exceeded. Proceeding without database (Some features will be disabled).
+2026-04-17 11:21:23 [error]: ❌ MongoDB error: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2026-04-17 11:21:23 [error]: ❌ MongoDB error: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2026-04-17 11:21:23 [error]: ❌ MongoDB error: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2026-04-17 11:21:23 [error]: ❌ MongoDB error: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2026-04-17 11:21:23 [error]: ❌ MongoDB error: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2026-04-17 11:21:35 [error]: ⚠️ Forced shutdown after 15s timeout
+2026-04-17 12:45:29 [warn]: ⚠️ Supabase credentials missing. Supabase integration disabled.
+2026-04-17 12:45:30 [info]: ℹ️ Redis URL not configured — caching disabled (set REDIS_URL to enable)
+2026-04-17 12:45:30 [info]: 
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+2026-04-17 12:45:30 [info]: 🚀 Delhi-Noida Events API  —  v1.0.0
+2026-04-17 12:45:30 [info]: 🌍 http://0.0.0.0:5005/api/v1
+2026-04-17 12:45:30 [info]: 🏥 Health:   http://localhost:5005/api/v1/health
+2026-04-17 12:45:30 [info]: ✅ Ready:    http://localhost:5005/api/v1/ready
+2026-04-17 12:45:30 [info]: 📊 Metrics:  http://localhost:5005/api/v1/metrics
+2026-04-17 12:45:30 [info]: 🌆 ENV:      development
+2026-04-17 12:45:30 [info]: 🔧 Worker:   standalone
+2026-04-17 12:45:30 [warn]: 🛡️  MODE:     SAFE MODE (Database Disconnected)
+2026-04-17 12:45:30 [info]: ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+2026-04-17 12:45:40 [warn]: ⚠️ MongoDB disconnected
+2026-04-17 12:45:40 [error]: MongoDB connection failed (attempt 1/5): connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2026-04-17 12:45:40 [info]: Retrying MongoDB in 2s...
+2026-04-17 12:45:40 [error]: ❌ MongoDB error: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2026-04-17 12:45:56 [warn]: ⚠️ Supabase credentials missing. Supabase integration disabled.
+2026-04-17 12:45:57 [info]: ℹ️ Redis URL not configured — caching disabled (set REDIS_URL to enable)
+2026-04-17 12:45:57 [info]: 
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+2026-04-17 12:45:57 [info]: 🚀 Delhi-Noida Events API  —  v1.0.0
+2026-04-17 12:45:57 [info]: 🌍 http://0.0.0.0:5005/api/v1
+2026-04-17 12:45:57 [info]: 🏥 Health:   http://localhost:5005/api/v1/health
+2026-04-17 12:45:57 [info]: ✅ Ready:    http://localhost:5005/api/v1/ready
+2026-04-17 12:45:57 [info]: 📊 Metrics:  http://localhost:5005/api/v1/metrics
+2026-04-17 12:45:57 [info]: 🌆 ENV:      development
+2026-04-17 12:45:57 [info]: 🔧 Worker:   standalone
+2026-04-17 12:45:57 [warn]: 🛡️  MODE:     SAFE MODE (Database Disconnected)
+2026-04-17 12:45:57 [info]: ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+2026-04-17 12:46:07 [warn]: ⚠️ MongoDB disconnected
+2026-04-17 12:46:07 [error]: MongoDB connection failed (attempt 1/5): connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2026-04-17 12:46:07 [info]: Retrying MongoDB in 2s...
+2026-04-17 12:46:07 [error]: ❌ MongoDB error: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2026-04-17 12:46:15 [warn]: Safe Mode: Database disconnected. Serving MOCK_EVENTS for Listing.
+2026-04-17 12:46:15 [error]: Uncaught Exception: Cannot set headers after they are sent to the client
+Error: Cannot set headers after they are sent to the client
+    at ServerResponse.setHeader (node:_http_outgoing:699:11)
+    at ServerResponse.<anonymous> (C:\Users\pc\Downloads\DE_NE_Events\backend\src\server.ts:95:9)
+    at ServerResponse.emit (node:events:530:35)
+    at ServerResponse.emit (node:domain:489:12)
+    at onFinish (node:_http_outgoing:1081:10)
+    at afterWrite (node:internal/streams/writable:710:5)
+    at afterWriteTick (node:internal/streams/writable:696:10)
+    at processTicksAndRejections (node:internal/process/task_queues:89:21)
+2026-04-17 12:46:15 [info]: 
+📴 UNCAUGHT_EXCEPTION received. Graceful shutdown...
+2026-04-17 12:46:15 [info]: GET /api/v1/events?page=1&limit=12&sort=date 200 - - 25.400 ms [w:0]
+2026-04-17 12:46:19 [warn]: ⚠️ MongoDB disconnected
+2026-04-17 13:15:28 [warn]: ⚠️ Supabase credentials missing. Supabase integration disabled.
+2026-04-17 13:15:29 [info]: ℹ️ Redis URL not configured — caching disabled (set REDIS_URL to enable)
+2026-04-17 13:15:29 [info]: 
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+2026-04-17 13:15:29 [info]: 🚀 Delhi-Noida Events API  —  v1.0.0
+2026-04-17 13:15:29 [info]: 🌍 http://0.0.0.0:5005/api/v1
+2026-04-17 13:15:29 [info]: 🏥 Health:   http://localhost:5005/api/v1/health
+2026-04-17 13:15:29 [info]: ✅ Ready:    http://localhost:5005/api/v1/ready
+2026-04-17 13:15:29 [info]: 📊 Metrics:  http://localhost:5005/api/v1/metrics
+2026-04-17 13:15:29 [info]: 🌆 ENV:      development
+2026-04-17 13:15:29 [info]: 🔧 Worker:   standalone
+2026-04-17 13:15:29 [warn]: 🛡️  MODE:     SAFE MODE (Database Disconnected)
+2026-04-17 13:15:29 [info]: ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+2026-04-17 13:15:39 [warn]: ⚠️ MongoDB disconnected
+2026-04-17 13:15:39 [error]: MongoDB connection failed (attempt 1/5): connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2026-04-17 13:15:39 [info]: Retrying MongoDB in 2s...
+2026-04-17 13:15:39 [error]: ❌ MongoDB error: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2026-04-17 13:15:51 [warn]: ⚠️ MongoDB disconnected
+2026-04-17 13:15:51 [warn]: ⚠️ MongoDB disconnected
+2026-04-17 13:15:51 [error]: MongoDB connection failed (attempt 2/5): connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2026-04-17 13:15:51 [info]: Retrying MongoDB in 4s...
+2026-04-17 13:15:51 [error]: ❌ MongoDB error: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2026-04-17 13:15:51 [error]: ❌ MongoDB error: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2026-04-17 13:16:05 [warn]: ⚠️ MongoDB disconnected
+2026-04-17 13:16:05 [warn]: ⚠️ MongoDB disconnected
+2026-04-17 13:16:05 [warn]: ⚠️ MongoDB disconnected
+2026-04-17 13:16:05 [error]: MongoDB connection failed (attempt 3/5): connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2026-04-17 13:16:05 [info]: Retrying MongoDB in 8s...
+2026-04-17 13:16:05 [error]: ❌ MongoDB error: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2026-04-17 13:16:05 [error]: ❌ MongoDB error: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2026-04-17 13:16:05 [error]: ❌ MongoDB error: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2026-04-17 13:16:13 [warn]: ⚠️ Supabase credentials missing. Supabase integration disabled.
+2026-04-17 13:16:14 [info]: ℹ️ Redis URL not configured — caching disabled (set REDIS_URL to enable)
+2026-04-17 13:16:14 [info]: 
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+2026-04-17 13:16:14 [info]: 🚀 Delhi-Noida Events API  —  v1.0.0
+2026-04-17 13:16:14 [info]: 🌍 http://0.0.0.0:5005/api/v1
+2026-04-17 13:16:14 [info]: 🏥 Health:   http://localhost:5005/api/v1/health
+2026-04-17 13:16:14 [info]: ✅ Ready:    http://localhost:5005/api/v1/ready
+2026-04-17 13:16:14 [info]: 📊 Metrics:  http://localhost:5005/api/v1/metrics
+2026-04-17 13:16:14 [info]: 🌆 ENV:      development
+2026-04-17 13:16:14 [info]: 🔧 Worker:   standalone
+2026-04-17 13:16:14 [warn]: 🛡️  MODE:     SAFE MODE (Database Disconnected)
+2026-04-17 13:16:14 [info]: ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+2026-04-17 13:16:24 [warn]: ⚠️ MongoDB disconnected
+2026-04-17 13:16:24 [error]: MongoDB connection failed (attempt 1/5): connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2026-04-17 13:16:24 [info]: Retrying MongoDB in 2s...
+2026-04-17 13:16:24 [error]: ❌ MongoDB error: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2026-04-17 13:16:40 [warn]: ⚠️ Supabase credentials missing. Supabase integration disabled.
+2026-04-17 13:16:41 [info]: ℹ️ Redis URL not configured — caching disabled (set REDIS_URL to enable)
+2026-04-17 13:16:41 [info]: 
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+2026-04-17 13:16:41 [info]: 🚀 Delhi-Noida Events API  —  v1.0.0
+2026-04-17 13:16:41 [info]: 🌍 http://0.0.0.0:5005/api/v1
+2026-04-17 13:16:41 [info]: 🏥 Health:   http://localhost:5005/api/v1/health
+2026-04-17 13:16:41 [info]: ✅ Ready:    http://localhost:5005/api/v1/ready
+2026-04-17 13:16:41 [info]: 📊 Metrics:  http://localhost:5005/api/v1/metrics
+2026-04-17 13:16:41 [info]: 🌆 ENV:      development
+2026-04-17 13:16:41 [info]: 🔧 Worker:   standalone
+2026-04-17 13:16:41 [warn]: 🛡️  MODE:     SAFE MODE (Database Disconnected)
+2026-04-17 13:16:41 [info]: ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+2026-04-17 13:16:51 [warn]: ⚠️ MongoDB disconnected
+2026-04-17 13:16:51 [error]: MongoDB connection failed (attempt 1/5): connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2026-04-17 13:16:51 [info]: Retrying MongoDB in 2s...
+2026-04-17 13:16:51 [error]: ❌ MongoDB error: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2026-04-17 13:17:03 [warn]: ⚠️ MongoDB disconnected
+2026-04-17 13:17:03 [warn]: ⚠️ MongoDB disconnected
+2026-04-17 13:17:03 [error]: MongoDB connection failed (attempt 2/5): connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2026-04-17 13:17:03 [info]: Retrying MongoDB in 4s...
+2026-04-17 13:17:03 [error]: ❌ MongoDB error: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2026-04-17 13:17:03 [error]: ❌ MongoDB error: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2026-04-17 13:52:51 [warn]: ⚠️ Supabase credentials missing. Supabase integration disabled.
+2026-04-17 13:52:51 [warn]: ⚠️ Supabase credentials missing. Supabase integration disabled.
+2026-04-17 13:52:52 [info]: ℹ️ Redis URL not configured — caching disabled (set REDIS_URL to enable)
+2026-04-17 13:52:53 [error]: Uncaught Exception: listen EADDRINUSE: address already in use 0.0.0.0:5005
+Error: listen EADDRINUSE: address already in use 0.0.0.0:5005
+    at Server.setupListenHandle [as _listen2] (node:net:1939:16)
+    at listenInCluster (node:net:1996:12)
+    at node:net:2205:7
+    at processTicksAndRejections (node:internal/process/task_queues:90:21)
+2026-04-17 13:52:53 [info]: 
+📴 UNCAUGHT_EXCEPTION received. Graceful shutdown...
+2026-04-17 13:52:52 [info]: ℹ️ Redis URL not configured — caching disabled (set REDIS_URL to enable)
+2026-04-17 13:52:53 [info]: 
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+2026-04-17 13:52:53 [info]: 🚀 Delhi-Noida Events API  —  v1.0.0
+2026-04-17 13:52:53 [info]: 🌍 http://0.0.0.0:5005/api/v1
+2026-04-17 13:52:53 [info]: 🏥 Health:   http://localhost:5005/api/v1/health
+2026-04-17 13:52:53 [info]: ✅ Ready:    http://localhost:5005/api/v1/ready
+2026-04-17 13:52:53 [info]: 📊 Metrics:  http://localhost:5005/api/v1/metrics
+2026-04-17 13:52:53 [info]: 🌆 ENV:      development
+2026-04-17 13:52:53 [info]: 🔧 Worker:   standalone
+2026-04-17 13:52:53 [warn]: 🛡️  MODE:     SAFE MODE (Database Disconnected)
+2026-04-17 13:52:53 [info]: ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+2026-04-17 13:53:03 [warn]: ⚠️ MongoDB disconnected
+2026-04-17 13:53:03 [warn]: ⚠️ MongoDB disconnected
+2026-04-17 13:53:03 [error]: MongoDB connection failed (attempt 1/5): connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2026-04-17 13:53:03 [info]: Retrying MongoDB in 2s...
+2026-04-17 13:53:03 [error]: ❌ MongoDB error: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2026-04-17 13:53:15 [warn]: ⚠️ MongoDB disconnected
+2026-04-17 13:53:15 [warn]: ⚠️ MongoDB disconnected
+2026-04-17 13:53:15 [error]: MongoDB connection failed (attempt 2/5): connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2026-04-17 13:53:15 [info]: Retrying MongoDB in 4s...
+2026-04-17 13:53:15 [error]: ❌ MongoDB error: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2026-04-17 13:53:15 [error]: ❌ MongoDB error: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2026-04-17 13:53:29 [warn]: ⚠️ MongoDB disconnected
+2026-04-17 13:53:29 [warn]: ⚠️ MongoDB disconnected
+2026-04-17 13:53:29 [warn]: ⚠️ MongoDB disconnected
+2026-04-17 13:53:29 [error]: MongoDB connection failed (attempt 3/5): connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2026-04-17 13:53:29 [info]: Retrying MongoDB in 8s...
+2026-04-17 13:53:29 [error]: ❌ MongoDB error: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2026-04-17 13:53:29 [error]: ❌ MongoDB error: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2026-04-17 13:53:29 [error]: ❌ MongoDB error: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2026-04-17 13:53:47 [warn]: ⚠️ MongoDB disconnected
+2026-04-17 13:53:47 [warn]: ⚠️ MongoDB disconnected
+2026-04-17 13:53:47 [warn]: ⚠️ MongoDB disconnected
+2026-04-17 13:53:47 [warn]: ⚠️ MongoDB disconnected
+2026-04-17 13:53:47 [error]: MongoDB connection failed (attempt 4/5): connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2026-04-17 13:53:47 [info]: Retrying MongoDB in 16s...
+2026-04-17 13:53:47 [error]: ❌ MongoDB error: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2026-04-17 13:53:47 [error]: ❌ MongoDB error: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2026-04-17 13:53:47 [error]: ❌ MongoDB error: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2026-04-17 13:53:47 [error]: ❌ MongoDB error: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2026-04-17 13:54:13 [warn]: ⚠️ MongoDB disconnected
+2026-04-17 13:54:13 [warn]: ⚠️ MongoDB disconnected
+2026-04-17 13:54:13 [warn]: ⚠️ MongoDB disconnected
+2026-04-17 13:54:13 [warn]: ⚠️ MongoDB disconnected
+2026-04-17 13:54:13 [warn]: ⚠️ MongoDB disconnected
+2026-04-17 13:54:13 [error]: MongoDB connection failed (attempt 5/5): connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2026-04-17 13:54:13 [error]: MongoDB: max retries exceeded. Proceeding without database (Some features will be disabled).
+2026-04-17 13:54:13 [error]: ❌ MongoDB error: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2026-04-17 13:54:13 [error]: ❌ MongoDB error: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2026-04-17 13:54:13 [error]: ❌ MongoDB error: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2026-04-17 13:54:13 [error]: ❌ MongoDB error: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2026-04-17 13:54:13 [error]: ❌ MongoDB error: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017

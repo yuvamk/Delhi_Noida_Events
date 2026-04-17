@@ -1,0 +1,81 @@
+name: Deploy to Google Cloud
+
+on:
+  push:
+    branches:
+      - main
+
+env:
+  PROJECT_ID: your-google-cloud-project-id # IMPORTANT: Replace with actual GCP Project ID
+  REGION: us-central1
+  GAR_LOCATION: us-central1
+  SERVICE_FRONTEND: dene-frontend
+  SERVICE_BACKEND: dene-backend
+  JOB_SCRAPER: dene-scraper-job
+
+jobs:
+  deploy:
+    permissions:
+      contents: 'read'
+      id-token: 'write'
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout Code
+      uses: actions/checkout@v4
+
+    - id: 'auth'
+      name: 'Authenticate to Google Cloud'
+      uses: 'google-github-actions/auth@v2'
+      with:
+        # IMPORTANT: Set up Workload Identity Federation in GCP and add the provider here
+        workload_identity_provider: 'projects/123456789/locations/global/workloadIdentityPools/my-pool/providers/my-provider'
+        service_account: 'my-service-account@your-google-cloud-project-id.iam.gserviceaccount.com'
+
+    - name: 'Set up Cloud SDK'
+      uses: 'google-github-actions/setup-gcloud@v2'
+
+    - name: 'Docker Auth'
+      run: |-
+        gcloud auth configure-docker "${{ env.GAR_LOCATION }}-docker.pkg.dev"
+
+    # --- DEPLOY BACKEND ---
+    - name: 'Build and Push Backend Container'
+      run: |-
+        docker build -t "${{ env.GAR_LOCATION }}-docker.pkg.dev/${{ env.PROJECT_ID }}/dene-repo/${{ env.SERVICE_BACKEND }}:${{ github.sha }}" ./backend
+        docker push "${{ env.GAR_LOCATION }}-docker.pkg.dev/${{ env.PROJECT_ID }}/dene-repo/${{ env.SERVICE_BACKEND }}:${{ github.sha }}"
+
+    - name: 'Deploy Backend to Cloud Run'
+      uses: 'google-github-actions/deploy-cloudrun@v2'
+      with:
+        service: '${{ env.SERVICE_BACKEND }}'
+        region: '${{ env.REGION }}'
+        image: '${{ env.GAR_LOCATION }}-docker.pkg.dev/${{ env.PROJECT_ID }}/dene-repo/${{ env.SERVICE_BACKEND }}:${{ github.sha }}'
+
+    # --- DEPLOY FRONTEND ---
+    - name: 'Build and Push Frontend Container'
+      run: |-
+        docker build -t "${{ env.GAR_LOCATION }}-docker.pkg.dev/${{ env.PROJECT_ID }}/dene-repo/${{ env.SERVICE_FRONTEND }}:${{ github.sha }}" ./frontend
+        docker push "${{ env.GAR_LOCATION }}-docker.pkg.dev/${{ env.PROJECT_ID }}/dene-repo/${{ env.SERVICE_FRONTEND }}:${{ github.sha }}"
+
+    - name: 'Deploy Frontend to Cloud Run'
+      uses: 'google-github-actions/deploy-cloudrun@v2'
+      with:
+        service: '${{ env.SERVICE_FRONTEND }}'
+        region: '${{ env.REGION }}'
+        image: '${{ env.GAR_LOCATION }}-docker.pkg.dev/${{ env.PROJECT_ID }}/dene-repo/${{ env.SERVICE_FRONTEND }}:${{ github.sha }}'
+        
+    # --- DEPLOY SCRAPER (CLOUD RUN JOB) ---
+    - name: 'Build and Push Scraper Container'
+      run: |-
+        docker build -t "${{ env.GAR_LOCATION }}-docker.pkg.dev/${{ env.PROJECT_ID }}/dene-repo/${{ env.JOB_SCRAPER }}:${{ github.sha }}" ./scraper
+        docker push "${{ env.GAR_LOCATION }}-docker.pkg.dev/${{ env.PROJECT_ID }}/dene-repo/${{ env.JOB_SCRAPER }}:${{ github.sha }}"
+
+    - name: 'Deploy Scraper to Cloud Run Jobs'
+      run: |-
+        gcloud beta run jobs update ${{ env.JOB_SCRAPER }} \
+          --image "${{ env.GAR_LOCATION }}-docker.pkg.dev/${{ env.PROJECT_ID }}/dene-repo/${{ env.JOB_SCRAPER }}:${{ github.sha }}" \
+          --region "${{ env.REGION }}" \
+          --tasks 1 \
+          --max-retries 3 \
+          --task-timeout 60m

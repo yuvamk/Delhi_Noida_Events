@@ -32,6 +32,7 @@ import bookmarkRoutes from "./routes/bookmarkRoutes";
 import adminRoutes from "./routes/adminRoutes";
 import analyticsRoutes from "./routes/analyticsRoutes";
 import newsletterRoutes from "./routes/newsletterRoutes";
+import uploadRoutes from "./routes/uploadRoutes";
 
 import {
   cacheMiddleware, TTL, invalidateEventCaches,
@@ -174,6 +175,9 @@ app.use("/api/v1/events",
 
 // Auth — no caching (sensitive), strict rate limit
 app.use("/api/v1/auth", authRoutes);
+
+// Uploads — image processing
+app.use("/api/v1/upload", uploadRoutes);
 
 // Bookmarks — auth-aware, no global cache
 app.use("/api/v1/bookmarks", bookmarkRoutes);
