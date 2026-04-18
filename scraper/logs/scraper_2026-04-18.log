@@ -1,0 +1,633 @@
+2026-04-18 21:41:15 | INFO | utils.logger — Logger initialized for Delhi-Noida Events Scraper
+2026-04-18 21:41:15 | INFO | __main__ — 
+============================================================
+2026-04-18 21:41:15 | INFO | __main__ — 🚀 SCRAPER PIPELINE STARTED — Job: job-ac4dfa1aa4a7
+2026-04-18 21:41:15 | INFO | __main__ — 📅 2026-04-18 21:41:15 IST
+2026-04-18 21:41:15 | INFO | __main__ — ============================================================
+2026-04-18 21:41:15 | INFO | __main__ — 📦 Running 7 scrapers: ['eventbrite', 'meraevents', 'meetup', 'unstop', 'iit_delhi', 'linkedin', 'corporate']
+2026-04-18 21:41:15 | WARNING | __main__ — ⚠️  Backend API unreachable. Running in dry-run mode.
+2026-04-18 21:41:15 | INFO | scrapers.base_scraper — 🚀 Starting eventbrite scraper...
+2026-04-18 21:41:15 | INFO | scrapers.eventbrite_scraper — Scraping Eventbrite: Delhi
+2026-04-18 21:41:15 | INFO | scrapers.base_scraper — 🚀 Starting meraevents scraper...
+2026-04-18 21:41:15 | INFO | scrapers.meraevents_scraper — Scraping MeraEvents: https://www.meraevents.com/events/delhi
+2026-04-18 21:41:15 | INFO | scrapers.base_scraper — 🚀 Starting meetup scraper...
+2026-04-18 21:41:15 | INFO | scrapers.meetup_scraper — Scraping Meetup for Delhi...
+2026-04-18 21:41:15 | INFO | scrapers.base_scraper — 🚀 Starting unstop scraper...
+2026-04-18 21:41:15 | INFO | scrapers.unstop_scraper — Scraping Unstop: hackathon
+2026-04-18 21:41:15 | INFO | scrapers.base_scraper — 🚀 Starting iit_delhi scraper...
+2026-04-18 21:41:15 | INFO | scrapers.university_scraper — Scraping IIT Delhi...
+2026-04-18 21:41:15 | INFO | scrapers.base_scraper — 🚀 Starting linkedin scraper...
+2026-04-18 21:41:15 | WARNING | scrapers.linkedin_scraper — No LinkedIn session found. Run save_session() first. Skipping.
+2026-04-18 21:41:15 | SUCCESS | scrapers.base_scraper — ✅ linkedin: 0/0 events scraped in 0.0s
+2026-04-18 21:41:15 | INFO | scrapers.base_scraper — 🚀 Starting corporate scraper...
+2026-04-18 21:41:15 | INFO | scrapers.corporate_scraper — Scraping Google Developers...
+2026-04-18 21:41:15 | WARNING | scrapers.unstop_scraper — Unstop API status: 403
+2026-04-18 21:41:15 | WARNING | scrapers.meetup_scraper — Meetup API returned 404
+2026-04-18 21:41:15 | INFO | scrapers.university_scraper —   → 0 events from IIT Delhi
+2026-04-18 21:41:15 | ERROR | scrapers.base_scraper — HTTP 404 from https://events.google.com/u/0/?region=IN-DL
+2026-04-18 21:41:15 | ERROR | scrapers.base_scraper — Error fetching https://www.meraevents.com/events/delhi: 400, message='Can not decode content-encoding: brotli (br). Please install `Brotli`', url=URL('https://www.meraevents.com/')
+2026-04-18 21:41:17 | INFO | scrapers.unstop_scraper — Scraping Unstop: competition
+2026-04-18 21:41:17 | INFO | scrapers.meetup_scraper — Scraping Meetup for Noida...
+2026-04-18 21:41:17 | WARNING | scrapers.unstop_scraper — Unstop API status: 403
+2026-04-18 21:41:17 | WARNING | scrapers.meetup_scraper — Meetup API returned 404
+2026-04-18 21:41:17 | ERROR | scrapers.base_scraper — Error fetching https://www.meraevents.com/events/delhi: 400, message='Can not decode content-encoding: brotli (br). Please install `Brotli`', url=URL('https://www.meraevents.com/')
+2026-04-18 21:41:18 | INFO | scrapers.eventbrite_scraper — Found 0 event cards on page
+2026-04-18 21:41:18 | INFO | scrapers.eventbrite_scraper — Found 0 events for Delhi
+2026-04-18 21:41:19 | INFO | scrapers.unstop_scraper — Scraping Unstop: workshop
+2026-04-18 21:41:19 | SUCCESS | scrapers.base_scraper — ✅ meetup: 0/0 events scraped in 4.1s
+2026-04-18 21:41:19 | WARNING | scrapers.unstop_scraper — Unstop API status: 403
+2026-04-18 21:41:19 | INFO | scrapers.university_scraper — Scraping IIIT Delhi...
+2026-04-18 21:41:19 | INFO | scrapers.corporate_scraper — Scraping Microsoft Events...
+2026-04-18 21:41:19 | ERROR | scrapers.base_scraper — HTTP 404 from https://iiitd.ac.in/events
+2026-04-18 21:41:20 | ERROR | scrapers.base_scraper — Error fetching https://www.meraevents.com/events/delhi: 400, message='Can not decode content-encoding: brotli (br). Please install `Brotli`', url=URL('https://www.meraevents.com/')
+2026-04-18 21:41:20 | ERROR | scrapers.meraevents_scraper — MeraEvents error for https://www.meraevents.com/events/delhi: RetryError[<Future at 0x10bb76070 state=finished raised ClientResponseError>]
+2026-04-18 21:41:20 | INFO | scrapers.meraevents_scraper — Scraping MeraEvents: https://www.meraevents.com/events/noida
+2026-04-18 21:41:20 | ERROR | scrapers.base_scraper — HTTP 404 from https://events.microsoft.com/en-us/allevents/?clientTimeZone=1&country=India&region=Delhi
+2026-04-18 21:41:20 | ERROR | scrapers.base_scraper — Error fetching https://www.meraevents.com/events/noida: 400, message='Can not decode content-encoding: brotli (br). Please install `Brotli`', url=URL('https://www.meraevents.com/')
+2026-04-18 21:41:21 | INFO | scrapers.eventbrite_scraper — Scraping Eventbrite: Delhi
+2026-04-18 21:41:21 | INFO | scrapers.unstop_scraper — Scraping Unstop: case-study
+2026-04-18 21:41:21 | WARNING | scrapers.unstop_scraper — Unstop API status: 403
+2026-04-18 21:41:23 | ERROR | scrapers.base_scraper — Error fetching https://www.meraevents.com/events/noida: 400, message='Can not decode content-encoding: brotli (br). Please install `Brotli`', url=URL('https://www.meraevents.com/')
+2026-04-18 21:41:23 | INFO | scrapers.unstop_scraper — Scraping Unstop: quiz
+2026-04-18 21:41:23 | WARNING | scrapers.unstop_scraper — Unstop API status: 403
+2026-04-18 21:41:23 | INFO | scrapers.eventbrite_scraper — Found 0 event cards on page
+2026-04-18 21:41:23 | INFO | scrapers.eventbrite_scraper — Found 0 events for Delhi
+2026-04-18 21:41:23 | INFO | scrapers.university_scraper — Scraping Delhi University...
+2026-04-18 21:41:24 | INFO | scrapers.corporate_scraper — Scraping Nasscom Events...
+2026-04-18 21:41:25 | SUCCESS | scrapers.base_scraper — ✅ unstop: 0/0 events scraped in 10.2s
+2026-04-18 21:41:25 | ERROR | scrapers.base_scraper — Error fetching https://www.meraevents.com/events/noida: 400, message='Can not decode content-encoding: brotli (br). Please install `Brotli`', url=URL('https://www.meraevents.com/')
+2026-04-18 21:41:25 | ERROR | scrapers.meraevents_scraper — MeraEvents error for https://www.meraevents.com/events/noida: RetryError[<Future at 0x10c2f7f70 state=finished raised ClientResponseError>]
+2026-04-18 21:41:25 | INFO | scrapers.meraevents_scraper — Scraping MeraEvents: https://www.meraevents.com/tech-events/delhi
+2026-04-18 21:41:26 | ERROR | scrapers.base_scraper — Error fetching https://www.meraevents.com/tech-events/delhi: 400, message='Can not decode content-encoding: brotli (br). Please install `Brotli`', url=URL('https://www.meraevents.com/')
+2026-04-18 21:41:26 | INFO | scrapers.corporate_scraper —   → 10 events from Nasscom Events
+2026-04-18 21:41:26 | INFO | scrapers.eventbrite_scraper — Scraping Eventbrite: Delhi
+2026-04-18 21:41:28 | INFO | scrapers.eventbrite_scraper — Found 0 event cards on page
+2026-04-18 21:41:28 | INFO | scrapers.eventbrite_scraper — Found 0 events for Delhi
+2026-04-18 21:41:28 | ERROR | scrapers.base_scraper — Error fetching https://www.meraevents.com/tech-events/delhi: 400, message='Can not decode content-encoding: brotli (br). Please install `Brotli`', url=URL('https://www.meraevents.com/')
+2026-04-18 21:41:30 | INFO | scrapers.corporate_scraper — Scraping CII Events...
+2026-04-18 21:41:30 | INFO | scrapers.corporate_scraper —   → 0 events from CII Events
+2026-04-18 21:41:30 | ERROR | scrapers.base_scraper — Error fetching https://www.meraevents.com/tech-events/delhi: 400, message='Can not decode content-encoding: brotli (br). Please install `Brotli`', url=URL('https://www.meraevents.com/')
+2026-04-18 21:41:30 | ERROR | scrapers.meraevents_scraper — MeraEvents error for https://www.meraevents.com/tech-events/delhi: RetryError[<Future at 0x10c43f220 state=finished raised ClientResponseError>]
+2026-04-18 21:41:30 | INFO | scrapers.meraevents_scraper — Scraping MeraEvents: https://www.meraevents.com/tech-events/noida
+2026-04-18 21:41:31 | ERROR | scrapers.base_scraper — Error fetching https://www.meraevents.com/tech-events/noida: 400, message='Can not decode content-encoding: brotli (br). Please install `Brotli`', url=URL('https://www.meraevents.com/')
+2026-04-18 21:41:31 | INFO | scrapers.eventbrite_scraper — Scraping Eventbrite: Delhi
+2026-04-18 21:41:33 | INFO | scrapers.eventbrite_scraper — Found 0 event cards on page
+2026-04-18 21:41:33 | INFO | scrapers.eventbrite_scraper — Found 0 events for Delhi
+2026-04-18 21:41:33 | ERROR | scrapers.base_scraper — Error fetching https://www.meraevents.com/tech-events/noida: 400, message='Can not decode content-encoding: brotli (br). Please install `Brotli`', url=URL('https://www.meraevents.com/')
+2026-04-18 21:41:34 | INFO | scrapers.corporate_scraper — Scraping FICCI Events...
+2026-04-18 21:41:35 | ERROR | scrapers.base_scraper — HTTP 404 from https://ficci.in/events.asp
+2026-04-18 21:41:36 | ERROR | scrapers.base_scraper — Error fetching https://www.meraevents.com/tech-events/noida: 400, message='Can not decode content-encoding: brotli (br). Please install `Brotli`', url=URL('https://www.meraevents.com/')
+2026-04-18 21:41:36 | ERROR | scrapers.meraevents_scraper — MeraEvents error for https://www.meraevents.com/tech-events/noida: RetryError[<Future at 0x10c2f7cd0 state=finished raised ClientResponseError>]
+2026-04-18 21:41:36 | INFO | scrapers.meraevents_scraper — Scraping MeraEvents: https://www.meraevents.com/business-events/delhi
+2026-04-18 21:41:36 | ERROR | scrapers.base_scraper — Error fetching https://www.meraevents.com/business-events/delhi: 400, message='Can not decode content-encoding: brotli (br). Please install `Brotli`', url=URL('https://www.meraevents.com/')
+2026-04-18 21:41:36 | SUCCESS | scrapers.base_scraper — ✅ eventbrite: 0/0 events scraped in 21.4s
+2026-04-18 21:41:38 | ERROR | scrapers.base_scraper — Error fetching https://www.meraevents.com/business-events/delhi: 400, message='Can not decode content-encoding: brotli (br). Please install `Brotli`', url=URL('https://www.meraevents.com/')
+2026-04-18 21:41:39 | SUCCESS | scrapers.base_scraper — ✅ corporate: 0/10 events scraped in 23.9s
+2026-04-18 21:41:41 | ERROR | scrapers.base_scraper — Error fetching https://www.meraevents.com/business-events/delhi: 400, message='Can not decode content-encoding: brotli (br). Please install `Brotli`', url=URL('https://www.meraevents.com/')
+2026-04-18 21:41:41 | ERROR | scrapers.meraevents_scraper — MeraEvents error for https://www.meraevents.com/business-events/delhi: RetryError[<Future at 0x10bb86eb0 state=finished raised ClientResponseError>]
+2026-04-18 21:41:41 | INFO | scrapers.meraevents_scraper — Scraping MeraEvents: https://www.meraevents.com/cultural-events/delhi
+2026-04-18 21:41:41 | ERROR | scrapers.base_scraper — Error fetching https://www.meraevents.com/cultural-events/delhi: 400, message='Can not decode content-encoding: brotli (br). Please install `Brotli`', url=URL('https://www.meraevents.com/')
+2026-04-18 21:41:44 | ERROR | scrapers.base_scraper — Error fetching https://www.meraevents.com/cultural-events/delhi: 400, message='Can not decode content-encoding: brotli (br). Please install `Brotli`', url=URL('https://www.meraevents.com/')
+2026-04-18 21:41:46 | ERROR | scrapers.base_scraper — Error fetching https://www.meraevents.com/cultural-events/delhi: 400, message='Can not decode content-encoding: brotli (br). Please install `Brotli`', url=URL('https://www.meraevents.com/')
+2026-04-18 21:41:46 | ERROR | scrapers.meraevents_scraper — MeraEvents error for https://www.meraevents.com/cultural-events/delhi: RetryError[<Future at 0x10c2f7bb0 state=finished raised ClientResponseError>]
+2026-04-18 21:41:46 | SUCCESS | scrapers.base_scraper — ✅ meraevents: 0/0 events scraped in 31.3s
+2026-04-18 21:41:53 | ERROR | scrapers.base_scraper — Error fetching http://www.du.ac.in/du/index.php?page=events: 
+2026-04-18 21:42:26 | ERROR | scrapers.base_scraper — Error fetching http://www.du.ac.in/du/index.php?page=events: 
+2026-04-18 21:42:59 | ERROR | scrapers.base_scraper — Error fetching http://www.du.ac.in/du/index.php?page=events: 
+2026-04-18 21:42:59 | WARNING | scrapers.university_scraper — Failed to scrape Delhi University: RetryError[<Future at 0x10bb6f8e0 state=finished raised TimeoutError>]
+2026-04-18 21:42:59 | INFO | scrapers.university_scraper — Scraping Amity University Noida...
+2026-04-18 21:43:04 | INFO | scrapers.university_scraper — Scraping Jaypee Institute...
+2026-04-18 21:43:04 | ERROR | scrapers.base_scraper — Error fetching https://www.jiit.ac.in/events: 400, message='Can not decode content-encoding: brotli (br). Please install `Brotli`', url=URL('https://www.jiit.ac.in/events')
+2026-04-18 21:43:07 | ERROR | scrapers.base_scraper — Error fetching https://www.jiit.ac.in/events: 400, message='Can not decode content-encoding: brotli (br). Please install `Brotli`', url=URL('https://www.jiit.ac.in/events')
+2026-04-18 21:43:09 | ERROR | scrapers.base_scraper — Error fetching https://www.jiit.ac.in/events: 400, message='Can not decode content-encoding: brotli (br). Please install `Brotli`', url=URL('https://www.jiit.ac.in/events')
+2026-04-18 21:43:09 | WARNING | scrapers.university_scraper — Failed to scrape Jaypee Institute: RetryError[<Future at 0x10c2d3130 state=finished raised ClientResponseError>]
+2026-04-18 21:43:09 | SUCCESS | scrapers.base_scraper — ✅ iit_delhi: 0/0 events scraped in 114.7s
+2026-04-18 21:43:09 | INFO | __main__ — 
+📊 Aggregated: 0 valid events from 7 sources
+2026-04-18 21:43:09 | INFO | __main__ — ✨ Normalized: 0 events
+2026-04-18 21:43:09 | INFO | __main__ — 🔍 Deduplicated: 0 unique events (0 duplicates removed)
+2026-04-18 21:43:09 | INFO | __main__ — 🏃 Dry-run mode: would send 0 events
+2026-04-18 21:43:09 | INFO | __main__ — 
+============================================================
+2026-04-18 21:43:09 | INFO | __main__ — ✅ PIPELINE COMPLETE — Job: job-ac4dfa1aa4a7
+2026-04-18 21:43:09 | INFO | __main__ —    Found: 10 | Valid: 0 | Unique: 0 | Sent: 0
+2026-04-18 21:43:09 | INFO | __main__ —    Duration: 114.7s | Duplicates removed: 0
+2026-04-18 21:43:09 | INFO | __main__ — ============================================================
+
+2026-04-18 23:25:23 | INFO | utils.logger — Logger initialized for Delhi-Noida Events Scraper
+2026-04-18 23:25:23 | INFO | __main__ — 🏃 DRY-RUN MODE — events will not be sent to API
+2026-04-18 23:25:23 | INFO | __main__ — 
+============================================================
+2026-04-18 23:25:23 | INFO | __main__ — 🚀 SCRAPER PIPELINE STARTED — Job: job-7da3e2be4dee
+2026-04-18 23:25:23 | INFO | __main__ — 📅 2026-04-18 23:25:23 IST
+2026-04-18 23:25:23 | INFO | __main__ — ============================================================
+2026-04-18 23:25:23 | INFO | __main__ — 📦 Running 1 scrapers: ['meetup']
+2026-04-18 23:25:23 | INFO | scrapers.base_scraper — 🚀 Starting meetup scraper...
+2026-04-18 23:25:23 | INFO | scrapers.meetup_scraper — Scraping Meetup for Delhi...
+2026-04-18 23:25:23 | WARNING | scrapers.meetup_scraper — Meetup API returned 404
+2026-04-18 23:25:25 | INFO | scrapers.meetup_scraper — Scraping Meetup for Noida...
+2026-04-18 23:25:25 | WARNING | scrapers.meetup_scraper — Meetup API returned 404
+2026-04-18 23:25:27 | SUCCESS | scrapers.base_scraper — ✅ meetup: 0/0 events scraped in 4.2s
+2026-04-18 23:25:27 | INFO | __main__ — 
+📊 Aggregated: 0 valid events from 1 sources
+2026-04-18 23:25:27 | INFO | __main__ — ✨ Normalized: 0 events
+2026-04-18 23:25:27 | INFO | __main__ — 🔍 Deduplicated: 0 unique events (0 duplicates removed)
+2026-04-18 23:25:27 | INFO | __main__ — 🏃 Dry-run mode: would send 0 events
+2026-04-18 23:25:27 | INFO | __main__ — 
+============================================================
+2026-04-18 23:25:27 | INFO | __main__ — ✅ PIPELINE COMPLETE — Job: job-7da3e2be4dee
+2026-04-18 23:25:27 | INFO | __main__ —    Found: 0 | Valid: 0 | Unique: 0 | Sent: 0
+2026-04-18 23:25:27 | INFO | __main__ —    Duration: 4.2s | Duplicates removed: 0
+2026-04-18 23:25:27 | INFO | __main__ — ============================================================
+
+2026-04-18 23:25:38 | INFO | utils.logger — Logger initialized for Delhi-Noida Events Scraper
+2026-04-18 23:25:38 | INFO | __main__ — 🏃 DRY-RUN MODE — events will not be sent to API
+2026-04-18 23:25:38 | INFO | __main__ — 
+============================================================
+2026-04-18 23:25:38 | INFO | __main__ — 🚀 SCRAPER PIPELINE STARTED — Job: job-da1a29898365
+2026-04-18 23:25:38 | INFO | __main__ — 📅 2026-04-18 23:25:38 IST
+2026-04-18 23:25:38 | INFO | __main__ — ============================================================
+2026-04-18 23:25:38 | INFO | __main__ — 📦 Running 1 scrapers: ['unstop']
+2026-04-18 23:25:38 | INFO | scrapers.base_scraper — 🚀 Starting unstop scraper...
+2026-04-18 23:25:38 | INFO | scrapers.unstop_scraper — Scraping Unstop: hackathon
+2026-04-18 23:25:39 | WARNING | scrapers.unstop_scraper — Unstop API status: 403
+2026-04-18 23:25:41 | INFO | scrapers.unstop_scraper — Scraping Unstop: competition
+2026-04-18 23:25:41 | WARNING | scrapers.unstop_scraper — Unstop API status: 403
+2026-04-18 23:25:43 | INFO | scrapers.unstop_scraper — Scraping Unstop: workshop
+2026-04-18 23:25:43 | WARNING | scrapers.unstop_scraper — Unstop API status: 403
+2026-04-18 23:25:45 | INFO | scrapers.unstop_scraper — Scraping Unstop: case-study
+2026-04-18 23:25:45 | WARNING | scrapers.unstop_scraper — Unstop API status: 403
+2026-04-18 23:25:47 | INFO | scrapers.unstop_scraper — Scraping Unstop: quiz
+2026-04-18 23:25:47 | WARNING | scrapers.unstop_scraper — Unstop API status: 403
+2026-04-18 23:25:49 | SUCCESS | scrapers.base_scraper — ✅ unstop: 0/0 events scraped in 10.4s
+2026-04-18 23:25:49 | INFO | __main__ — 
+📊 Aggregated: 0 valid events from 1 sources
+2026-04-18 23:25:49 | INFO | __main__ — ✨ Normalized: 0 events
+2026-04-18 23:25:49 | INFO | __main__ — 🔍 Deduplicated: 0 unique events (0 duplicates removed)
+2026-04-18 23:25:49 | INFO | __main__ — 🏃 Dry-run mode: would send 0 events
+2026-04-18 23:25:49 | INFO | __main__ — 
+============================================================
+2026-04-18 23:25:49 | INFO | __main__ — ✅ PIPELINE COMPLETE — Job: job-da1a29898365
+2026-04-18 23:25:49 | INFO | __main__ —    Found: 0 | Valid: 0 | Unique: 0 | Sent: 0
+2026-04-18 23:25:49 | INFO | __main__ —    Duration: 10.4s | Duplicates removed: 0
+2026-04-18 23:25:49 | INFO | __main__ — ============================================================
+
+2026-04-18 23:34:26 | INFO | utils.logger — Logger initialized for Delhi-Noida Events Scraper
+2026-04-18 23:34:26 | INFO | __main__ — 
+============================================================
+2026-04-18 23:34:26 | INFO | __main__ — 🚀 SCRAPER PIPELINE STARTED — Job: job-13345d4baeb1
+2026-04-18 23:34:26 | INFO | __main__ — 📅 2026-04-18 23:34:26 IST
+2026-04-18 23:34:26 | INFO | __main__ — ============================================================
+2026-04-18 23:34:26 | INFO | __main__ — 📦 Running 1 scrapers: ['dynamic']
+2026-04-18 23:34:26 | ERROR | __main__ — Scraper exception: Can't instantiate abstract class DynamicBrowserScraper with abstract methods parse_event, scrape
+2026-04-18 23:34:26 | INFO | __main__ — 
+============================================================
+2026-04-18 23:34:26 | INFO | __main__ — ✅ PIPELINE COMPLETE — Job: job-13345d4baeb1
+2026-04-18 23:34:26 | INFO | __main__ —    Found: 0 | Sent: 0
+2026-04-18 23:34:26 | INFO | __main__ — ============================================================
+
+2026-04-18 23:34:51 | INFO | utils.logger — Logger initialized for Delhi-Noida Events Scraper
+2026-04-18 23:34:51 | INFO | __main__ — 
+============================================================
+2026-04-18 23:34:51 | INFO | __main__ — 🚀 SCRAPER PIPELINE STARTED — Job: job-13455adbf4b4
+2026-04-18 23:34:51 | INFO | __main__ — 📅 2026-04-18 23:34:51 IST
+2026-04-18 23:34:51 | INFO | __main__ — ============================================================
+2026-04-18 23:34:51 | INFO | __main__ — 📦 Running 1 scrapers: ['dynamic']
+2026-04-18 23:34:51 | INFO | scrapers.base_scraper — 🚀 Starting ai_discovery scraper...
+2026-04-18 23:35:08 | ERROR | scrapers.base_scraper — ❌ ai_discovery scraper failed: Target page, context or browser has been closed
+Browser logs:
+
+<launching> /Users/yuvamrajput/Library/Caches/ms-playwright/chromium-1091/chrome-mac/Chromium.app/Contents/MacOS/Chromium --disable-field-trial-config --disable-background-networking --enable-features=NetworkService,NetworkServiceInProcess --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-extensions --disable-features=ImprovedCookieControls,LazyFrameLoading,GlobalMediaControls,DestroyProfileOnBrowserClose,MediaRouter,DialMediaRouteProvider,AcceptCHFrame,AutoExpandDetailsElement,CertificateTransparencyComponentUpdater,AvoidUnnecessaryBeforeUnloadCheckSync,Translate,HttpsUpgrades --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --force-color-profile=srgb --metrics-recording-only --no-first-run --enable-automation --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --enable-use-zoom-for-dsf=false --use-angle --headless --hide-scrollbars --mute-audio --blink-settings=primaryHoverType=2,availableHoverTypes=2,primaryPointerType=4,availablePointerTypes=4 --no-sandbox --user-data-dir=/var/folders/04/5kmtfb0s4bj40vs740cysz700000gn/T/playwright_chromiumdev_profile-cPsaVu --remote-debugging-pipe --no-startup-window
+<launched> pid=87992
+[pid=87992] <process did exit: exitCode=null, signal=SIGTRAP>
+[pid=87992] starting temporary directories cleanup
+2026-04-18 23:35:08 | INFO | __main__ — 
+============================================================
+2026-04-18 23:35:08 | INFO | __main__ — ✅ PIPELINE COMPLETE — Job: job-13455adbf4b4
+2026-04-18 23:35:08 | INFO | __main__ —    Found: 0 | Sent: 0
+2026-04-18 23:35:08 | INFO | __main__ — ============================================================
+
+2026-04-18 23:38:24 | INFO | utils.logger — Logger initialized for Delhi-Noida Events Scraper
+2026-04-18 23:38:24 | INFO | __main__ — 
+============================================================
+2026-04-18 23:38:24 | INFO | __main__ — 🚀 SCRAPER PIPELINE STARTED — Job: job-cbd11f0d8921
+2026-04-18 23:38:24 | INFO | __main__ — 📅 2026-04-18 23:38:24 IST
+2026-04-18 23:38:24 | INFO | __main__ — ============================================================
+2026-04-18 23:38:24 | INFO | __main__ — 📦 Running 1 scrapers: ['dynamic']
+2026-04-18 23:38:24 | INFO | scrapers.base_scraper — 🚀 Starting ai_discovery scraper...
+2026-04-18 23:38:26 | ERROR | scrapers.base_scraper — ❌ ai_discovery scraper failed: Target page, context or browser has been closed
+Browser logs:
+
+<launching> /Users/yuvamrajput/Library/Caches/ms-playwright/chromium-1091/chrome-mac/Chromium.app/Contents/MacOS/Chromium --disable-field-trial-config --disable-background-networking --enable-features=NetworkService,NetworkServiceInProcess --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-extensions --disable-features=ImprovedCookieControls,LazyFrameLoading,GlobalMediaControls,DestroyProfileOnBrowserClose,MediaRouter,DialMediaRouteProvider,AcceptCHFrame,AutoExpandDetailsElement,CertificateTransparencyComponentUpdater,AvoidUnnecessaryBeforeUnloadCheckSync,Translate,HttpsUpgrades --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --force-color-profile=srgb --metrics-recording-only --no-first-run --enable-automation --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --enable-use-zoom-for-dsf=false --use-angle --headless --hide-scrollbars --mute-audio --blink-settings=primaryHoverType=2,availableHoverTypes=2,primaryPointerType=4,availablePointerTypes=4 --no-sandbox --user-data-dir=/var/folders/04/5kmtfb0s4bj40vs740cysz700000gn/T/playwright_chromiumdev_profile-23t6aC --remote-debugging-pipe --no-startup-window
+<launched> pid=88384
+2026-04-18 23:38:26 | INFO | __main__ — 
+============================================================
+2026-04-18 23:38:26 | INFO | __main__ — ✅ PIPELINE COMPLETE — Job: job-cbd11f0d8921
+2026-04-18 23:38:26 | INFO | __main__ —    Found: 0 | Sent: 0
+2026-04-18 23:38:26 | INFO | __main__ — ============================================================
+
+2026-04-18 23:38:50 | INFO | utils.logger — Logger initialized for Delhi-Noida Events Scraper
+2026-04-18 23:38:50 | INFO | __main__ — 
+============================================================
+2026-04-18 23:38:50 | INFO | __main__ — 🚀 SCRAPER PIPELINE STARTED — Job: job-355063f5f907
+2026-04-18 23:38:50 | INFO | __main__ — 📅 2026-04-18 23:38:50 IST
+2026-04-18 23:38:50 | INFO | __main__ — ============================================================
+2026-04-18 23:38:50 | INFO | __main__ — 📦 Running 1 scrapers: ['dynamic']
+2026-04-18 23:38:50 | INFO | scrapers.base_scraper — 🚀 Starting ai_discovery scraper...
+2026-04-18 23:38:52 | ERROR | scrapers.base_scraper — ❌ ai_discovery scraper failed: Target page, context or browser has been closed
+Browser logs:
+
+<launching> /Users/yuvamrajput/Library/Caches/ms-playwright/chromium-1091/chrome-mac/Chromium.app/Contents/MacOS/Chromium --disable-field-trial-config --disable-background-networking --enable-features=NetworkService,NetworkServiceInProcess --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-extensions --disable-features=ImprovedCookieControls,LazyFrameLoading,GlobalMediaControls,DestroyProfileOnBrowserClose,MediaRouter,DialMediaRouteProvider,AcceptCHFrame,AutoExpandDetailsElement,CertificateTransparencyComponentUpdater,AvoidUnnecessaryBeforeUnloadCheckSync,Translate,HttpsUpgrades --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --force-color-profile=srgb --metrics-recording-only --no-first-run --enable-automation --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --enable-use-zoom-for-dsf=false --use-angle --headless --hide-scrollbars --mute-audio --blink-settings=primaryHoverType=2,availableHoverTypes=2,primaryPointerType=4,availablePointerTypes=4 --no-sandbox --user-data-dir=/var/folders/04/5kmtfb0s4bj40vs740cysz700000gn/T/playwright_chromiumdev_profile-jzTdGh --remote-debugging-pipe --no-startup-window
+<launched> pid=88423
+2026-04-18 23:38:52 | INFO | __main__ — 
+============================================================
+2026-04-18 23:38:52 | INFO | __main__ — ✅ PIPELINE COMPLETE — Job: job-355063f5f907
+2026-04-18 23:38:52 | INFO | __main__ —    Found: 0 | Sent: 0
+2026-04-18 23:38:52 | INFO | __main__ — ============================================================
+
+2026-04-18 23:44:49 | INFO | utils.logger — Logger initialized for Delhi-Noida Events Scraper
+2026-04-18 23:44:49 | INFO | __main__ — 
+============================================================
+2026-04-18 23:44:49 | INFO | __main__ — 🚀 SCRAPER PIPELINE STARTED — Job: job-83888d2f16dc
+2026-04-18 23:44:49 | INFO | __main__ — 📅 2026-04-18 23:44:49 IST
+2026-04-18 23:44:49 | INFO | __main__ — ============================================================
+2026-04-18 23:44:49 | INFO | __main__ — 📦 Running 8 scrapers: ['eventbrite', 'meraevents', 'meetup', 'unstop', 'iit_delhi', 'linkedin', 'corporate', 'dynamic']
+2026-04-18 23:44:49 | WARNING | __main__ — ⚠️  Backend API unreachable. Running in dry-run mode.
+2026-04-18 23:44:49 | INFO | scrapers.base_scraper — 🚀 Starting eventbrite scraper...
+2026-04-18 23:44:49 | INFO | scrapers.eventbrite_scraper — Scraping Eventbrite: Delhi
+2026-04-18 23:44:49 | INFO | scrapers.base_scraper — 🚀 Starting meraevents scraper...
+2026-04-18 23:44:49 | INFO | scrapers.meraevents_scraper — Scraping MeraEvents: https://www.meraevents.com/events/delhi
+2026-04-18 23:44:49 | INFO | scrapers.base_scraper — 🚀 Starting meetup scraper...
+2026-04-18 23:44:49 | INFO | scrapers.meetup_scraper — Scraping Meetup for Delhi...
+2026-04-18 23:44:49 | INFO | scrapers.base_scraper — 🚀 Starting unstop scraper...
+2026-04-18 23:44:49 | INFO | scrapers.unstop_scraper — Scraping Unstop: hackathon
+2026-04-18 23:44:49 | INFO | scrapers.base_scraper — 🚀 Starting iit_delhi scraper...
+2026-04-18 23:44:49 | INFO | scrapers.university_scraper — Scraping IIT Delhi...
+2026-04-18 23:44:49 | INFO | scrapers.base_scraper — 🚀 Starting linkedin scraper...
+2026-04-18 23:44:49 | WARNING | scrapers.linkedin_scraper — No LinkedIn session found. Run save_session() first. Skipping.
+2026-04-18 23:44:49 | SUCCESS | scrapers.base_scraper — ✅ linkedin: 0/0 events scraped in 0.0s
+2026-04-18 23:44:49 | INFO | scrapers.base_scraper — 🚀 Starting corporate scraper...
+2026-04-18 23:44:49 | INFO | scrapers.corporate_scraper — Scraping Google Developers...
+2026-04-18 23:44:49 | ERROR | utils.ai_extractor — GEMINI_API_KEY not found in environment
+2026-04-18 23:44:49 | INFO | scrapers.base_scraper — 🚀 Starting ai_discovery scraper...
+2026-04-18 23:44:49 | ERROR | scrapers.base_scraper — HTTP 404 from https://events.google.com/u/0/?region=IN-DL
+2026-04-18 23:44:49 | WARNING | scrapers.meetup_scraper — Meetup API returned 404
+2026-04-18 23:44:49 | INFO | scrapers.university_scraper —   → 0 events from IIT Delhi
+2026-04-18 23:44:49 | WARNING | scrapers.unstop_scraper — Unstop API status: 403
+2026-04-18 23:44:50 | ERROR | scrapers.base_scraper — Error fetching https://www.meraevents.com/events/delhi: 400, message='Can not decode content-encoding: brotli (br). Please install `Brotli`', url=URL('https://www.meraevents.com/')
+2026-04-18 23:44:51 | ERROR | scrapers.base_scraper — ❌ ai_discovery scraper failed: Target page, context or browser has been closed
+Browser logs:
+
+<launching> /Users/yuvamrajput/Library/Caches/ms-playwright/chromium-1091/chrome-mac/Chromium.app/Contents/MacOS/Chromium --disable-field-trial-config --disable-background-networking --enable-features=NetworkService,NetworkServiceInProcess --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-extensions --disable-features=ImprovedCookieControls,LazyFrameLoading,GlobalMediaControls,DestroyProfileOnBrowserClose,MediaRouter,DialMediaRouteProvider,AcceptCHFrame,AutoExpandDetailsElement,CertificateTransparencyComponentUpdater,AvoidUnnecessaryBeforeUnloadCheckSync,Translate,HttpsUpgrades --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --force-color-profile=srgb --metrics-recording-only --no-first-run --enable-automation --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --enable-use-zoom-for-dsf=false --use-angle --headless --hide-scrollbars --mute-audio --blink-settings=primaryHoverType=2,availableHoverTypes=2,primaryPointerType=4,availablePointerTypes=4 --no-sandbox --user-data-dir=/var/folders/04/5kmtfb0s4bj40vs740cysz700000gn/T/playwright_chromiumdev_profile-3aUHck --remote-debugging-pipe --no-startup-window
+<launched> pid=89181
+2026-04-18 23:44:51 | INFO | scrapers.eventbrite_scraper — Found 0 event cards on page
+2026-04-18 23:44:51 | INFO | scrapers.eventbrite_scraper — Found 0 events for Delhi
+2026-04-18 23:44:51 | INFO | scrapers.meetup_scraper — Scraping Meetup for Noida...
+2026-04-18 23:44:51 | WARNING | scrapers.meetup_scraper — Meetup API returned 404
+2026-04-18 23:44:51 | INFO | scrapers.unstop_scraper — Scraping Unstop: competition
+2026-04-18 23:44:51 | WARNING | scrapers.unstop_scraper — Unstop API status: 403
+2026-04-18 23:44:52 | ERROR | scrapers.base_scraper — Error fetching https://www.meraevents.com/events/delhi: 400, message='Can not decode content-encoding: brotli (br). Please install `Brotli`', url=URL('https://www.meraevents.com/')
+2026-04-18 23:44:53 | INFO | scrapers.corporate_scraper — Scraping Microsoft Events...
+2026-04-18 23:44:53 | SUCCESS | scrapers.base_scraper — ✅ meetup: 0/0 events scraped in 4.2s
+2026-04-18 23:44:53 | INFO | scrapers.university_scraper — Scraping IIIT Delhi...
+2026-04-18 23:44:53 | INFO | scrapers.unstop_scraper — Scraping Unstop: workshop
+2026-04-18 23:44:54 | WARNING | scrapers.unstop_scraper — Unstop API status: 403
+2026-04-18 23:44:54 | ERROR | scrapers.base_scraper — HTTP 404 from https://iiitd.ac.in/events
+2026-04-18 23:44:54 | INFO | scrapers.eventbrite_scraper — Scraping Eventbrite: Delhi
+2026-04-18 23:44:55 | ERROR | scrapers.base_scraper — HTTP 404 from https://events.microsoft.com/en-us/allevents/?clientTimeZone=1&country=India&region=Delhi
+2026-04-18 23:44:55 | ERROR | scrapers.base_scraper — Error fetching https://www.meraevents.com/events/delhi: 400, message='Can not decode content-encoding: brotli (br). Please install `Brotli`', url=URL('https://www.meraevents.com/')
+2026-04-18 23:44:55 | ERROR | scrapers.meraevents_scraper — MeraEvents error for https://www.meraevents.com/events/delhi: RetryError[<Future at 0x10b03aa30 state=finished raised ClientResponseError>]
+2026-04-18 23:44:55 | INFO | scrapers.meraevents_scraper — Scraping MeraEvents: https://www.meraevents.com/events/noida
+2026-04-18 23:44:55 | ERROR | scrapers.base_scraper — Error fetching https://www.meraevents.com/events/noida: 400, message='Can not decode content-encoding: brotli (br). Please install `Brotli`', url=URL('https://www.meraevents.com/')
+2026-04-18 23:44:56 | INFO | scrapers.unstop_scraper — Scraping Unstop: case-study
+2026-04-18 23:44:56 | WARNING | scrapers.unstop_scraper — Unstop API status: 403
+2026-04-18 23:44:56 | INFO | scrapers.eventbrite_scraper — Found 0 event cards on page
+2026-04-18 23:44:56 | INFO | scrapers.eventbrite_scraper — Found 0 events for Delhi
+2026-04-18 23:44:58 | ERROR | scrapers.base_scraper — Error fetching https://www.meraevents.com/events/noida: 400, message='Can not decode content-encoding: brotli (br). Please install `Brotli`', url=URL('https://www.meraevents.com/')
+2026-04-18 23:44:58 | INFO | scrapers.unstop_scraper — Scraping Unstop: quiz
+2026-04-18 23:44:58 | WARNING | scrapers.unstop_scraper — Unstop API status: 403
+2026-04-18 23:44:58 | INFO | scrapers.university_scraper — Scraping Delhi University...
+2026-04-18 23:44:59 | INFO | scrapers.corporate_scraper — Scraping Nasscom Events...
+2026-04-18 23:44:59 | INFO | scrapers.eventbrite_scraper — Scraping Eventbrite: Delhi
+2026-04-18 23:45:00 | SUCCESS | scrapers.base_scraper — ✅ unstop: 0/0 events scraped in 10.4s
+2026-04-18 23:45:00 | ERROR | scrapers.base_scraper — Error fetching https://www.meraevents.com/events/noida: 400, message='Can not decode content-encoding: brotli (br). Please install `Brotli`', url=URL('https://www.meraevents.com/')
+2026-04-18 23:45:00 | ERROR | scrapers.meraevents_scraper — MeraEvents error for https://www.meraevents.com/events/noida: RetryError[<Future at 0x10d5a1dc0 state=finished raised ClientResponseError>]
+2026-04-18 23:45:00 | INFO | scrapers.meraevents_scraper — Scraping MeraEvents: https://www.meraevents.com/tech-events/delhi
+2026-04-18 23:45:00 | ERROR | scrapers.base_scraper — Error fetching https://www.meraevents.com/tech-events/delhi: 400, message='Can not decode content-encoding: brotli (br). Please install `Brotli`', url=URL('https://www.meraevents.com/')
+2026-04-18 23:45:01 | INFO | scrapers.corporate_scraper —   → 10 events from Nasscom Events
+2026-04-18 23:45:02 | INFO | scrapers.eventbrite_scraper — Found 0 event cards on page
+2026-04-18 23:45:02 | INFO | scrapers.eventbrite_scraper — Found 0 events for Delhi
+2026-04-18 23:45:03 | ERROR | scrapers.base_scraper — Error fetching https://www.meraevents.com/tech-events/delhi: 400, message='Can not decode content-encoding: brotli (br). Please install `Brotli`', url=URL('https://www.meraevents.com/')
+2026-04-18 23:45:05 | INFO | scrapers.corporate_scraper — Scraping CII Events...
+2026-04-18 23:45:05 | INFO | scrapers.corporate_scraper —   → 0 events from CII Events
+2026-04-18 23:45:05 | INFO | scrapers.eventbrite_scraper — Scraping Eventbrite: Delhi
+2026-04-18 23:45:05 | ERROR | scrapers.base_scraper — Error fetching https://www.meraevents.com/tech-events/delhi: 400, message='Can not decode content-encoding: brotli (br). Please install `Brotli`', url=URL('https://www.meraevents.com/')
+2026-04-18 23:45:05 | ERROR | scrapers.meraevents_scraper — MeraEvents error for https://www.meraevents.com/tech-events/delhi: RetryError[<Future at 0x11180ebb0 state=finished raised ClientResponseError>]
+2026-04-18 23:45:05 | INFO | scrapers.meraevents_scraper — Scraping MeraEvents: https://www.meraevents.com/tech-events/noida
+2026-04-18 23:45:06 | ERROR | scrapers.base_scraper — Error fetching https://www.meraevents.com/tech-events/noida: 400, message='Can not decode content-encoding: brotli (br). Please install `Brotli`', url=URL('https://www.meraevents.com/')
+2026-04-18 23:45:07 | INFO | scrapers.eventbrite_scraper — Found 0 event cards on page
+2026-04-18 23:45:07 | INFO | scrapers.eventbrite_scraper — Found 0 events for Delhi
+2026-04-18 23:45:08 | ERROR | scrapers.base_scraper — Error fetching https://www.meraevents.com/tech-events/noida: 400, message='Can not decode content-encoding: brotli (br). Please install `Brotli`', url=URL('https://www.meraevents.com/')
+2026-04-18 23:45:09 | INFO | scrapers.corporate_scraper — Scraping FICCI Events...
+2026-04-18 23:45:09 | ERROR | scrapers.base_scraper — HTTP 404 from https://ficci.in/events.asp
+2026-04-18 23:45:10 | SUCCESS | scrapers.base_scraper — ✅ eventbrite: 0/0 events scraped in 20.7s
+2026-04-18 23:45:10 | ERROR | scrapers.base_scraper — Error fetching https://www.meraevents.com/tech-events/noida: 400, message='Can not decode content-encoding: brotli (br). Please install `Brotli`', url=URL('https://www.meraevents.com/')
+2026-04-18 23:45:10 | ERROR | scrapers.meraevents_scraper — MeraEvents error for https://www.meraevents.com/tech-events/noida: RetryError[<Future at 0x10d7af430 state=finished raised ClientResponseError>]
+2026-04-18 23:45:10 | INFO | scrapers.meraevents_scraper — Scraping MeraEvents: https://www.meraevents.com/business-events/delhi
+2026-04-18 23:45:11 | ERROR | scrapers.base_scraper — Error fetching https://www.meraevents.com/business-events/delhi: 400, message='Can not decode content-encoding: brotli (br). Please install `Brotli`', url=URL('https://www.meraevents.com/')
+2026-04-18 23:45:13 | ERROR | scrapers.base_scraper — Error fetching https://www.meraevents.com/business-events/delhi: 400, message='Can not decode content-encoding: brotli (br). Please install `Brotli`', url=URL('https://www.meraevents.com/')
+2026-04-18 23:45:13 | SUCCESS | scrapers.base_scraper — ✅ corporate: 0/10 events scraped in 24.1s
+2026-04-18 23:45:16 | ERROR | scrapers.base_scraper — Error fetching https://www.meraevents.com/business-events/delhi: 400, message='Can not decode content-encoding: brotli (br). Please install `Brotli`', url=URL('https://www.meraevents.com/')
+2026-04-18 23:45:16 | ERROR | scrapers.meraevents_scraper — MeraEvents error for https://www.meraevents.com/business-events/delhi: RetryError[<Future at 0x10d7ac520 state=finished raised ClientResponseError>]
+2026-04-18 23:45:16 | INFO | scrapers.meraevents_scraper — Scraping MeraEvents: https://www.meraevents.com/cultural-events/delhi
+2026-04-18 23:45:16 | ERROR | scrapers.base_scraper — Error fetching https://www.meraevents.com/cultural-events/delhi: 400, message='Can not decode content-encoding: brotli (br). Please install `Brotli`', url=URL('https://www.meraevents.com/')
+2026-04-18 23:45:18 | ERROR | scrapers.base_scraper — Error fetching https://www.meraevents.com/cultural-events/delhi: 400, message='Can not decode content-encoding: brotli (br). Please install `Brotli`', url=URL('https://www.meraevents.com/')
+2026-04-18 23:45:21 | ERROR | scrapers.base_scraper — Error fetching https://www.meraevents.com/cultural-events/delhi: 400, message='Can not decode content-encoding: brotli (br). Please install `Brotli`', url=URL('https://www.meraevents.com/')
+2026-04-18 23:45:21 | ERROR | scrapers.meraevents_scraper — MeraEvents error for https://www.meraevents.com/cultural-events/delhi: RetryError[<Future at 0x10b00a700 state=finished raised ClientResponseError>]
+2026-04-18 23:45:21 | SUCCESS | scrapers.base_scraper — ✅ meraevents: 0/0 events scraped in 31.7s
+2026-04-18 23:45:28 | ERROR | scrapers.base_scraper — Error fetching http://www.du.ac.in/du/index.php?page=events: 
+2026-04-18 23:46:01 | ERROR | scrapers.base_scraper — Error fetching http://www.du.ac.in/du/index.php?page=events: 
+2026-04-18 23:46:34 | ERROR | scrapers.base_scraper — Error fetching http://www.du.ac.in/du/index.php?page=events: 
+2026-04-18 23:46:34 | WARNING | scrapers.university_scraper — Failed to scrape Delhi University: RetryError[<Future at 0x10b03a2e0 state=finished raised TimeoutError>]
+2026-04-18 23:46:34 | INFO | scrapers.university_scraper — Scraping Amity University Noida...
+2026-04-18 23:46:38 | INFO | scrapers.university_scraper — Scraping Jaypee Institute...
+2026-04-18 23:46:40 | ERROR | scrapers.base_scraper — Error fetching https://www.jiit.ac.in/events: 400, message='Can not decode content-encoding: brotli (br). Please install `Brotli`', url=URL('https://www.jiit.ac.in/events')
+2026-04-18 23:46:42 | ERROR | scrapers.base_scraper — Error fetching https://www.jiit.ac.in/events: 400, message='Can not decode content-encoding: brotli (br). Please install `Brotli`', url=URL('https://www.jiit.ac.in/events')
+2026-04-18 23:46:45 | ERROR | scrapers.base_scraper — Error fetching https://www.jiit.ac.in/events: 400, message='Can not decode content-encoding: brotli (br). Please install `Brotli`', url=URL('https://www.jiit.ac.in/events')
+2026-04-18 23:46:45 | WARNING | scrapers.university_scraper — Failed to scrape Jaypee Institute: RetryError[<Future at 0x10d7aa100 state=finished raised ClientResponseError>]
+2026-04-18 23:46:45 | SUCCESS | scrapers.base_scraper — ✅ iit_delhi: 0/0 events scraped in 115.7s
+2026-04-18 23:46:45 | INFO | __main__ — 
+============================================================
+2026-04-18 23:46:45 | INFO | __main__ — ✅ PIPELINE COMPLETE — Job: job-83888d2f16dc
+2026-04-18 23:46:45 | INFO | __main__ —    Found: 10 | Sent: 0
+2026-04-18 23:46:45 | INFO | __main__ — ============================================================
+
+2026-04-18 23:49:07 | INFO | utils.logger — Logger initialized for Delhi-Noida Events Scraper
+2026-04-18 23:49:07 | INFO | __main__ — 
+============================================================
+2026-04-18 23:49:07 | INFO | __main__ — 🚀 SCRAPER PIPELINE STARTED — Job: job-79d7181a08ce
+2026-04-18 23:49:07 | INFO | __main__ — 📅 2026-04-18 23:49:07 IST
+2026-04-18 23:49:07 | INFO | __main__ — ============================================================
+2026-04-18 23:49:07 | INFO | __main__ — 📦 Running 8 scrapers: ['eventbrite', 'meraevents', 'meetup', 'unstop', 'iit_delhi', 'linkedin', 'corporate', 'dynamic']
+2026-04-18 23:49:07 | INFO | scrapers.base_scraper — 🚀 Starting eventbrite scraper...
+2026-04-18 23:49:07 | INFO | scrapers.eventbrite_scraper — Scraping Eventbrite: Delhi
+2026-04-18 23:49:07 | INFO | scrapers.base_scraper — 🚀 Starting meraevents scraper...
+2026-04-18 23:49:07 | INFO | scrapers.meraevents_scraper — Scraping MeraEvents: https://www.meraevents.com/events/delhi
+2026-04-18 23:49:07 | INFO | scrapers.base_scraper — 🚀 Starting meetup scraper...
+2026-04-18 23:49:07 | INFO | scrapers.meetup_scraper — Scraping Meetup for Delhi...
+2026-04-18 23:49:07 | INFO | scrapers.base_scraper — 🚀 Starting unstop scraper...
+2026-04-18 23:49:07 | INFO | scrapers.unstop_scraper — Scraping Unstop: hackathon
+2026-04-18 23:49:07 | INFO | scrapers.base_scraper — 🚀 Starting iit_delhi scraper...
+2026-04-18 23:49:07 | INFO | scrapers.university_scraper — Scraping IIT Delhi...
+2026-04-18 23:49:07 | INFO | scrapers.base_scraper — 🚀 Starting linkedin scraper...
+2026-04-18 23:49:07 | WARNING | scrapers.linkedin_scraper — No LinkedIn session found. Run save_session() first. Skipping.
+2026-04-18 23:49:07 | SUCCESS | scrapers.base_scraper — ✅ linkedin: 0/0 events scraped in 0.0s
+2026-04-18 23:49:07 | INFO | scrapers.base_scraper — 🚀 Starting corporate scraper...
+2026-04-18 23:49:07 | INFO | scrapers.corporate_scraper — Scraping Google Developers...
+2026-04-18 23:49:07 | ERROR | utils.ai_extractor — GEMINI_API_KEY not found in environment
+2026-04-18 23:49:07 | INFO | scrapers.base_scraper — 🚀 Starting ai_discovery scraper...
+2026-04-18 23:49:07 | WARNING | scrapers.meetup_scraper — Meetup API returned 404
+2026-04-18 23:49:07 | ERROR | scrapers.base_scraper — HTTP 404 from https://events.google.com/u/0/?region=IN-DL
+2026-04-18 23:49:07 | INFO | scrapers.university_scraper —   → 0 events from IIT Delhi
+2026-04-18 23:49:07 | WARNING | scrapers.unstop_scraper — Unstop API status: 403
+2026-04-18 23:49:08 | DEBUG | scrapers.meraevents_scraper — MeraEvents: found 0 cards
+2026-04-18 23:49:08 | INFO | scrapers.meraevents_scraper —   → 0 events from Delhi
+2026-04-18 23:49:09 | INFO | scrapers.eventbrite_scraper — Found 0 event cards on page
+2026-04-18 23:49:09 | INFO | scrapers.eventbrite_scraper — Found 0 events for Delhi
+2026-04-18 23:49:09 | INFO | scrapers.meetup_scraper — Scraping Meetup for Noida...
+2026-04-18 23:49:09 | WARNING | scrapers.meetup_scraper — Meetup API returned 404
+2026-04-18 23:49:09 | INFO | scrapers.unstop_scraper — Scraping Unstop: competition
+2026-04-18 23:49:09 | WARNING | scrapers.unstop_scraper — Unstop API status: 403
+2026-04-18 23:49:11 | INFO | scrapers.meraevents_scraper — Scraping MeraEvents: https://www.meraevents.com/events/noida
+2026-04-18 23:49:11 | ERROR | scrapers.base_scraper — ❌ ai_discovery scraper failed: Target page, context or browser has been closed
+Browser logs:
+
+<launching> /Users/yuvamrajput/Library/Caches/ms-playwright/chromium-1091/chrome-mac/Chromium.app/Contents/MacOS/Chromium --disable-field-trial-config --disable-background-networking --enable-features=NetworkService,NetworkServiceInProcess --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-extensions --disable-features=ImprovedCookieControls,LazyFrameLoading,GlobalMediaControls,DestroyProfileOnBrowserClose,MediaRouter,DialMediaRouteProvider,AcceptCHFrame,AutoExpandDetailsElement,CertificateTransparencyComponentUpdater,AvoidUnnecessaryBeforeUnloadCheckSync,Translate,HttpsUpgrades --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --force-color-profile=srgb --metrics-recording-only --no-first-run --enable-automation --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --enable-use-zoom-for-dsf=false --use-angle --headless --hide-scrollbars --mute-audio --blink-settings=primaryHoverType=2,availableHoverTypes=2,primaryPointerType=4,availablePointerTypes=4 --no-sandbox --user-data-dir=/var/folders/04/5kmtfb0s4bj40vs740cysz700000gn/T/playwright_chromiumdev_profile-zcYNTa --remote-debugging-pipe --no-startup-window
+<launched> pid=89546
+2026-04-18 23:49:11 | DEBUG | scrapers.meraevents_scraper — MeraEvents: found 0 cards
+2026-04-18 23:49:11 | INFO | scrapers.meraevents_scraper —   → 0 events from Noida
+2026-04-18 23:49:11 | SUCCESS | scrapers.base_scraper — ✅ meetup: 0/0 events scraped in 4.2s
+2026-04-18 23:49:11 | INFO | scrapers.corporate_scraper — Scraping Microsoft Events...
+2026-04-18 23:49:11 | INFO | scrapers.university_scraper — Scraping IIIT Delhi...
+2026-04-18 23:49:11 | INFO | scrapers.unstop_scraper — Scraping Unstop: workshop
+2026-04-18 23:49:11 | WARNING | scrapers.unstop_scraper — Unstop API status: 403
+2026-04-18 23:49:12 | ERROR | scrapers.base_scraper — HTTP 404 from https://iiitd.ac.in/events
+2026-04-18 23:49:12 | INFO | scrapers.eventbrite_scraper — Scraping Eventbrite: Delhi
+2026-04-18 23:49:12 | ERROR | scrapers.base_scraper — HTTP 404 from https://events.microsoft.com/en-us/allevents/?clientTimeZone=1&country=India&region=Delhi
+2026-04-18 23:49:13 | INFO | scrapers.unstop_scraper — Scraping Unstop: case-study
+2026-04-18 23:49:14 | WARNING | scrapers.unstop_scraper — Unstop API status: 403
+2026-04-18 23:49:14 | INFO | scrapers.meraevents_scraper — Scraping MeraEvents: https://www.meraevents.com/tech-events/delhi
+2026-04-18 23:49:15 | INFO | scrapers.eventbrite_scraper — Found 0 event cards on page
+2026-04-18 23:49:15 | INFO | scrapers.eventbrite_scraper — Found 0 events for Delhi
+2026-04-18 23:49:15 | DEBUG | scrapers.meraevents_scraper — MeraEvents: found 0 cards
+2026-04-18 23:49:15 | INFO | scrapers.meraevents_scraper —   → 0 events from Delhi
+2026-04-18 23:49:16 | INFO | scrapers.unstop_scraper — Scraping Unstop: quiz
+2026-04-18 23:49:16 | WARNING | scrapers.unstop_scraper — Unstop API status: 403
+2026-04-18 23:49:16 | INFO | scrapers.university_scraper — Scraping Delhi University...
+2026-04-18 23:49:16 | INFO | scrapers.corporate_scraper — Scraping Nasscom Events...
+2026-04-18 23:49:18 | SUCCESS | scrapers.base_scraper — ✅ unstop: 0/0 events scraped in 10.5s
+2026-04-18 23:49:18 | INFO | scrapers.eventbrite_scraper — Scraping Eventbrite: Delhi
+2026-04-18 23:49:18 | INFO | scrapers.meraevents_scraper — Scraping MeraEvents: https://www.meraevents.com/tech-events/noida
+2026-04-18 23:49:18 | DEBUG | scrapers.meraevents_scraper — MeraEvents: found 0 cards
+2026-04-18 23:49:18 | INFO | scrapers.meraevents_scraper —   → 0 events from Noida
+2026-04-18 23:49:20 | INFO | scrapers.eventbrite_scraper — Found 0 event cards on page
+2026-04-18 23:49:20 | INFO | scrapers.eventbrite_scraper — Found 0 events for Delhi
+2026-04-18 23:49:21 | INFO | scrapers.meraevents_scraper — Scraping MeraEvents: https://www.meraevents.com/business-events/delhi
+2026-04-18 23:49:22 | INFO | scrapers.corporate_scraper —   → 10 events from Nasscom Events
+2026-04-18 23:49:22 | DEBUG | scrapers.meraevents_scraper — MeraEvents: found 0 cards
+2026-04-18 23:49:22 | INFO | scrapers.meraevents_scraper —   → 0 events from Delhi
+2026-04-18 23:49:23 | INFO | scrapers.eventbrite_scraper — Scraping Eventbrite: Delhi
+2026-04-18 23:49:25 | INFO | scrapers.meraevents_scraper — Scraping MeraEvents: https://www.meraevents.com/cultural-events/delhi
+2026-04-18 23:49:25 | DEBUG | scrapers.meraevents_scraper — MeraEvents: found 0 cards
+2026-04-18 23:49:25 | INFO | scrapers.meraevents_scraper —   → 0 events from Delhi
+2026-04-18 23:49:25 | INFO | scrapers.eventbrite_scraper — Found 0 event cards on page
+2026-04-18 23:49:25 | INFO | scrapers.eventbrite_scraper — Found 0 events for Delhi
+2026-04-18 23:49:26 | INFO | scrapers.corporate_scraper — Scraping CII Events...
+2026-04-18 23:49:26 | INFO | scrapers.corporate_scraper —   → 0 events from CII Events
+2026-04-18 23:49:28 | SUCCESS | scrapers.base_scraper — ✅ meraevents: 0/0 events scraped in 21.2s
+2026-04-18 23:49:28 | SUCCESS | scrapers.base_scraper — ✅ eventbrite: 0/0 events scraped in 21.2s
+2026-04-18 23:49:30 | INFO | scrapers.corporate_scraper — Scraping FICCI Events...
+2026-04-18 23:49:30 | ERROR | scrapers.base_scraper — HTTP 404 from https://ficci.in/events.asp
+2026-04-18 23:49:34 | SUCCESS | scrapers.base_scraper — ✅ corporate: 0/10 events scraped in 27.3s
+2026-04-18 23:49:46 | ERROR | scrapers.base_scraper — Error fetching http://www.du.ac.in/du/index.php?page=events: 
+2026-04-18 23:50:19 | ERROR | scrapers.base_scraper — Error fetching http://www.du.ac.in/du/index.php?page=events: 
+2026-04-18 23:50:50 | INFO | utils.logger — Logger initialized for Delhi-Noida Events Scraper
+2026-04-18 23:50:50 | INFO | __main__ — 
+============================================================
+2026-04-18 23:50:50 | INFO | __main__ — 🚀 SCRAPER PIPELINE STARTED — Job: job-f3c34f6da7b2
+2026-04-18 23:50:50 | INFO | __main__ — 📅 2026-04-18 23:50:50 IST
+2026-04-18 23:50:50 | INFO | __main__ — ============================================================
+2026-04-18 23:50:50 | INFO | __main__ — 📦 Running 8 scrapers: ['eventbrite', 'meraevents', 'meetup', 'unstop', 'iit_delhi', 'linkedin', 'corporate', 'dynamic']
+2026-04-18 23:50:50 | WARNING | __main__ — ⚠️  Backend API unreachable. Running in dry-run mode.
+2026-04-18 23:50:50 | INFO | scrapers.base_scraper — 🚀 Starting eventbrite scraper...
+2026-04-18 23:50:50 | INFO | scrapers.eventbrite_scraper — Scraping Eventbrite: Delhi
+2026-04-18 23:50:50 | INFO | scrapers.base_scraper — 🚀 Starting meraevents scraper...
+2026-04-18 23:50:50 | INFO | scrapers.meraevents_scraper — Scraping MeraEvents: https://www.meraevents.com/events/delhi
+2026-04-18 23:50:50 | INFO | scrapers.base_scraper — 🚀 Starting meetup scraper...
+2026-04-18 23:50:50 | INFO | scrapers.meetup_scraper — Scraping Meetup for Delhi...
+2026-04-18 23:50:50 | INFO | scrapers.base_scraper — 🚀 Starting unstop scraper...
+2026-04-18 23:50:50 | INFO | scrapers.unstop_scraper — Scraping Unstop: hackathon
+2026-04-18 23:50:50 | INFO | scrapers.base_scraper — 🚀 Starting iit_delhi scraper...
+2026-04-18 23:50:50 | INFO | scrapers.university_scraper — Scraping IIT Delhi...
+2026-04-18 23:50:50 | INFO | scrapers.base_scraper — 🚀 Starting linkedin scraper...
+2026-04-18 23:50:50 | WARNING | scrapers.linkedin_scraper — No LinkedIn session found. Run save_session() first. Skipping.
+2026-04-18 23:50:50 | SUCCESS | scrapers.base_scraper — ✅ linkedin: 0/0 events scraped in 0.0s
+2026-04-18 23:50:50 | INFO | scrapers.base_scraper — 🚀 Starting corporate scraper...
+2026-04-18 23:50:50 | INFO | scrapers.corporate_scraper — Scraping Google Developers...
+2026-04-18 23:50:50 | ERROR | utils.ai_extractor — GEMINI_API_KEY not found in environment
+2026-04-18 23:50:50 | INFO | scrapers.base_scraper — 🚀 Starting ai_discovery scraper...
+2026-04-18 23:50:50 | ERROR | scrapers.base_scraper — Error fetching https://home.iitd.ac.in/events.php: Cannot connect to host home.iitd.ac.in:443 ssl:False [Connect call failed ('103.27.9.24', 443)]
+2026-04-18 23:50:50 | WARNING | scrapers.meetup_scraper — Meetup API returned 404
+2026-04-18 23:50:50 | WARNING | scrapers.unstop_scraper — Unstop API status: 403
+2026-04-18 23:50:50 | ERROR | scrapers.base_scraper — HTTP 404 from https://events.google.com/u/0/?region=IN-DL
+2026-04-18 23:50:51 | DEBUG | scrapers.meraevents_scraper — MeraEvents: found 0 cards
+2026-04-18 23:50:51 | INFO | scrapers.meraevents_scraper —   → 0 events from Delhi
+2026-04-18 23:50:51 | ERROR | scrapers.base_scraper — ❌ ai_discovery scraper failed: Target page, context or browser has been closed
+Browser logs:
+
+<launching> /Users/yuvamrajput/Library/Caches/ms-playwright/chromium-1091/chrome-mac/Chromium.app/Contents/MacOS/Chromium --disable-field-trial-config --disable-background-networking --enable-features=NetworkService,NetworkServiceInProcess --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-extensions --disable-features=ImprovedCookieControls,LazyFrameLoading,GlobalMediaControls,DestroyProfileOnBrowserClose,MediaRouter,DialMediaRouteProvider,AcceptCHFrame,AutoExpandDetailsElement,CertificateTransparencyComponentUpdater,AvoidUnnecessaryBeforeUnloadCheckSync,Translate,HttpsUpgrades --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --force-color-profile=srgb --metrics-recording-only --no-first-run --enable-automation --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --enable-use-zoom-for-dsf=false --use-angle --headless --hide-scrollbars --mute-audio --blink-settings=primaryHoverType=2,availableHoverTypes=2,primaryPointerType=4,availablePointerTypes=4 --no-sandbox --user-data-dir=/var/folders/04/5kmtfb0s4bj40vs740cysz700000gn/T/playwright_chromiumdev_profile-xaZHY8 --remote-debugging-pipe --no-startup-window
+<launched> pid=89800
+[pid=89800][err] Received signal 11 SEGV_ACCERR 000100000008
+[pid=89800][err]  [0x00011bdb2344]
+[pid=89800][err]  [0x00011ffc296c]
+[pid=89800][err]  [0x00011ffcf2f0]
+[pid=89800][err]  [0x00019dc3d764]
+[pid=89800][err]  [0x0001b14f32fc]
+[pid=89800][err]  [0x0001b138dde8]
+[pid=89800][err]  [0x0001b10935a8]
+[pid=89800][err]  [0x0001b1094114]
+[pid=89800][err]  [0x00019faf2ac8]
+[pid=89800][err]  [0x00019faf3838]
+[pid=89800][err]  [0x0001a2e6ff88]
+[pid=89800][err]  [0x00019da90ad4]
+[pid=89800][err]  [0x00019da79a60]
+[pid=89800][err]  [0x0001a2e6f2ec]
+[pid=89800][err]  [0x0001a20d14c4]
+[pid=89800][err]  [0x0001a290bbbc]
+[pid=89800][err]  [0x0001a20e50cc]
+[pid=89800][err]  [0x0001a21deb64]
+[pid=89800][err]  [0x0001a20e468c]
+[pid=89800][err]  [0x00011ffd8470]
+[pid=89800][err]  [0x00011ffd6ee0]
+[pid=89800][err]  [0x00011ff901ec]
+[pid=89800][err]  [0x00011ff5f06c]
+[pid=89800][err]  [0x00011e0acad8]
+[pid=89800][err]  [0x00011e0ae2a4]
+[pid=89800][err]  [0x000125932c30]
+[pid=89800][err]  [0x00011f3ff858]
+[pid=89800][err]  [0x00011f400da4]
+[pid=89800][err]  [0x00011f4008c8]
+[pid=89800][err]  [0x00011f3fee98]
+[pid=89800][err]  [0x00011f3ff28c]
+[pid=89800][err]  [0x000125923cac]
+[pid=89800][err]  [0x00011bdace6c]
+[pid=89800][err]  [0x000104c9c938]
+[pid=89800][err]  [0x00019d869d54]
+[pid=89800][err] [end of stack trace]
+2026-04-18 23:50:52 | INFO | scrapers.eventbrite_scraper — Found 0 event cards on page
+2026-04-18 23:50:52 | INFO | scrapers.eventbrite_scraper — Found 0 events for Delhi
+2026-04-18 23:50:52 | INFO | scrapers.meetup_scraper — Scraping Meetup for Noida...
+2026-04-18 23:50:52 | INFO | scrapers.unstop_scraper — Scraping Unstop: competition
+2026-04-18 23:50:52 | ERROR | scrapers.base_scraper — Error fetching https://home.iitd.ac.in/events.php: Cannot connect to host home.iitd.ac.in:443 ssl:False [Connect call failed ('103.27.9.24', 443)]
+2026-04-18 23:50:52 | ERROR | scrapers.base_scraper — Error fetching http://www.du.ac.in/du/index.php?page=events: 
+2026-04-18 23:50:52 | WARNING | scrapers.university_scraper — Failed to scrape Delhi University: RetryError[<Future at 0x115a68550 state=finished raised TimeoutError>]
+2026-04-18 23:50:52 | INFO | scrapers.university_scraper — Scraping Amity University Noida...
+2026-04-18 23:50:52 | WARNING | scrapers.meetup_scraper — Meetup API returned 404
+2026-04-18 23:50:52 | WARNING | scrapers.unstop_scraper — Unstop API status: 403
+2026-04-18 23:50:54 | INFO | scrapers.meraevents_scraper — Scraping MeraEvents: https://www.meraevents.com/events/noida
+2026-04-18 23:50:54 | DEBUG | scrapers.meraevents_scraper — MeraEvents: found 0 cards
+2026-04-18 23:50:54 | INFO | scrapers.meraevents_scraper —   → 0 events from Noida
+2026-04-18 23:50:54 | INFO | scrapers.corporate_scraper — Scraping Microsoft Events...
+2026-04-18 23:50:54 | ERROR | scrapers.base_scraper — Error fetching https://home.iitd.ac.in/events.php: Cannot connect to host home.iitd.ac.in:443 ssl:False [Connect call failed ('103.27.9.24', 443)]
+2026-04-18 23:50:54 | WARNING | scrapers.university_scraper — Failed to scrape IIT Delhi: RetryError[<Future at 0x10f2568b0 state=finished raised ClientConnectorError>]
+2026-04-18 23:50:54 | INFO | scrapers.university_scraper — Scraping IIIT Delhi...
+2026-04-18 23:50:54 | SUCCESS | scrapers.base_scraper — ✅ meetup: 0/0 events scraped in 4.2s
+2026-04-18 23:50:54 | INFO | scrapers.unstop_scraper — Scraping Unstop: workshop
+2026-04-18 23:50:54 | WARNING | scrapers.unstop_scraper — Unstop API status: 403
+2026-04-18 23:50:55 | ERROR | scrapers.base_scraper — HTTP 404 from https://iiitd.ac.in/events
+2026-04-18 23:50:55 | INFO | scrapers.eventbrite_scraper — Scraping Eventbrite: Delhi
+2026-04-18 23:50:55 | ERROR | scrapers.base_scraper — HTTP 404 from https://events.microsoft.com/en-us/allevents/?clientTimeZone=1&country=India&region=Delhi
+2026-04-18 23:50:56 | INFO | scrapers.eventbrite_scraper — Found 0 event cards on page
+2026-04-18 23:50:56 | INFO | scrapers.eventbrite_scraper — Found 0 events for Delhi
+2026-04-18 23:50:56 | INFO | scrapers.unstop_scraper — Scraping Unstop: case-study
+2026-04-18 23:50:56 | WARNING | scrapers.unstop_scraper — Unstop API status: 403
+2026-04-18 23:50:56 | INFO | scrapers.university_scraper — Scraping Jaypee Institute...
+2026-04-18 23:50:57 | ERROR | scrapers.base_scraper — HTTP 404 from https://www.jiit.ac.in/events
+2026-04-18 23:50:57 | INFO | scrapers.meraevents_scraper — Scraping MeraEvents: https://www.meraevents.com/tech-events/delhi
+2026-04-18 23:50:58 | DEBUG | scrapers.meraevents_scraper — MeraEvents: found 0 cards
+2026-04-18 23:50:58 | INFO | scrapers.meraevents_scraper —   → 0 events from Delhi
+2026-04-18 23:50:58 | INFO | scrapers.unstop_scraper — Scraping Unstop: quiz
+2026-04-18 23:50:58 | WARNING | scrapers.unstop_scraper — Unstop API status: 403
+2026-04-18 23:50:59 | INFO | scrapers.university_scraper — Scraping Delhi University...
+2026-04-18 23:50:59 | INFO | scrapers.eventbrite_scraper — Scraping Eventbrite: Delhi
+2026-04-18 23:50:59 | INFO | scrapers.corporate_scraper — Scraping Nasscom Events...
+2026-04-18 23:51:00 | INFO | scrapers.eventbrite_scraper — Found 0 event cards on page
+2026-04-18 23:51:00 | INFO | scrapers.eventbrite_scraper — Found 0 events for Delhi
+2026-04-18 23:51:00 | SUCCESS | scrapers.base_scraper — ✅ unstop: 0/0 events scraped in 10.3s
+2026-04-18 23:51:01 | INFO | scrapers.meraevents_scraper — Scraping MeraEvents: https://www.meraevents.com/tech-events/noida
+2026-04-18 23:51:01 | SUCCESS | scrapers.base_scraper — ✅ iit_delhi: 0/0 events scraped in 113.6s
+2026-04-18 23:51:01 | INFO | __main__ — 
+============================================================
+2026-04-18 23:51:01 | INFO | __main__ — ✅ PIPELINE COMPLETE — Job: job-79d7181a08ce
+2026-04-18 23:51:01 | INFO | __main__ —    Found: 10 | Sent: 0
+2026-04-18 23:51:01 | INFO | __main__ — ============================================================
+
+2026-04-18 23:51:01 | INFO | scrapers.corporate_scraper —   → 10 events from Nasscom Events
+2026-04-18 23:51:01 | DEBUG | scrapers.meraevents_scraper — MeraEvents: found 0 cards
+2026-04-18 23:51:01 | INFO | scrapers.meraevents_scraper —   → 0 events from Noida
+2026-04-18 23:51:03 | INFO | scrapers.eventbrite_scraper — Scraping Eventbrite: Delhi
+2026-04-18 23:51:04 | INFO | scrapers.eventbrite_scraper — Found 0 event cards on page
+2026-04-18 23:51:04 | INFO | scrapers.eventbrite_scraper — Found 0 events for Delhi
+2026-04-18 23:51:04 | INFO | scrapers.meraevents_scraper — Scraping MeraEvents: https://www.meraevents.com/business-events/delhi
+2026-04-18 23:51:05 | DEBUG | scrapers.meraevents_scraper — MeraEvents: found 0 cards
+2026-04-18 23:51:05 | INFO | scrapers.meraevents_scraper —   → 0 events from Delhi
+2026-04-18 23:51:05 | INFO | scrapers.corporate_scraper — Scraping CII Events...
+2026-04-18 23:51:05 | INFO | scrapers.corporate_scraper —   → 0 events from CII Events
+2026-04-18 23:51:07 | SUCCESS | scrapers.base_scraper — ✅ eventbrite: 0/0 events scraped in 16.8s
+2026-04-18 23:51:08 | INFO | scrapers.meraevents_scraper — Scraping MeraEvents: https://www.meraevents.com/cultural-events/delhi
+2026-04-18 23:51:08 | DEBUG | scrapers.meraevents_scraper — MeraEvents: found 0 cards
+2026-04-18 23:51:08 | INFO | scrapers.meraevents_scraper —   → 0 events from Delhi
+2026-04-18 23:51:09 | INFO | scrapers.corporate_scraper — Scraping FICCI Events...
+2026-04-18 23:51:10 | ERROR | scrapers.base_scraper — HTTP 404 from https://ficci.in/events.asp
+2026-04-18 23:51:11 | SUCCESS | scrapers.base_scraper — ✅ meraevents: 0/0 events scraped in 21.1s
+2026-04-18 23:51:14 | SUCCESS | scrapers.base_scraper — ✅ corporate: 0/10 events scraped in 23.6s
+2026-04-18 23:51:29 | ERROR | scrapers.base_scraper — Error fetching http://www.du.ac.in/du/index.php?page=events: 
+2026-04-18 23:52:02 | ERROR | scrapers.base_scraper — Error fetching http://www.du.ac.in/du/index.php?page=events: 
+2026-04-18 23:52:35 | ERROR | scrapers.base_scraper — Error fetching http://www.du.ac.in/du/index.php?page=events: 
+2026-04-18 23:52:35 | WARNING | scrapers.university_scraper — Failed to scrape Delhi University: RetryError[<Future at 0x10f2d97f0 state=finished raised TimeoutError>]
+2026-04-18 23:52:35 | INFO | scrapers.university_scraper — Scraping Amity University Noida...
+2026-04-18 23:52:40 | INFO | scrapers.university_scraper — Scraping Jaypee Institute...
+2026-04-18 23:52:41 | ERROR | scrapers.base_scraper — HTTP 404 from https://www.jiit.ac.in/events
+2026-04-18 23:52:45 | SUCCESS | scrapers.base_scraper — ✅ iit_delhi: 0/0 events scraped in 114.7s
+2026-04-18 23:52:45 | INFO | __main__ — 
+============================================================
+2026-04-18 23:52:45 | INFO | __main__ — ✅ PIPELINE COMPLETE — Job: job-f3c34f6da7b2
+2026-04-18 23:52:45 | INFO | __main__ —    Found: 10 | Sent: 0
+2026-04-18 23:52:45 | INFO | __main__ — ============================================================
+
+2026-04-18 23:54:14 | INFO | utils.logger — Logger initialized for Delhi-Noida Events Scraper
+2026-04-18 23:54:14 | INFO | __main__ — 
+============================================================
+2026-04-18 23:54:14 | INFO | __main__ — 🚀 SCRAPER PIPELINE STARTED — Job: job-4711b6b49381
+2026-04-18 23:54:14 | INFO | __main__ — 📅 2026-04-18 23:54:14 IST
+2026-04-18 23:54:14 | INFO | __main__ — ============================================================
+2026-04-18 23:54:14 | INFO | __main__ — 📦 Running 1 scrapers: ['corporate']
+2026-04-18 23:54:14 | WARNING | __main__ — ⚠️  Backend API unreachable. Running in dry-run mode.
+2026-04-18 23:54:14 | INFO | scrapers.base_scraper — 🚀 Starting corporate scraper...
+2026-04-18 23:54:14 | INFO | scrapers.corporate_scraper — Scraping Google Developers...
+2026-04-18 23:54:14 | ERROR | scrapers.base_scraper — HTTP 404 from https://events.google.com/u/0/?region=IN-DL
+2026-04-18 23:54:18 | INFO | scrapers.corporate_scraper — Scraping Microsoft Events...
+2026-04-18 23:54:19 | ERROR | scrapers.base_scraper — HTTP 404 from https://events.microsoft.com/en-us/allevents/?clientTimeZone=1&country=India&region=Delhi
+2026-04-18 23:54:23 | INFO | scrapers.corporate_scraper — Scraping Nasscom Events...
+2026-04-18 23:54:25 | INFO | scrapers.corporate_scraper —   → 10 events from Nasscom Events
+2026-04-18 23:54:29 | INFO | scrapers.corporate_scraper — Scraping CII Events...
+2026-04-18 23:54:29 | INFO | scrapers.corporate_scraper —   → 0 events from CII Events
+2026-04-18 23:54:33 | INFO | scrapers.corporate_scraper — Scraping FICCI Events...
+2026-04-18 23:54:34 | ERROR | scrapers.base_scraper — HTTP 404 from https://ficci.in/events.asp
+2026-04-18 23:54:38 | SUCCESS | scrapers.base_scraper — ✅ corporate: 0/10 events scraped in 23.7s
+2026-04-18 23:54:38 | INFO | __main__ — 
+============================================================
+2026-04-18 23:54:38 | INFO | __main__ — ✅ PIPELINE COMPLETE — Job: job-4711b6b49381
+2026-04-18 23:54:38 | INFO | __main__ —    Found: 10 | Sent: 0
+2026-04-18 23:54:38 | INFO | __main__ — ============================================================
+

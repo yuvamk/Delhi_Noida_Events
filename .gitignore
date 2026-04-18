@@ -10,7 +10,7 @@ venv/
 env/
 ENV/
 
-# ─── AI & IDE Metadata ───
+# ─── AI Tool & IDE Metadata (Safe to ignore) ───
 .bob/
 .windsurf/
 .factory/
@@ -47,33 +47,31 @@ ENV/
 *.swo
 .DS_Store
 
-# ─── Data & Previews ───
-*.log
-scraper/logs/
-backend/logs/
-*.json
+# ─── Keep Project Config (IMPORTANT) ───
 !package.json
 !package-lock.json
 !tsconfig.json
-!next.config.json
+!next.config.js
+!next.config.ts
 !pyrefly.toml
-!kinetik_logo_screen.json
-!screen_data.json
-# (Allow these specific JSONs if they are part of the app code)
+!requirements.txt
+!docker-compose.yml
 
-*.html
-!frontend/src/**/*.html
-# (Excludes all top-level .html files like otp_preview.html)
+# ─── Data & Logs (KEEP) ───
+# We ignore the content of massive caches, but keep logs
+nginx_cache/
+!logs/
+!*.log
+!scraper/logs/
+!backend/logs/
+
+# ─── Environment ───
+.env
+.env.*
+!.env.example
 
 # ─── Python Cache ───
 __pycache__/
 *.py[cod]
 *$py.class
 .pytest_cache/
-.coverage
-htmlcov/
-
-# ─── Environment ───
-.env
-.env.*
-!.env.example
