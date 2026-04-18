@@ -2,7 +2,7 @@ import { notFound } from "next/navigation";
 import { EventDetailClient } from "./EventDetailClient";
 import { Metadata } from "next";
 
-const API = process.env.NEXT_PUBLIC_API_URL || "http://localhost:5000/api/v1";
+const API = process.env.NEXT_PUBLIC_API_URL || "/api/v1";
 
 const MOCK_EVENT: any = {
   _id: "mock-event",

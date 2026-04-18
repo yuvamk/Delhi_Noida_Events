@@ -69,7 +69,8 @@ export function AuthProvider({ children }: { children: ReactNode }) {
 
   const loginWithGoogleSuccess = useCallback(async (credential: string) => {
     try {
-      const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/auth/google-login`, {
+      const API_URL = process.env.NEXT_PUBLIC_API_URL || "/api/v1";
+      const res = await fetch(`${API_URL}/auth/google-login`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ idToken: credential }),

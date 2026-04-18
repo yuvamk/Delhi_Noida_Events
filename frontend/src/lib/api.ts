@@ -3,7 +3,7 @@
  * Base URL from env var, JWT token from localStorage, auto-refresh on 401.
  */
 
-const BASE_URL = process.env.NEXT_PUBLIC_API_URL || "http://localhost:5000/api/v1";
+const BASE_URL = process.env.NEXT_PUBLIC_API_URL || "/api/v1";
 
 // ─── Token helpers ────────────────────────────────────────────
 export function getToken(): string | null {

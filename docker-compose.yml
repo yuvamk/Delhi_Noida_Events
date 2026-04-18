@@ -216,12 +216,14 @@ services:
     build:
       context: ./frontend
       dockerfile: Dockerfile
+      args:
+        - NEXT_PUBLIC_API_URL=/api/v1
     container_name: dne-frontend
     expose:
       - "3000"
     environment:
       - NODE_ENV=production
-      - NEXT_PUBLIC_API_URL=${NEXT_PUBLIC_API_URL:-http://nginx/api/v1}
+      - NEXT_PUBLIC_API_URL=/api/v1
     depends_on:
       - nginx
     restart: unless-stopped
