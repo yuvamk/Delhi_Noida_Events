@@ -19,7 +19,7 @@ export default function AuthCallbackPage() {
       const error = searchParams.get("error");
 
       if (error) {
-        toast.error(\`Auth Error: \${error}\`);
+        toast.error(`Auth Error: ${error}`);
         router.push("/");
         return;
       }
