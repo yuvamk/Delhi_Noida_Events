@@ -1,6 +1,0 @@
-{
-  "python.defaultInterpreterPath": "/Users/yuvamrajput/Desktop/DE_NE_Events/scraper/venv/bin/python3",
-  "python.analysis.extraPaths": [
-    "/Users/yuvamrajput/Desktop/DE_NE_Events/scraper/venv/lib/python3.9/site-packages"
-  ]
-}
