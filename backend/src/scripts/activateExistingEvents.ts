@@ -17,6 +17,10 @@ async function migrate() {
     await mongoose.connect(uri);
     console.log("Connected successfully.");
 
+    if (!mongoose.connection.db) {
+      throw new Error("Database connection not established");
+    }
+
     const result = await mongoose.connection.db.collection("events").updateMany(
       { isActive: { $exists: false } },
       { $set: { isActive: true } }
