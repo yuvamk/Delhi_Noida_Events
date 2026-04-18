@@ -1,0 +1,148 @@
+import nodemailer from "nodemailer";
+import { logger } from "./logger";
+import dotenv from "dotenv";
+
+// Ensure environment variables are loaded
+dotenv.config();
+
+const transporter = nodemailer.createTransport({
+  service: "gmail",
+  auth: {
+    user: process.env.EMAIL_USER,
+    pass: process.env.EMAIL_PASS,
+  },
+});
+
+export const sendOTP = async (email: string, otp: string) => {
+  try {
+    const formattedOtp = otp.split('').join(' ');
+    const mailOptions = {
+      from: '"Neon Editorial" <noreply@neon-editorial.com>',
+      to: email,
+      subject: "Your OTP for DE·NE",
+      html: `
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verify Your Identity</title>
+</head>
+<body style="margin: 0; padding: 0; background-color: #0e0e14; font-family: 'Inter', Helvetica, Arial, sans-serif; color: #f5f2fb;">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%" style="table-layout: fixed;">
+        <tr>
+            <td align="center" style="padding: 40px 20px;">
+                <!-- Logo Section (Drawn with SVG/Code) -->
+                <table border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width: 520px;">
+                    <tr>
+                        <td align="center" style="padding-bottom: 30px;">
+                            <table border="0" cellpadding="0" cellspacing="0">
+                                <tr>
+                                    <td valign="middle">
+                                        <!-- Geometric Geometric Logo Icon -->
+                                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" style="display: block;">
+                                            <rect width="40" height="40" rx="8" fill="#25252e" />
+                                            <path d="M12 20L20 10V20L28 20L20 30V20L12 20Z" fill="#7C3AED" />
+                                        </svg>
+                                    </td>
+                                    <td valign="middle" style="padding-left: 12px;">
+                                        <span style="font-family: 'Epilogue', sans-serif; font-size: 24px; font-weight: bold; color: #f5f2fb; text-transform: uppercase; letter-spacing: -1px;">Kinetik</span>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <!-- Main Card -->
+                    <tr>
+                        <td style="background-color: #191920; border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 16px; padding: 40px; text-align: center; position: relative;">
+                            <div>
+                                <span style="font-family: 'Epilogue', sans-serif; font-weight: bold; color: #bd9dff; letter-spacing: 2px; font-size: 11px; text-transform: uppercase; display: block; margin-bottom: 8px;">Identity Verification</span>
+                                <h1 style="font-family: 'Epilogue', sans-serif; font-size: 32px; font-weight: bold; color: #f5f2fb; margin: 0 0 16px 0; letter-spacing: -0.5px;">Verify Your Identity</h1>
+                                <p style="font-size: 16px; line-height: 1.6; color: #acaab3; margin: 0 auto 30px auto; max-width: 320px;">
+                                    Use the code below to complete your sign-in to <span style="color: #f5f2fb; font-weight: 600;">DE·NE</span>.
+                                </p>
+
+                                <!-- OTP Box -->
+                                <div style="margin: 30px 0; padding: 2px; background-color: #000000; display: inline-block; border-radius: 12px; border-bottom: 2px solid #48474f;">
+                                    <div style="padding: 20px 40px; background-color: #1f1f27; border: 1px solid rgba(255, 255, 255, 0.05); border-radius: 12px;">
+                                        <span style="font-family: 'Epilogue', sans-serif; font-size: 40px; font-weight: 900; color: #bd9dff; letter-spacing: 0.2em; text-shadow: 0 0 15px rgba(189, 157, 255, 0.4);">${formattedOtp}</span>
+                                    </div>
+                                </div>
+
+                                <!-- Copy Code Button -->
+                                <div style="padding-top: 20px;">
+                                    <table border="0" cellpadding="0" cellspacing="0" style="margin: 0 auto;">
+                                        <tr>
+                                            <td align="center" style="border-radius: 9999px;">
+                                                <div style="background-color: #FF5E1A; border-radius: 9999px; padding: 16px 40px;">
+                                                    <a href="#" style="font-family: 'Epilogue', sans-serif; font-size: 16px; font-weight: bold; color: #000000; text-decoration: none;">
+                                                        Copy Code
+                                                    </a>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                    <p style="color: rgba(172, 170, 179, 0.6); font-style: italic; margin-top: 16px; font-size: 14px;">
+                                        Click the button above to copy the code to your clipboard.
+                                    </p>
+                                </div>
+
+                                <!-- Security Note -->
+                                <div style="margin-top: 40px; padding-top: 30px; border-top: 1px solid rgba(255, 255, 255, 0.05);">
+                                    <div style="background-color: #13131a; padding: 20px; border-radius: 12px; text-align: left; display: inline-block; width: 100%; box-sizing: border-box;">
+                                        <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                            <tr>
+                                                <td width="30" valign="top" style="padding-top: 2px;">
+                                                    <!-- Lucide-style Info Icon SVG -->
+                                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#00d4ff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display: block;">
+                                                        <circle cx="12" cy="12" r="10"></circle>
+                                                        <line x1="12" y1="16" x2="12" y2="12"></line>
+                                                        <line x1="12" y1="8" x2="12.01" y2="8"></line>
+                                                    </svg>
+                                                </td>
+                                                <td style="padding-left: 10px;">
+                                                    <p style="font-size: 14px; color: #acaab3; line-height: 1.5; margin: 0;">
+                                                        This code will <span style="color: #f5f2fb; font-weight: 600;">expire in 10 minutes</span>. If you didn't request this sign-in, please ignore this email.
+                                                    </p>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <!-- Footer -->
+                    <tr>
+                        <td align="center" style="padding-top: 40px; padding-bottom: 40px;">
+                            <div style="height: 1px; width: 80px; background: #48474f; margin-bottom: 20px;"></div>
+                            <p style="font-family: 'Epilogue', sans-serif; font-size: 12px; font-weight: bold; color: #acaab3; text-transform: uppercase; letter-spacing: 2px; margin: 0 0 20px 0;">
+                                Built by Kinetik
+                            </p>
+                            <nav style="margin-bottom: 20px;">
+                                <a href="#" style="font-size: 12px; color: #acaab3; text-decoration: none; margin: 0 10px;">Support Center</a>
+                                <a href="#" style="font-size: 12px; color: #acaab3; text-decoration: none; margin: 0 10px;">Privacy Policy</a>
+                                <a href="#" style="font-size: 12px; color: #acaab3; text-decoration: none; margin: 0 10px;">Terms of Service</a>
+                            </nav>
+                            <p style="font-size: 10px; color: rgba(172, 170, 179, 0.4); text-transform: uppercase; letter-spacing: 1.5px; margin: 0;">
+                                © 2024 Kinetik • Delhi • Noida • Gurgaon
+                            </p>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>
+      `,
+    };
+
+    const info = await transporter.sendMail(mailOptions);
+    logger.info(`OTP sent to ${email}: ${info.messageId}`);
+    return true;
+  } catch (error: any) {
+    logger.error(`Error sending OTP to ${email}: ${error.message}`);
+    return false;
+  }
+};

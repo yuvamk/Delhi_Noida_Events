@@ -6,6 +6,7 @@ import Analytic from "../models/Analytic";
 import { asyncHandler } from "../middleware/errorHandler";
 import { AuthRequest } from "../middleware/auth";
 import { logger } from "../utils/logger";
+import { scraperManager } from "../services/ScraperManager";
 
 // ─── GET /api/v1/admin/stats ──────────────────────────────────
 export const getAdminStats = asyncHandler(async (_req: Request, res: Response) => {
@@ -162,54 +163,46 @@ export const getScraperStatus = asyncHandler(async (_req: Request, res: Response
   );
 
   const runningJob = await ScraperLog.findOne({ status: "running" }).lean();
+  const liveStatus = scraperManager.getStatus();
 
   res.json({
     success: true,
     data: {
       sources: statuses,
-      currentlyRunning: !!runningJob,
+      currentlyRunning: !!runningJob || liveStatus.running,
+      liveStatus,
       runningJob: runningJob || null,
       nextScheduled: new Date(Date.now() + 6 * 60 * 60 * 1000).toISOString(),
     },
   });
 });
 
-// ─── POST /api/v1/admin/scraper/trigger ──────────────────────
-export const triggerScraper = asyncHandler(async (req: AuthRequest, res: Response) => {
-  const { sources = ["all"], city = "both", maxPages = 5 } = req.body;
-  const jobId = `manual-${crypto.randomUUID().replace(/-/g, "").slice(0, 12)}`;
-
-  const runSources = sources.includes("all")
-    ? ["eventbrite", "meraevents", "meetup", "unstop", "linkedin", "iit_delhi", "corporate"]
-    : sources;
-
-  // Create log entries for each source
-  const logPromises = runSources.map((source: string) =>
-    ScraperLog.create({
-      jobId: `${jobId}-${source}`,
-      source,
-      status: "running",
-      triggeredBy: "manual",
-      triggeredByUser: req.userId,
-      startedAt: new Date(),
-    })
-  );
-  await Promise.all(logPromises);
-
-  logger.info(`Scraper triggered manually by ${req.userId} for sources: ${runSources.join(", ")}`);
-
-  // In production, this would call the Python scraper via: 
-  // await axios.post(`${SCRAPER_API_URL}/trigger`, { sources, city, maxPages, jobId })
-
-  res.json({
-    success: true,
-    jobId,
-    sources: runSources,
-    message: `Scraper job started for: ${runSources.join(", ")}`,
-    estimatedDuration: `${runSources.length * 3}-${runSources.length * 5} minutes`,
-    trackUrl: `/api/v1/admin/scraper/logs?jobId=${jobId}`,
-  });
+// ─── POST /api/v1/admin/scraper/start ───────────────────────
+export const startScraper = asyncHandler(async (req: AuthRequest, res: Response) => {
+  const success = await scraperManager.start();
+  
+  if (success) {
+    logger.info(`Scraper process started by admin ${req.userId}`);
+    res.json({ success: true, message: "Scraper process started successfully" });
+  } else {
+    res.status(500).json({ success: false, error: "Failed to start scraper process" });
+  }
 });
+
+// ─── POST /api/v1/admin/scraper/stop ────────────────────────
+export const stopScraper = asyncHandler(async (req: AuthRequest, res: Response) => {
+  const success = scraperManager.stop();
+  
+  if (success) {
+    logger.info(`Scraper process stop requested by admin ${req.userId}`);
+    res.json({ success: true, message: "Scraper stop signal sent" });
+  } else {
+    res.status(400).json({ success: false, error: "No scraper process running" });
+  }
+});
+
+// Alias for backwards compatibility or manual triggers
+export const triggerScraper = startScraper;
 
 // ─── POST /api/v1/admin/scraper/logs (from Python) ───────────
 export const postScraperResult = asyncHandler(async (req: Request, res: Response) => {
@@ -247,21 +240,59 @@ export const batchUpsertEvents = asyncHandler(async (req: Request, res: Response
 
   const results = { inserted: 0, updated: 0, failed: 0 };
 
-  await Promise.all(
-    events.map(async (eventData: any) => {
-      try {
-        await Event.findOneAndUpdate(
-          { source: eventData.source, sourceUrl: eventData.sourceUrl },
-          { $set: eventData, $setOnInsert: { viewCount: 0, bookmarkCount: 0, createdAt: new Date() } },
-          { upsert: true, new: true, runValidators: false }
-        );
-        results.inserted++;
-      } catch (error: any) {
-        if (error.code === 11000) results.updated++;
-        else { results.failed++; logger.error(`Failed to upsert event: ${error.message}`); }
+  for (let eventData of events) {
+    try {
+      // ─── Data Normalization ───────────────────────────────────
+      // 1. Normalize City
+      if (eventData.city) {
+        if (eventData.city.toLowerCase().includes("gurugram")) eventData.city = "Gurgaon";
+        if (eventData.city.toLowerCase().includes("new delhi")) eventData.city = "Delhi";
       }
-    })
-  );
+
+      // 2. Ensure Organizer Name
+      if (!eventData.organizer?.name) {
+        eventData.organizer = { 
+          ...(eventData.organizer || {}), 
+          name: eventData.source || "Event Organizer" 
+        };
+      }
+
+      // 3. Trim and Clean Strings
+      if (eventData.title) eventData.title = eventData.title.trim();
+      if (eventData.category) {
+        // Simple capitalization check
+        eventData.category = eventData.category.charAt(0).toUpperCase() + eventData.category.slice(1).toLowerCase();
+      }
+      if (eventData.city) {
+        eventData.city = eventData.city.charAt(0).toUpperCase() + eventData.city.slice(1);
+      }
+      
+      // 4. Force active by default for frontend visibility
+      eventData.isActive = true;
+      // ──────────────────────────────────────────────────────────
+
+      // Find existing event by source and sourceUrl
+      let event = await Event.findOne({ 
+        source: eventData.source, 
+        sourceUrl: eventData.sourceUrl 
+      });
+
+      if (event) {
+        // Update existing
+        event.set(eventData);
+        await event.save();
+        results.updated++;
+      } else {
+        // Create new
+        event = new Event(eventData);
+        await event.save();
+        results.inserted++;
+      }
+    } catch (error: any) {
+      results.failed++;
+      logger.error(`Failed to upsert event "${eventData.title}": ${error.message}`);
+    }
+  }
 
   logger.info(`Batch upsert: ${results.inserted} inserted, ${results.updated} updated, ${results.failed} failed (job: ${jobId})`);
   res.json({ success: true, results, total: events.length });

@@ -48,6 +48,7 @@ export interface User {
   cityPreference?: string;
   categoryPreferences?: string[];
   isEmailVerified?: boolean;
+  twoFactorEnabled?: boolean;
 }
 
 export interface ApiResponse<T = any> {
@@ -201,6 +202,15 @@ export const authApi = {
     }),
 
   logout: () => request("/auth/logout", { method: "POST" }),
+  
+  generateOTP: (email: string) => 
+    request("/auth/generate-otp", { method: "POST", body: JSON.stringify({ email }) }),
+    
+  verifyOTP: (email: string, otp: string) =>
+    request("/auth/verify-otp", { method: "POST", body: JSON.stringify({ email, otp }) }),
+    
+  toggle2FA: (enabled: boolean) =>
+    request("/auth/toggle-2fa", { method: "POST", body: JSON.stringify({ enabled }) }),
 };
 
 // ─── Bookmarks API ────────────────────────────────────────────
@@ -225,6 +235,8 @@ export const adminApi = {
   getUsers: (page = 1) => request(`/admin/users?page=${page}`),
   getScraperStatus: () => request("/admin/scraper/status"),
   getScraperLogs: (page = 1) => request(`/admin/scraper/logs?page=${page}`),
+  startScraper: () => request("/admin/scraper/start", { method: "POST" }),
+  stopScraper: () => request("/admin/scraper/stop", { method: "POST" }),
   triggerScraper: (sources: string[] = ["all"]) =>
     request("/admin/scraper/trigger", { method: "POST", body: JSON.stringify({ sources }) }),
   toggleFeatured: (id: string) => request(`/admin/events/${id}/feature`, { method: "PATCH" }),

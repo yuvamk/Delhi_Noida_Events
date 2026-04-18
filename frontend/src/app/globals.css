@@ -1,6 +1,77 @@
+@import "tailwindcss";
+
+@theme {
+  /* Brand Colors (Migrated from layout script) */
+  --color-primary: #bd9dff;
+  --color-primary-dim: #8a4cfc;
+  --color-primary-fixed: #b28cff;
+  --color-primary-fixed-dim: #a67aff;
+  --color-primary-container: #b28cff;
+  --color-on-primary: #3c0089;
+  --color-on-primary-container: #2e006c;
+  --color-on-primary-fixed: #000000;
+  --color-on-primary-fixed-variant: #390083;
+
+  --color-secondary: #ff7440;
+  --color-secondary-dim: #ff7440;
+  --color-secondary-fixed: #ffc4b1;
+  --color-secondary-fixed-dim: #ffb196;
+  --color-secondary-container: #aa3600;
+  --color-on-secondary: #400f00;
+  --color-on-secondary-container: #fff6f3;
+  --color-on-secondary-fixed: #621c00;
+  --color-on-secondary-fixed-variant: #932e00;
+
+  --color-tertiary: #6dddff;
+  --color-tertiary-dim: #00c3eb;
+  --color-tertiary-fixed: #00d2fd;
+  --color-tertiary-fixed-dim: #00c3eb;
+  --color-tertiary-container: #00d2fd;
+  --color-on-tertiary: #004c5e;
+  --color-on-tertiary-container: #004352;
+  --color-on-tertiary-fixed: #002c37;
+  --color-on-tertiary-fixed-variant: #004c5d;
+
+  --color-error: #ff6e84;
+  --color-error-dim: #d73357;
+  --color-error-container: #a70138;
+  --color-on-error: #490013;
+  --color-on-error-container: #ffb2b9;
+
+  --color-surface: #0e0e14;
+  --color-surface-dim: #0e0e14;
+  --color-surface-bright: #2b2b35;
+  --color-surface-variant: #25252e;
+  --color-on-surface: #f5f2fb;
+  --color-on-surface-variant: #acaab3;
+  --color-inverse-surface: #fcf8ff;
+  --color-inverse-on-surface: #55545c;
+  --color-surface-tint: #bd9dff;
+
+  --color-surface-container: #191920;
+  --color-surface-container-low: #13131a;
+  --color-surface-container-lowest: #000000;
+  --color-surface-container-high: #1f1f27;
+  --color-surface-container-highest: #25252e;
+
+  --color-outline: #76747d;
+  --color-outline-variant: #48474f;
+  --color-background: #0e0e14;
+  --color-on-background: #f5f2fb;
+
+  /* Spacing / Borders */
+  --radius-lg: 2rem;
+  --radius-xl: 3rem;
+  --radius-default: 1rem;
+
+  /* Fonts */
+  --font-headline: "Epilogue", sans-serif;
+  --font-body: "Inter", sans-serif;
+  --font-label: "Inter", sans-serif;
+}
+
 /* 
   Global CSS for DE·NE
-  Most styling is handled by Tailwind CSS classes injected via CDN during prototyping.
 */
 
 html, body {

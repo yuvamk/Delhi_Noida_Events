@@ -8,11 +8,14 @@ interface AuthContextType {
   loading: boolean;
   isAuthenticated: boolean;
   isAdmin: boolean;
-  login: (email: string, password: string) => Promise<boolean>;
-  loginWithGoogle: () => Promise<void>;
+  login: (email: string, password: string) => Promise<boolean | "OTP_REQUIRED">;
+  loginWithGoogleSuccess: (credential: string) => Promise<void>;
   register: (name: string, email: string, password: string) => Promise<boolean>;
   logout: () => void;
   updateUser: (user: User) => void;
+  generateOTP: (email: string) => Promise<boolean>;
+  verifyOTP: (email: string, otp: string) => Promise<boolean>;
+  toggle2FA: (enabled: boolean) => Promise<boolean>;
 }
 
 const AuthContext = createContext<AuthContextType | null>(null);
@@ -21,13 +24,11 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   const [user, setUser] = useState<User | null>(null);
   const [loading, setLoading] = useState(true);
 
-  // Rehydrate from localStorage on mount
   useEffect(() => {
     const stored = getStoredUser();
     const token = getToken();
     if (stored && token) {
       setUser(stored);
-      // Validate token with backend in background
       authApi.getMe().then((res) => {
         if (res.success && res.data) {
           setUser(res.data);
@@ -42,11 +43,15 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     }
   }, []);
 
-  const login = useCallback(async (email: string, password: string): Promise<boolean> => {
+  const login = useCallback(async (email: string, password: string): Promise<boolean | "OTP_REQUIRED"> => {
     try {
       const res = await authApi.login(email, password);
-      if (res.success && res.data) {
-        const { token, refreshToken, user: userData } = res.data as any;
+      if (res.success) {
+        if ((res as any).otpRequired) {
+           toast("Please enter the OTP sent to your email", { icon: "📧" });
+           return "OTP_REQUIRED";
+        }
+        const { token, refreshToken, user: userData } = res as any;
         setToken(token, refreshToken);
         setStoredUser(userData);
         setUser(userData);
@@ -62,24 +67,33 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     }
   }, []);
 
-  const loginWithGoogle = useCallback(async () => {
-    // Google OAuth via backend redirect
-    const clientId = process.env.NEXT_PUBLIC_GOOGLE_CLIENT_ID;
-    if (!clientId) {
-      toast.error("Google login not configured");
-      return;
+  const loginWithGoogleSuccess = useCallback(async (credential: string) => {
+    try {
+      const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/auth/google-login`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ idToken: credential }),
+      });
+      const result = await res.json();
+      if (result.success) {
+        const { token, refreshToken, user: userData } = result;
+        setToken(token, refreshToken);
+        setStoredUser(userData);
+        setUser(userData);
+        toast.success(`Logged in with Google! Welcome, ${userData.name} ✨`);
+      } else {
+        toast.error(result.error || "Google login failed");
+      }
+    } catch (error) {
+      toast.error("Google authentication failed");
     }
-    const redirectUri = `${window.location.origin}/auth/callback`;
-    const scope = "email profile";
-    const url = `https://accounts.google.com/o/oauth2/v2/auth?client_id=${clientId}&redirect_uri=${encodeURIComponent(redirectUri)}&response_type=token&scope=${encodeURIComponent(scope)}`;
-    window.location.href = url;
   }, []);
 
   const register = useCallback(async (name: string, email: string, password: string): Promise<boolean> => {
     try {
       const res = await authApi.register(name, email, password);
-      if (res.success && res.data) {
-        const { token, refreshToken, user: userData } = res.data as any;
+      if (res.success) {
+        const { token, refreshToken, user: userData } = res as any;
         setToken(token, refreshToken);
         setStoredUser(userData);
         setUser(userData);
@@ -102,6 +116,45 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     toast.success("Logged out successfully");
     window.location.href = "/";
   }, []);
+  
+  const generateOTP = useCallback(async (email: string): Promise<boolean> => {
+    const res = await authApi.generateOTP(email);
+    if (res.success) {
+      toast.success("OTP sent to your email!");
+      return true;
+    }
+    toast.error(res.error || "Failed to send OTP");
+    return false;
+  }, []);
+
+  const verifyOTP = useCallback(async (email: string, otp: string): Promise<boolean> => {
+    const res = await authApi.verifyOTP(email, otp);
+    if (res.success) {
+      const { token, refreshToken, user: userData } = res as any;
+      setToken(token, refreshToken);
+      setStoredUser(userData);
+      setUser(userData);
+      toast.success(`Welcome back, ${userData.name}! 👋`);
+      return true;
+    }
+    toast.error(res.error || "Invalid OTP");
+    return false;
+  }, []);
+
+  const toggle2FA = useCallback(async (enabled: boolean): Promise<boolean> => {
+    const res = await authApi.toggle2FA(enabled);
+    if (res.success) {
+      toast.success(`2FA ${enabled ? "enabled" : "disabled"} successfully!`);
+      if (user) {
+        const updated = { ...user, twoFactorEnabled: !!enabled };
+        setUser(updated);
+        setStoredUser(updated);
+      }
+      return true;
+    }
+    toast.error(res.error || "Failed to update 2FA status");
+    return false;
+  }, [user]);
 
   const updateUser = useCallback((updated: User) => {
     setUser(updated);
@@ -115,10 +168,13 @@ export function AuthProvider({ children }: { children: ReactNode }) {
       isAuthenticated: !!user,
       isAdmin: user?.role === "admin" || user?.role === "moderator",
       login,
-      loginWithGoogle,
+      loginWithGoogleSuccess,
       register,
       logout,
       updateUser,
+      generateOTP,
+      verifyOTP,
+      toggle2FA,
     }}>
       {children}
     </AuthContext.Provider>

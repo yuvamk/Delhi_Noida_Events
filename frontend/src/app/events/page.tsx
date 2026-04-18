@@ -7,8 +7,8 @@ import { EventCard } from "@/components/events/EventCard";
 import { EventsGridSkeleton } from "@/components/ui/LoadingSkeleton";
 import Link from "next/link";
 
-const CATEGORIES = ["Tech","Startup","Cultural","Business","Sports","Education","Entertainment","Hackathon","Meetup","Conference"];
-const CITIES = ["Delhi","Noida"];
+const CATEGORIES = ["Tech", "Startup", "Cultural", "Business", "Sports", "Education", "Entertainment", "Hackathon", "Meetup", "Conference", "Workshop", "Comedy", "Music", "Nightlife", "Art", "Food", "Spiritual", "Networking", "Other"];
+const CITIES = ["Delhi", "Noida", "Gurgaon", "NCR"];
 
 function useDebounce<T>(value: T, delay: number): T {
   const [debouncedValue, setDebouncedValue] = useState<T>(value);

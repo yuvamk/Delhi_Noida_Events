@@ -8,7 +8,7 @@ import { Search, Bell } from "lucide-react";
 
 export function Header() {
   const pathname = usePathname();
-  const { user, isAuthenticated, logout } = useAuth();
+  const { user, isAuthenticated, isAdmin, logout } = useAuth();
   const { openSearch, openLogin } = useUI();
 
   if (pathname?.startsWith("/admin")) return null;
@@ -26,6 +26,12 @@ export function Header() {
             <Link href="/delhi-events" className={`${pathname === '/delhi-events' ? 'text-primary font-black italic tracking-tight' : 'text-on-surface-variant hover:text-white transition-colors'} font-headline text-sm uppercase`}>Delhi</Link>
             <Link href="/noida-events" className={`${pathname === '/noida-events' ? 'text-primary font-black italic tracking-tight' : 'text-on-surface-variant hover:text-white transition-colors'} font-headline text-sm uppercase`}>Noida</Link>
             <Link href="/about" className={`${pathname === '/about' ? 'text-primary font-black italic tracking-tight' : 'text-on-surface-variant hover:text-white transition-colors'} font-headline text-sm uppercase`}>About</Link>
+            {isAdmin && (
+              <Link href="/admin" className={`${pathname?.startsWith('/admin') ? 'text-primary font-black italic tracking-tight' : 'text-on-surface-variant hover:text-white transition-colors'} font-headline text-sm uppercase flex items-center gap-2 group`}>
+                <span className="w-1.5 h-1.5 bg-primary rounded-full animate-pulse group-hover:scale-125 transition-transform" />
+                Admin
+              </Link>
+            )}
           </nav>
         </div>
         

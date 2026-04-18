@@ -7,7 +7,7 @@ export interface IEvent extends Document {
   shortDescription: string;
   category: string;
   subcategory?: string;
-  city: "Delhi" | "Noida";
+  city: string;
   venue: string;
   address: string;
   location?: {
@@ -57,6 +57,7 @@ export interface IEvent extends Document {
   sponsors?: Array<{ name: string; logo?: string; tier?: string }>;
   metaTitle?: string;
   metaDescription?: string;
+  isActive: boolean;
   createdAt: Date;
   updatedAt: Date;
 }
@@ -64,16 +65,16 @@ export interface IEvent extends Document {
 const EventSchema = new Schema<IEvent>(
   {
     title: { type: String, required: true, trim: true, maxlength: 200 },
-    slug: { type: String, required: true, unique: true, lowercase: true },
+    slug: { type: String, unique: true, lowercase: true },
     description: { type: String, required: true, maxlength: 5000 },
     shortDescription: { type: String, maxlength: 300 },
     category: {
       type: String,
       required: true,
-      enum: ["Tech", "Startup", "Cultural", "Business", "Sports", "Education", "Entertainment", "Hackathon", "Meetup", "Conference"],
+      default: "Other"
     },
     subcategory: { type: String },
-    city: { type: String, required: true, enum: ["Delhi", "Noida"] },
+    city: { type: String, required: true, default: "NCR" },
     venue: { type: String, required: true },
     address: { type: String, required: true },
     location: {
@@ -97,7 +98,7 @@ const EventSchema = new Schema<IEvent>(
     thumbnail: { type: String },
     tags: [{ type: String, lowercase: true }],
     organizer: {
-      name: { type: String, required: true },
+      name: { type: String, default: "Community Organizer" },
       email: { type: String },
       phone: { type: String },
       website: { type: String },
@@ -123,6 +124,7 @@ const EventSchema = new Schema<IEvent>(
     sponsors: [{ name: String, logo: String, tier: String }],
     metaTitle: { type: String },
     metaDescription: { type: String },
+    isActive: { type: Boolean, default: true },
   },
   {
     timestamps: true,
@@ -132,10 +134,7 @@ const EventSchema = new Schema<IEvent>(
 );
 
 // Indexes
-EventSchema.index({ city: 1, date: 1 });
-EventSchema.index({ category: 1, date: 1 });
-EventSchema.index({ source: 1, sourceUrl: 1 }, { unique: true });
-EventSchema.index({ slug: 1 }, { unique: true });
+// Removed redundant slug and city/date/category indexes to fix Mongoose duplication warnings
 EventSchema.index({ date: 1 });
 EventSchema.index({ featured: 1, date: 1 });
 EventSchema.index({ tags: 1 });

@@ -17,9 +17,12 @@ export interface IUser extends Document {
   cityPreference?: "Delhi" | "Noida" | "Both";
   categoryPreferences: string[];
   notificationsEnabled: boolean;
-  fcmToken?: string;
+  twoFactorEnabled: boolean;
+  otpCode?: string;
+  otpExpires?: Date;
   lastLogin?: Date;
   loginCount: number;
+  fcmToken?: string;
   bookmarkedEvents: mongoose.Types.ObjectId[];
   createdAt: Date;
   updatedAt: Date;
@@ -43,6 +46,9 @@ const UserSchema = new Schema<IUser>(
     cityPreference: { type: String, enum: ["Delhi", "Noida", "Both"], default: "Both" },
     categoryPreferences: [{ type: String }],
     notificationsEnabled: { type: Boolean, default: true },
+    twoFactorEnabled: { type: Boolean, default: false },
+    otpCode: { type: String, select: false },
+    otpExpires: { type: Date, select: false },
     fcmToken: { type: String, select: false },
     lastLogin: { type: Date },
     loginCount: { type: Number, default: 0 },
@@ -51,10 +57,10 @@ const UserSchema = new Schema<IUser>(
   { timestamps: true }
 );
 
-UserSchema.index({ email: 1 }, { unique: true });
+// Redundant index removed: email is already unique via field definition
 
 // Pre-save: hash password
-UserSchema.pre("save", async function (next) {
+UserSchema.pre<IUser>("save", async function (next) {
   if (!this.isModified("password") || !this.password) return next();
   this.password = await bcrypt.hash(this.password, 12);
   next();

@@ -1,6 +1,8 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import { adminApi } from "@/lib/api";
+import { useScraperSocket } from "@/hooks/useScraperSocket";
+import { toast } from "react-hot-toast";
 
 // Fallback logic
 const mockStats = {
@@ -13,6 +15,8 @@ const mockStats = {
 export default function AdminDashboardPage() {
   const [stats, setStats] = useState<any>(null);
   const [loading, setLoading] = useState(true);
+
+  const { logs: liveLogs, status: liveStatus } = useScraperSocket();
 
   useEffect(() => {
     // Attempt real fetch, fall back nicely
@@ -30,6 +34,26 @@ export default function AdminDashboardPage() {
       })
       .finally(() => setLoading(false));
   }, []);
+
+  const handleStart = async () => {
+    try {
+      const res = await adminApi.startScraper();
+      if (res.success) toast.success("Scraper engine ignited!");
+      else toast.error(res.error || "Failed to start scraper");
+    } catch (err: any) {
+      toast.error("Connection error");
+    }
+  };
+
+  const handleStop = async () => {
+    try {
+      const res = await adminApi.stopScraper();
+      if (res.success) toast.success("Stop signal sent");
+      else toast.error(res.error || "Failed to stop scraper");
+    } catch (err: any) {
+      toast.error("Connection error");
+    }
+  };
 
   if (loading) {
     return (
@@ -77,16 +101,18 @@ export default function AdminDashboardPage() {
             <span className="text-secondary text-xs font-bold">-2.1% ↓</span>
           </div>
         </div>
-        <div className="bg-surface p-6 rounded-lg shadow-[0_0_20px_rgba(251,146,60,0.15)] border border-secondary/10">
+        <div className={`bg-surface p-6 rounded-lg shadow-[0_0_20px_rgba(251,146,60,0.15)] border border-secondary/10 transition-all duration-500 ${liveStatus.running ? 'border-secondary/40 shadow-secondary/20' : ''}`}>
           <p className="text-on-surface-variant text-[10px] font-bold uppercase tracking-[0.2em] mb-2 opacity-70">Scraper Status</p>
           <div className="flex items-center gap-3">
             <div className="relative flex h-3 w-3">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-secondary opacity-75"></span>
-              <span className="relative inline-flex rounded-full h-3 w-3 bg-secondary"></span>
+              {liveStatus.running && <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-secondary opacity-75"></span>}
+              <span className={`relative inline-flex rounded-full h-3 w-3 ${liveStatus.running ? 'bg-secondary' : 'bg-slate-600'}`}></span>
             </div>
-            <h3 className="text-2xl font-headline font-black text-white uppercase italic">Pulsing</h3>
+            <h3 className="text-2xl font-headline font-black text-white uppercase italic">{liveStatus.running ? 'Pulsing' : 'Idle'}</h3>
           </div>
-          <p className="text-[10px] text-on-surface-variant/60 mt-2 font-mono uppercase tracking-tighter">Last ping: 2s ago</p>
+          <p className="text-[10px] text-on-surface-variant/60 mt-2 font-mono uppercase tracking-tighter">
+            {liveStatus.running ? `PID: ${liveStatus.pid}` : 'Engine Offline'}
+          </p>
         </div>
       </div>
 
@@ -255,11 +281,19 @@ export default function AdminDashboardPage() {
               Scraper Engine
             </h2>
             <div className="grid grid-cols-2 gap-3 mb-6">
-              <button className="flex items-center justify-center gap-2 py-2.5 bg-surface-variant rounded font-bold text-[10px] hover:bg-slate-700 transition-colors border-b-2 border-tertiary tracking-widest text-white">
+              <button 
+                onClick={handleStart}
+                disabled={liveStatus.running}
+                className="flex items-center justify-center gap-2 py-2.5 bg-surface-variant rounded font-bold text-[10px] hover:bg-slate-700 disabled:opacity-50 disabled:cursor-not-allowed transition-colors border-b-2 border-tertiary tracking-widest text-white"
+              >
                 <span className="material-symbols-outlined text-sm">play_arrow</span>
                 RESUME
               </button>
-              <button className="flex items-center justify-center gap-2 py-2.5 bg-surface-variant rounded font-bold text-[10px] hover:bg-slate-700 transition-colors border-b-2 border-red-500 tracking-widest text-white">
+              <button 
+                onClick={handleStop}
+                disabled={!liveStatus.running}
+                className="flex items-center justify-center gap-2 py-2.5 bg-surface-variant rounded font-bold text-[10px] hover:bg-slate-700 disabled:opacity-50 disabled:cursor-not-allowed transition-colors border-b-2 border-red-500 tracking-widest text-white"
+              >
                 <span className="material-symbols-outlined text-sm">stop</span>
                 HALT
               </button>
@@ -283,20 +317,35 @@ export default function AdminDashboardPage() {
               <div className="w-2 h-2 rounded-full bg-tertiary"></div>
               <span className="ml-auto text-[7px] text-white/30 uppercase font-bold tracking-widest">SESSION: 4A2B9F</span>
             </div>
-            <div className="space-y-1 opacity-70 flex-grow">
-              {recentScraperLogs.map((log: any, idx: number) => (
-                <p key={idx} className="text-tertiary">[14:02:11] LOG: {log.source} - {log.status}</p>
-              ))}
-              <p className="text-tertiary">[14:02:11] INITIALIZING SOCIAL_SCRAPER_V2...</p>
-              <p className="text-white/40">[14:02:12] AUTH_SUCCESS: Instagram Provider</p>
-              <p className="text-white/40">[14:02:15] SCANNING: #DelhiTechno #NoidaRaves</p>
-              <p className="text-secondary">[14:02:18] FOUND: 12 potential event strings</p>
-              <p className="text-white/40">[14:02:22] PARSING: "Warehouse 11 Event Details"</p>
-              <p className="text-primary">[14:02:25] MAPPING: Venue_ID {`->`} Noida_Sec144</p>
-              <div className="flex items-center gap-1 mt-2">
-                <span className="text-primary tracking-tighter">{`>>>`}</span>
-                <span className="animate-pulse w-1.5 h-3 bg-primary"></span>
-              </div>
+            <div className="space-y-1 opacity-70 flex-grow overflow-y-auto scrollbar-hide max-h-[300px]">
+              {liveLogs.length === 0 ? (
+                <p className="text-white/20 italic animate-pulse">Waiting for engine output...</p>
+              ) : (
+                liveLogs.map((log, idx) => {
+                  const isError = log.includes("[ERROR]") || log.includes("| ERROR |");
+                  const isSuccess = log.includes("| SUCCESS |") || log.includes("✅");
+                  const isWarn = log.includes("[WARN]") || log.includes("| WARNING |") || log.includes("⚠️");
+                  const isSystem = log.includes("[SYSTEM]");
+                  
+                  let textColor = "text-tertiary"; // Default info
+                  if (isError) textColor = "text-red-400";
+                  else if (isSuccess) textColor = "text-green-400";
+                  else if (isWarn) textColor = "text-amber-400";
+                  else if (isSystem) textColor = "text-primary";
+
+                  return (
+                    <p key={idx} className={textColor}>
+                      {log}
+                    </p>
+                  );
+                })
+              )}
+              {liveStatus.running && (
+                <div className="flex items-center gap-1 mt-2">
+                  <span className="text-primary tracking-tighter">{`>>>`}</span>
+                  <span className="animate-pulse w-1.5 h-3 bg-primary"></span>
+                </div>
+              )}
             </div>
           </div>
         </div>

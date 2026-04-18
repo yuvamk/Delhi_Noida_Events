@@ -100,7 +100,7 @@ class BaseScraper(ABC):
         stop=stop_after_attempt(3),
         wait=wait_exponential(multiplier=1, min=2, max=30),
     )
-    async def fetch_page(self, url: str, params: Dict = None) -> Optional[str]:
+    async def fetch_page(self, url: str, params: Optional[Dict] = None) -> Optional[str]:
         """Fetch a page with retry logic."""
         import aiohttp
         try:
@@ -125,7 +125,7 @@ class BaseScraper(ABC):
             logger.error(f"Error fetching {url}: {e}")
             raise
     
-    async def sleep(self, seconds: float = None):
+    async def sleep(self, seconds: Optional[float] = None):
         """Respectful rate limiting."""
         await asyncio.sleep(seconds or self.rate_limit_seconds)
     
@@ -134,14 +134,17 @@ class BaseScraper(ABC):
         if not event.title or len(event.title) < 5:
             logger.warning(f"Event rejected: title too short '{event.title}'")
             return False
-        if event.city not in ["Delhi", "Noida"]:
+        # Accept Delhi, Noida, Gurgaon, and NCR variants
+        valid_cities = ["Delhi", "Noida", "Gurgaon", "Gurugram", "Faridabad", "NCR"]
+        if event.city not in valid_cities:
             logger.warning(f"Event rejected: invalid city '{event.city}'")
             return False
         if not event.date:
             logger.warning(f"Event rejected: no date for '{event.title}'")
             return False
-        # Reject past events
-        if event.date < datetime.now():
+        # Reject events more than 7 days in the past
+        from datetime import timedelta
+        if event.date < datetime.now() - timedelta(days=7):
             return False
         return True
     

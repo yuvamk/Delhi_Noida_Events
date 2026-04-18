@@ -3,9 +3,14 @@ import Link from "next/link";
 import { useState } from "react";
 import { EventData } from "@/lib/api";
 import { useBookmarks } from "@/hooks/useBookmarks";
+import { format, parseISO } from "date-fns";
 
 function formatDate(dateStr: string): string {
-  return new Date(dateStr).toLocaleDateString("en-IN", { day: "numeric", month: "short", year: "numeric" });
+  try {
+    return format(parseISO(dateStr), "dd MMM yyyy");
+  } catch (e) {
+    return dateStr;
+  }
 }
 
 function getTimeUntil(dateStr: string): string {

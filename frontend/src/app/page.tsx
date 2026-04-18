@@ -10,8 +10,9 @@ export default function HomePage() {
   const [searchQuery, setSearchQuery] = useState("");
   
   // Real data hooks
+  const [activeCity, setActiveCity] = useState("All");
   const { events: featured, loading: loadingFeatured } = useFeaturedEvents();
-  const { events: trending, loading: loadingTrending } = useTrendingEvents();
+  const { events: trending, loading: loadingTrending } = useTrendingEvents(activeCity !== "All" ? activeCity : undefined);
   const { events: upcoming, loading: loadingUpcoming } = useEvents({ page: 1, limit: 12 });
 
   const handleSearch = (e: React.FormEvent) => {
@@ -26,13 +27,19 @@ export default function HomePage() {
         {/* City Toggle */}
         <div className="absolute top-32 z-10">
           <div className="flex bg-surface-container-highest/40 backdrop-blur-xl ghost-border p-1.5 rounded-full">
-            <button className="flex items-center gap-2 px-6 py-2 rounded-full bg-white/10 text-white font-medium text-sm transition-all shadow-lg">
+            <button 
+              onClick={() => setActiveCity("Delhi")}
+              className={`flex items-center gap-2 px-6 py-2 rounded-full font-medium text-sm transition-all ${activeCity === "Delhi" ? "bg-white/10 text-white shadow-lg" : "text-on-surface-variant hover:bg-white/5"}`}>
               <span>🏙️</span> Delhi
             </button>
-            <button className="flex items-center gap-2 px-6 py-2 rounded-full text-on-surface-variant font-medium text-sm hover:bg-white/5 transition-all">
+            <button 
+              onClick={() => setActiveCity("Noida")}
+              className={`flex items-center gap-2 px-6 py-2 rounded-full font-medium text-sm transition-all ${activeCity === "Noida" ? "bg-white/10 text-white shadow-lg" : "text-on-surface-variant hover:bg-white/5"}`}>
               <span>🌆</span> Noida
             </button>
-            <button className="flex items-center gap-2 px-6 py-2 rounded-full text-on-surface-variant font-medium text-sm hover:bg-white/5 transition-all">
+            <button 
+              onClick={() => setActiveCity("All")}
+              className={`flex items-center gap-2 px-6 py-2 rounded-full font-medium text-sm transition-all ${activeCity === "All" ? "bg-white/10 text-white shadow-lg" : "text-on-surface-variant hover:bg-white/5"}`}>
               <span>📍</span> Both
             </button>
           </div>

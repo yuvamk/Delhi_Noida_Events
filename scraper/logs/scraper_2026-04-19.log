@@ -1,0 +1,147 @@
+2026-04-19 00:02:05 | INFO | utils.logger — Logger initialized for Delhi-Noida Events Scraper
+2026-04-19 00:02:05 | INFO | __main__ — 
+============================================================
+2026-04-19 00:02:05 | INFO | __main__ — 🚀 SCRAPER PIPELINE STARTED — Job: job-bd9829a31b78
+2026-04-19 00:02:05 | INFO | __main__ — 📅 2026-04-19 00:02:05 IST
+2026-04-19 00:02:05 | INFO | __main__ — ============================================================
+2026-04-19 00:02:05 | INFO | __main__ — 📦 Running 8 scrapers: ['eventbrite', 'meraevents', 'meetup', 'unstop', 'iit_delhi', 'linkedin', 'corporate', 'dynamic']
+2026-04-19 00:02:05 | WARNING | __main__ — ⚠️  Backend API unreachable. Running in dry-run mode.
+2026-04-19 00:02:05 | INFO | scrapers.base_scraper — 🚀 Starting eventbrite scraper...
+2026-04-19 00:02:05 | INFO | scrapers.eventbrite_scraper — Scraping Eventbrite: Delhi
+2026-04-19 00:02:05 | INFO | scrapers.base_scraper — 🚀 Starting meraevents scraper...
+2026-04-19 00:02:05 | INFO | scrapers.meraevents_scraper — Scraping MeraEvents: https://www.meraevents.com/events/delhi
+2026-04-19 00:02:05 | INFO | scrapers.base_scraper — 🚀 Starting meetup scraper...
+2026-04-19 00:02:05 | INFO | scrapers.meetup_scraper — Scraping Meetup for Delhi...
+2026-04-19 00:02:05 | INFO | scrapers.base_scraper — 🚀 Starting unstop scraper...
+2026-04-19 00:02:05 | INFO | scrapers.unstop_scraper — Scraping Unstop: hackathon
+2026-04-19 00:02:05 | INFO | scrapers.base_scraper — 🚀 Starting iit_delhi scraper...
+2026-04-19 00:02:05 | INFO | scrapers.university_scraper — Scraping IIT Delhi...
+2026-04-19 00:02:05 | INFO | scrapers.base_scraper — 🚀 Starting linkedin scraper...
+2026-04-19 00:02:05 | WARNING | scrapers.linkedin_scraper — No LinkedIn session found. Run save_session() first. Skipping.
+2026-04-19 00:02:05 | SUCCESS | scrapers.base_scraper — ✅ linkedin: 0/0 events scraped in 0.0s
+2026-04-19 00:02:05 | INFO | scrapers.base_scraper — 🚀 Starting corporate scraper...
+2026-04-19 00:02:05 | INFO | scrapers.corporate_scraper — Scraping Google Developers...
+2026-04-19 00:02:05 | ERROR | utils.ai_extractor — GEMINI_API_KEY not found in environment
+2026-04-19 00:02:05 | INFO | scrapers.base_scraper — 🚀 Starting ai_discovery scraper...
+2026-04-19 00:02:05 | ERROR | scrapers.base_scraper — Error fetching https://home.iitd.ac.in/events.php: Cannot connect to host home.iitd.ac.in:443 ssl:False [Connect call failed ('103.27.9.24', 443)]
+2026-04-19 00:02:05 | WARNING | scrapers.unstop_scraper — Unstop API status: 403
+2026-04-19 00:02:05 | WARNING | scrapers.meetup_scraper — Meetup API returned 404
+2026-04-19 00:02:05 | ERROR | scrapers.base_scraper — HTTP 404 from https://events.google.com/u/0/?region=IN-DL
+2026-04-19 00:02:05 | DEBUG | scrapers.meraevents_scraper — MeraEvents: found 0 cards
+2026-04-19 00:02:05 | INFO | scrapers.meraevents_scraper —   → 0 events from Delhi
+2026-04-19 00:02:06 | ERROR | scrapers.dynamic_browser_scraper — Dynamic browser scraper crashed (Chromium issue): Target page, context or browser has been closed
+Browser logs:
+
+<launching> /Users/yuvamrajput/Library/Caches/ms-playwright/chromium-1091/chrome-mac/Chromium.app/Contents/MacOS/Chromium --disable-field-trial-config --disable-background-networking --enable-features=NetworkService,NetworkServiceInProcess --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-extensions --disable-features=ImprovedCookieControls,LazyFrameLoading,GlobalMediaControls,DestroyProfileOnBrowserClose,MediaRouter,DialMediaRouteProvider,AcceptCHFrame,AutoExpandDetailsElement,CertificateTransparencyComponentUpdater,AvoidUnnecessaryBeforeUnloadCheckSync,Translate,HttpsUpgrades --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --force-color-profile=srgb --metrics-recording-only --no-first-run --enable-automation --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --enable-use-zoom-for-dsf=false --use-angle --headless --hide-scrollbars --mute-audio --blink-settings=primaryHoverType=2,availableHoverTypes=2,primaryPointerType=4,availablePointerTypes=4 --no-sandbox --user-data-dir=/var/folders/04/5kmtfb0s4bj40vs740cysz700000gn/T/playwright_chromiumdev_profile-U7VG9T --remote-debugging-pipe --no-startup-window
+<launched> pid=90134
+[pid=90134][err] Received signal 11 SEGV_ACCERR 000100000008
+[pid=90134][err]  [0x000117b12344]
+[pid=90134][err]  [0x00011bd2296c]
+[pid=90134][err]  [0x00011bd2f2f0]
+[pid=90134][err]  [0x00019dc3d764]
+[pid=90134][err]  [0x0001b14f32fc]
+[pid=90134][err]  [0x0001b138dde8]
+[pid=90134][err]  [0x0001b10935a8]
+[pid=90134][err]  [0x0001b1094114]
+[pid=90134][err]  [0x00019faf2ac8]
+[pid=90134][err]  [0x00019faf3838]
+[pid=90134][err]  [0x0001a2e6ff88]
+[pid=90134][err]  [0x00019da90ad4]
+[pid=90134][err]  [0x00019da79a60]
+[pid=90134][err]  [0x0001a2e6f2ec]
+[pid=90134][err]  [0x0001a20d14c4]
+[pid=90134][err]  [0x0001a290bbbc]
+[pid=90134][err]  [0x0001a20e50cc]
+[pid=90134][err]  [0x0001a21deb64]
+[pid=90134][err]  [0x0001a20e468c]
+[pid=90134][err]  [0x00011bd38470]
+[pid=90134][err]  [0x00011bd36ee0]
+[pid=90134][err]  [0x00011bcf01ec]
+[pid=90134][err]  [0x00011bcbf06c]
+[pid=90134][err]  [0x000119e0cad8]
+[pid=90134][err]  [0x000119e0e2a4]
+[pid=90134][err]  [0x000121692c30]
+[pid=90134][err]  [0x00011b15f858]
+[pid=90134][err]  [0x00011b160da4]
+[pid=90134][err]  [0x00011b1608c8]
+[pid=90134][err]  [0x00011b15ee98]
+[pid=90134][err]  [0x00011b15f28c]
+[pid=90134][err]  [0x000121683cac]
+[pid=90134][err]  [0x000117b0ce6c]
+[pid=90134][err]  [0x000100ba4938]
+[pid=90134][err]  [0x00019d869d54]
+[pid=90134][err] [end of stack trace]. Skipping.
+2026-04-19 00:02:06 | SUCCESS | scrapers.base_scraper — ✅ ai_discovery: 0/0 events scraped in 1.4s
+2026-04-19 00:02:07 | ERROR | scrapers.base_scraper — Error fetching https://home.iitd.ac.in/events.php: Cannot connect to host home.iitd.ac.in:443 ssl:False [Connect call failed ('103.27.9.24', 443)]
+2026-04-19 00:02:07 | INFO | scrapers.unstop_scraper — Scraping Unstop: competition
+2026-04-19 00:02:07 | INFO | scrapers.meetup_scraper — Scraping Meetup for Noida...
+2026-04-19 00:02:07 | WARNING | scrapers.unstop_scraper — Unstop API status: 403
+2026-04-19 00:02:07 | WARNING | scrapers.meetup_scraper — Meetup API returned 404
+2026-04-19 00:02:08 | INFO | scrapers.eventbrite_scraper — Found 0 event cards on page
+2026-04-19 00:02:08 | INFO | scrapers.eventbrite_scraper — Found 0 events for Delhi
+2026-04-19 00:02:08 | INFO | scrapers.meraevents_scraper — Scraping MeraEvents: https://www.meraevents.com/events/noida
+2026-04-19 00:02:09 | ERROR | scrapers.base_scraper — Error fetching https://home.iitd.ac.in/events.php: Cannot connect to host home.iitd.ac.in:443 ssl:False [Connect call failed ('103.27.9.24', 443)]
+2026-04-19 00:02:09 | WARNING | scrapers.university_scraper — Failed to scrape IIT Delhi: RetryError[<Future at 0x10f0725b0 state=finished raised ClientConnectorError>]
+2026-04-19 00:02:09 | INFO | scrapers.university_scraper — Scraping IIIT Delhi...
+2026-04-19 00:02:09 | DEBUG | scrapers.meraevents_scraper — MeraEvents: found 0 cards
+2026-04-19 00:02:09 | INFO | scrapers.meraevents_scraper —   → 0 events from Noida
+2026-04-19 00:02:09 | INFO | scrapers.unstop_scraper — Scraping Unstop: workshop
+2026-04-19 00:02:09 | SUCCESS | scrapers.base_scraper — ✅ meetup: 0/0 events scraped in 4.2s
+2026-04-19 00:02:09 | INFO | scrapers.corporate_scraper — Scraping Microsoft Events...
+2026-04-19 00:02:09 | WARNING | scrapers.unstop_scraper — Unstop API status: 403
+2026-04-19 00:02:09 | ERROR | scrapers.base_scraper — HTTP 404 from https://iiitd.ac.in/events
+2026-04-19 00:02:10 | ERROR | scrapers.base_scraper — HTTP 404 from https://events.microsoft.com/en-us/allevents/?clientTimeZone=1&country=India&region=Delhi
+2026-04-19 00:02:11 | INFO | scrapers.unstop_scraper — Scraping Unstop: case-study
+2026-04-19 00:02:11 | WARNING | scrapers.unstop_scraper — Unstop API status: 403
+2026-04-19 00:02:11 | INFO | scrapers.eventbrite_scraper — Scraping Eventbrite: Delhi
+2026-04-19 00:02:12 | INFO | scrapers.meraevents_scraper — Scraping MeraEvents: https://www.meraevents.com/tech-events/delhi
+2026-04-19 00:02:12 | DEBUG | scrapers.meraevents_scraper — MeraEvents: found 0 cards
+2026-04-19 00:02:12 | INFO | scrapers.meraevents_scraper —   → 0 events from Delhi
+2026-04-19 00:02:13 | INFO | scrapers.unstop_scraper — Scraping Unstop: quiz
+2026-04-19 00:02:13 | WARNING | scrapers.unstop_scraper — Unstop API status: 403
+2026-04-19 00:02:13 | INFO | scrapers.university_scraper — Scraping Delhi University...
+2026-04-19 00:02:13 | INFO | scrapers.eventbrite_scraper — Found 0 event cards on page
+2026-04-19 00:02:13 | INFO | scrapers.eventbrite_scraper — Found 0 events for Delhi
+2026-04-19 00:02:14 | INFO | scrapers.corporate_scraper — Scraping Nasscom Events...
+2026-04-19 00:02:15 | SUCCESS | scrapers.base_scraper — ✅ unstop: 0/0 events scraped in 10.3s
+2026-04-19 00:02:15 | INFO | scrapers.meraevents_scraper — Scraping MeraEvents: https://www.meraevents.com/tech-events/noida
+2026-04-19 00:02:16 | INFO | scrapers.corporate_scraper —   → 4 events from Nasscom Events
+2026-04-19 00:02:16 | DEBUG | scrapers.meraevents_scraper — MeraEvents: found 0 cards
+2026-04-19 00:02:16 | INFO | scrapers.meraevents_scraper —   → 0 events from Noida
+2026-04-19 00:02:16 | INFO | scrapers.eventbrite_scraper — Scraping Eventbrite: Delhi
+2026-04-19 00:02:18 | INFO | scrapers.eventbrite_scraper — Found 0 event cards on page
+2026-04-19 00:02:18 | INFO | scrapers.eventbrite_scraper — Found 0 events for Delhi
+2026-04-19 00:02:19 | INFO | scrapers.meraevents_scraper — Scraping MeraEvents: https://www.meraevents.com/business-events/delhi
+2026-04-19 00:02:20 | DEBUG | scrapers.meraevents_scraper — MeraEvents: found 0 cards
+2026-04-19 00:02:20 | INFO | scrapers.meraevents_scraper —   → 0 events from Delhi
+2026-04-19 00:02:20 | INFO | scrapers.corporate_scraper — Scraping CII Events...
+2026-04-19 00:02:20 | INFO | scrapers.corporate_scraper —   → 0 events from CII Events
+2026-04-19 00:02:21 | INFO | scrapers.eventbrite_scraper — Scraping Eventbrite: Delhi
+2026-04-19 00:02:23 | INFO | scrapers.meraevents_scraper — Scraping MeraEvents: https://www.meraevents.com/cultural-events/delhi
+2026-04-19 00:02:23 | DEBUG | scrapers.meraevents_scraper — MeraEvents: found 0 cards
+2026-04-19 00:02:23 | INFO | scrapers.meraevents_scraper —   → 0 events from Delhi
+2026-04-19 00:02:23 | INFO | scrapers.eventbrite_scraper — Found 0 event cards on page
+2026-04-19 00:02:23 | INFO | scrapers.eventbrite_scraper — Found 0 events for Delhi
+2026-04-19 00:02:24 | INFO | scrapers.corporate_scraper — Scraping FICCI Events...
+2026-04-19 00:02:24 | ERROR | scrapers.base_scraper — HTTP 404 from https://ficci.in/events.asp
+2026-04-19 00:02:26 | SUCCESS | scrapers.base_scraper — ✅ meraevents: 0/0 events scraped in 21.4s
+2026-04-19 00:02:26 | SUCCESS | scrapers.base_scraper — ✅ eventbrite: 0/0 events scraped in 21.7s
+2026-04-19 00:02:28 | SUCCESS | scrapers.base_scraper — ✅ corporate: 4/4 events scraped in 23.6s
+2026-04-19 00:02:44 | ERROR | scrapers.base_scraper — Error fetching http://www.du.ac.in/du/index.php?page=events: 
+2026-04-19 00:03:17 | ERROR | scrapers.base_scraper — Error fetching http://www.du.ac.in/du/index.php?page=events: 
+2026-04-19 00:03:50 | ERROR | scrapers.base_scraper — Error fetching http://www.du.ac.in/du/index.php?page=events: 
+2026-04-19 00:03:50 | WARNING | scrapers.university_scraper — Failed to scrape Delhi University: RetryError[<Future at 0x110263040 state=finished raised TimeoutError>]
+2026-04-19 00:03:50 | INFO | scrapers.university_scraper — Scraping Amity University Noida...
+2026-04-19 00:03:54 | INFO | scrapers.university_scraper — Scraping Jaypee Institute...
+2026-04-19 00:03:54 | ERROR | scrapers.base_scraper — HTTP 404 from https://www.jiit.ac.in/events
+2026-04-19 00:03:58 | SUCCESS | scrapers.base_scraper — ✅ iit_delhi: 0/0 events scraped in 113.7s
+2026-04-19 00:03:58 | DEBUG | processors.deduplicator — Duplicate URL: Diversity and Inclusion
+2026-04-19 00:03:58 | DEBUG | processors.deduplicator — Duplicate URL: Policy Advocacy
+2026-04-19 00:03:58 | DEBUG | processors.deduplicator — Duplicate URL: Events & Awards
+2026-04-19 00:03:58 | INFO | processors.deduplicator — Deduplication: 3 duplicates removed from 4 events → 1 unique
+2026-04-19 00:03:58 | INFO | __main__ — 
+============================================================
+2026-04-19 00:03:58 | INFO | __main__ — ✅ PIPELINE COMPLETE — Job: job-bd9829a31b78
+2026-04-19 00:03:58 | INFO | __main__ —    Found: 4 | Sent: 0
+2026-04-19 00:03:58 | INFO | __main__ — ============================================================
+

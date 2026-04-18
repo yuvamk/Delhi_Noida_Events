@@ -5,7 +5,7 @@ Handles authentication, batching, and retry logic.
 import os
 import asyncio
 from datetime import datetime
-from typing import List, Dict, Any
+from typing import List, Dict, Any, Optional
 from loguru import logger
 from tenacity import retry, stop_after_attempt, wait_exponential
 import aiohttp
@@ -25,7 +25,7 @@ class APIClient:
     """
 
     def __init__(self):
-        self.base_url = os.getenv("BACKEND_API_URL", "http://localhost:5000/api/v1")
+        self.base_url = os.getenv("BACKEND_API_URL", "http://localhost:5005/api/v1")
         self.api_key = os.getenv("SCRAPER_API_KEY", "")
         self.batch_size = 50  # events per batch POST
 
@@ -89,23 +89,34 @@ class APIClient:
     async def send_events(self, events: List[EventModel], job_id: str) -> Dict[str, int]:
         """Send all events to backend in batches."""
         if not events:
-            return {"sent": 0, "batches": 0}
+            return {"sent": 0, "inserted": 0, "updated": 0, "batches": 0}
 
         serialized = [self._serialize_event(e) for e in events]
         batches = [serialized[i:i + self.batch_size] for i in range(0, len(serialized), self.batch_size)]
 
         total_inserted = 0
+        total_updated = 0
         for i, batch in enumerate(batches, 1):
             try:
                 result = await self._post_batch(batch, job_id)
-                inserted = result.get("results", {}).get("inserted", len(batch))
+                res_data = result.get("results", {})
+                inserted = res_data.get("inserted", 0)
+                updated = res_data.get("updated", 0)
+                
                 total_inserted += inserted
-                logger.info(f"Batch {i}/{len(batches)}: {inserted} events sent to backend")
+                total_updated += updated
+                
+                logger.info(f"Batch {i}/{len(batches)}: {inserted} new, {updated} updated")
                 await asyncio.sleep(0.5)  # Brief pause between batches
             except Exception as e:
                 logger.error(f"Failed to send batch {i}: {e}")
 
-        return {"sent": total_inserted, "batches": len(batches)}
+        return {
+            "sent": total_inserted + total_updated, 
+            "inserted": total_inserted, 
+            "updated": total_updated,
+            "batches": len(batches)
+        }
 
     @retry(stop=stop_after_attempt(3), wait=wait_exponential(multiplier=1, min=2, max=30))
     async def report_scraper_result(
@@ -118,7 +129,7 @@ class APIClient:
         events_updated: int,
         duplicates_removed: int,
         duration_ms: int,
-        error_message: str = None,
+        error_message: Optional[str] = None,
     ):
         """Report scraper run result to backend for logging."""
         payload = {

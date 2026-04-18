@@ -33,7 +33,7 @@ CORPORATE_SOURCES = [
         "organizer": "Nasscom",
         "city": "Delhi",
         "category": "Tech",
-        "selectors": {"list": ".event-block, article.post, .event-card", "title": "h2,h3,.entry-title", "date": ".event-date,.date"},
+        "selectors": {"list": "article.event, .event-item, .tribe-event, .events-archive article", "title": "h2,h3,.tribe-event-url", "date": ".tribe-events-start-datetime,.tribe_events_cat,.date"},
     },
     {
         "name": "CII Events",
@@ -65,7 +65,7 @@ class CorporateScraper(BaseScraper):
         for source in CORPORATE_SOURCES:
             try:
                 logger.info(f"Scraping {source['name']}...")
-                html = await self.fetch_page(source["url"])
+                html = await self.fetch_page(str(source["url"]))
                 if html:
                     events = await self._parse_corporate(html, source)
                     all_events.extend(events)
@@ -137,12 +137,18 @@ class CorporateScraper(BaseScraper):
                 from urllib.parse import urljoin
                 source_url = urljoin(base_url, href) if not href.startswith("http") else href
 
+            # Skip obvious navigation/menu links
+            if len(title) < 15 or title.lower() in ["home", "about", "contact", "login", "register", "events", "news"]:
+                return None
+            if any(kw in title.lower() for kw in ["membership", "become a member", "council", "login", "sign up", "subscribe"]):
+                return None
+
             return EventModel(
                 title=title[:200],
                 description=f"{organizer} event: {title}. Please visit the event page for full details.",
                 category=source.get("category", "Tech"),
                 city=city,
-                date=datetime(2025, 9, 1, 10, 0),  # Default — would be extracted properly
+                date=datetime(2026, 9, 1, 10, 0),  # Default future date
                 time="10:00 AM",
                 venue=f"{organizer} Office, {city}",
                 address=city,

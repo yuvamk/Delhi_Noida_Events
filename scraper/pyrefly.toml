@@ -1,0 +1,3 @@
+# Pyrefly type-checker config
+# Points the IDE to the virtual environment's Python so it can find all installed packages
+python_interpreter = "/Users/yuvamrajput/Desktop/DE_NE_Events/scraper/venv/bin/python3"

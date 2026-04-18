@@ -86,3 +86,25 @@ export function superAdminOnly(req: AuthRequest, res: Response, next: NextFuncti
   }
   next();
 }
+
+/**
+ * ─── scraperOnly ──────────────────────────────────────────────
+ * Used for Python scraper callbacks. 
+ * Validates against SCRAPER_API_KEY in .env.
+ */
+export function scraperOnly(req: Request, res: Response, next: NextFunction) {
+  const apiKey = req.headers["x-api-key"] || req.headers["X-API-Key"];
+  const validKey = process.env.SCRAPER_API_KEY;
+
+  if (!validKey || apiKey !== validKey) {
+    logger.warn(`❌ Unauthorized scraper attempt from IP: ${req.ip}`);
+    return res.status(401).json({
+      success: false,
+      error: "Invalid Scraper API Key",
+      code: "UNAUTHORIZED_SCRAPER"
+    });
+  }
+  
+  next();
+}
+

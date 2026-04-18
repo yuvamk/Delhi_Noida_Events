@@ -14,6 +14,8 @@
  */
 
 import express, { Request, Response, NextFunction } from "express";
+import { createServer } from "http";
+import { Server } from "socket.io";
 import cors from "cors";
 import helmet from "helmet";
 import morgan from "morgan";
@@ -21,9 +23,11 @@ import compression from "compression";
 import rateLimit from "express-rate-limit";
 import cookieParser from "cookie-parser";
 import dotenv from "dotenv";
+dotenv.config();
 import { connectDB } from "./config/database";
 import { errorHandler, notFound } from "./middleware/errorHandler";
 import { logger } from "./utils/logger";
+import { scraperManager } from "./services/ScraperManager";
 
 // Routes
 import eventRoutes from "./routes/eventRoutes";
@@ -93,7 +97,6 @@ app.use((req: Request, res: Response, next: NextFunction) => {
   const start = Date.now();
   res.on("finish", () => {
     const ms = Date.now() - start;
-    res.setHeader("X-Response-Time", `${ms}ms`);
     // Slow request logging (threshold: 2000ms)
     if (ms > 2000) {
       logger.warn(`🐌 Slow request: ${req.method} ${req.path} — ${ms}ms (status ${res.statusCode})`);
@@ -349,7 +352,37 @@ async function startServer() {
   // Start DB connection in background to allow immediate server startup in Safe Mode
   connectDB().catch(err => logger.error(`Initial DB connection failed: ${err.message}`));
 
-  const server = app.listen(PORT, HOST, () => {
+  const httpServer = createServer(app);
+  
+  // Initialize Socket.io
+  const io = new Server(httpServer, {
+    cors: {
+      origin: ALLOWED_ORIGINS,
+      methods: ["GET", "POST"],
+      credentials: true
+    }
+  });
+
+  // Attach io to scraper manager
+  scraperManager.setIo(io);
+
+  io.on("connection", (socket) => {
+    logger.info(`Socket connected: ${socket.id}`);
+    
+    socket.on("admin:join", () => {
+      socket.join("admin_logs");
+      logger.info(`Socket ${socket.id} joined admin_logs room`);
+      // Send current status and recent logs immediately
+      socket.emit("scraper:status", scraperManager.getStatus());
+      socket.emit("scraper:logs_init", scraperManager.getRecentLogs());
+    });
+
+    socket.on("disconnect", () => {
+      logger.info(`Socket disconnected: ${socket.id}`);
+    });
+  });
+
+  const server = httpServer.listen(PORT, HOST, () => {
     logger.info("\n" + "━".repeat(55));
     logger.info(`🚀 Delhi-Noida Events API  —  v1.0.0`);
     logger.info(`🌍 http://${HOST}:${PORT}/api/v1`);

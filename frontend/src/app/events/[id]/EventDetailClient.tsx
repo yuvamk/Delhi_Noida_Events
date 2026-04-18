@@ -3,11 +3,16 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import { EventData, eventsApi } from "@/lib/api";
 import { useBookmarks } from "@/hooks/useBookmarks";
-import EventMap from "@/components/events/EventMap";
+import { format, parseISO } from "date-fns";
+import { EventMap } from "@/components/events/EventMap";
 import toast from "react-hot-toast";
 
 function formatDate(dateStr: string) {
-  return new Date(dateStr).toLocaleDateString("en-IN", { day: "2-digit", month: "short", year: "numeric" }).toUpperCase();
+  try {
+    return format(parseISO(dateStr), "dd MMM yyyy").toUpperCase();
+  } catch (e) {
+    return dateStr;
+  }
 }
 
 export function EventDetailClient({ event }: { event: EventData }) {
@@ -129,19 +134,40 @@ export function EventDetailClient({ event }: { event: EventData }) {
             {/* Location Section */}
             <section className="space-y-6">
               <h2 className="font-headline text-4xl font-bold tracking-tight text-on-surface">Location</h2>
-              <div className="w-full h-80 rounded-lg overflow-hidden glass-card relative group p-1 z-0 bg-surface">
-                  <EventMap 
-                    events={[event]} 
-                    center={event.location?.coordinates ? [event.location.coordinates[1], event.location.coordinates[0]] : [28.6139, 77.2090]} 
-                    zoom={15} 
-                    height={310} 
-                  />
-                <div className="absolute inset-0 pointer-events-none rounded-lg ring-1 ring-inset ring-white/10"></div>
-                <div className="absolute bottom-6 left-6 p-4 glass-card rounded-md pointer-events-none z-10 hidden md:block">
-                  <p className="font-headline font-bold text-sm text-white">{event.venue}</p>
-                  <p className="text-xs text-on-surface-variant">{event.address || event.city}</p>
+              {event.location?.coordinates ? (
+                <div className="rounded-2xl overflow-hidden ghost-border bg-surface-container relative group">
+                  <a 
+                    href={`https://www.google.com/maps/search/?api=1&query=${event.location.coordinates[1]},${event.location.coordinates[0]}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block relative"
+                  >
+                    <EventMap 
+                      coordinates={event.location.coordinates as [number, number]} 
+                      title={event.title} 
+                      venue={event.venue} 
+                    />
+                    <div className="absolute inset-0 bg-primary/0 group-hover:bg-primary/5 transition-colors flex items-center justify-center">
+                      <div className="bg-primary text-on-primary-container px-6 py-3 rounded-full font-black text-sm opacity-0 group-hover:opacity-100 transition-all translate-y-4 group-hover:translate-y-0 shadow-2xl pointer-events-none">
+                        OPEN IN GOOGLE MAPS
+                      </div>
+                    </div>
+                  </a>
                 </div>
-              </div>
+              ) : (
+                <div className="bg-surface-container-low p-12 rounded-lg text-center border border-white/5">
+                  <span className="material-symbols-outlined text-4xl text-on-surface-variant mb-4">location_off</span>
+                  <p className="text-on-surface-variant">Coordinates not available for this venue.</p>
+                  <a 
+                    href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(`${event.venue}, ${event.address || event.city}`)}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-block mt-4 text-primary font-bold hover:underline"
+                  >
+                    View on Google Maps
+                  </a>
+                </div>
+              )}
             </section>
             
           </div>
@@ -197,7 +223,16 @@ export function EventDetailClient({ event }: { event: EventData }) {
                     </div>
                 </div>
 
-                <p className="mt-6 text-center text-[10px] text-on-surface-variant uppercase tracking-widest">{event.source ? `Source: ${event.source}` : "Capacity Restricted."}</p>
+                <p className="mt-6 text-center text-[10px] text-on-surface-variant uppercase tracking-widest">
+                  {event.source ? `Source: ${event.source.toUpperCase()}` : "Independent Pulse."}
+                </p>
+                {event.sourceUrl && (
+                  <div className="mt-4 text-center">
+                    <a href={event.sourceUrl} target="_blank" rel="noopener noreferrer" className="text-[10px] text-primary hover:underline font-bold uppercase tracking-widest">
+                      View Original Listing
+                    </a>
+                  </div>
+                )}
               </div>
 
               {event.organizer?.name && (
