@@ -1,37 +1,79 @@
+# ─── Dependencies ───
 node_modules/
-.env
-.env.local
-.DS_Store
 dist/
 build/
 .next/
-
-# Python
+out/
+bin/
+obj/
 venv/
-ENV/
 env/
-__pycache__/
-*.pyc
-*.pyo
-*.pyd
-.Python
-pip-log.txt
-pip-delete-this-directory.txt
-.tox/
-.coverage
-.cache
-nosetests.xml
-coverage.xml
-*,cover
-.hypothesis/
-.pytest_cache/
+ENV/
 
-# Logs
-logs/
-*.log
-
-# IDEs
+# ─── AI & IDE Metadata ───
+.bob/
+.windsurf/
+.factory/
+.agents/
+.augment/
+.claude/
+.codebuddy/
+.continue/
+.cortex/
+.crush/
+.goose/
+.iflow/
+.junie/
+.kilocode/
+.kiro/
+.kode/
+.mcpjam/
+.mux/
+.neovate/
+.openhands/
+.pi/
+.pochi/
+.qoder/
+.qwen/
+.roo/
+.trae/
+.vibe/
+.zencoder/
+.adal/
+.commandcode/
 .vscode/
 .idea/
 *.swp
 *.swo
+.DS_Store
+
+# ─── Data & Previews ───
+*.log
+scraper/logs/
+backend/logs/
+*.json
+!package.json
+!package-lock.json
+!tsconfig.json
+!next.config.json
+!pyrefly.toml
+!kinetik_logo_screen.json
+!screen_data.json
+# (Allow these specific JSONs if they are part of the app code)
+
+*.html
+!frontend/src/**/*.html
+# (Excludes all top-level .html files like otp_preview.html)
+
+# ─── Python Cache ───
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.coverage
+htmlcov/
+
+# ─── Environment ───
+.env
+.env.*
+!.env.example
