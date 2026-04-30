@@ -1,8 +1,9 @@
 /**
- * Seed Script — creates admin user (admin@gmail.com / admin@123)
- * and inserts sample events for testing.
- * Run: npx ts-node src/scripts/seed.ts
+ * Seed Script — creates admin user (admin@gmail.com) and inserts sample events for testing.
+ * Set SEED_ADMIN_PASSWORD env var before running, or a random password will be generated.
+ * Run: SEED_ADMIN_PASSWORD=yourpassword npx ts-node src/scripts/seed.ts
  */
+import crypto from "crypto";
 import dotenv from "dotenv";
 dotenv.config();
 
@@ -18,6 +19,10 @@ async function seed() {
 
   // ── Create Admin User ────────────────────────────────────────
   const adminEmail = "admin@gmail.com";
+  const adminPassword = process.env.SEED_ADMIN_PASSWORD || crypto.randomBytes(16).toString("hex");
+  if (!process.env.SEED_ADMIN_PASSWORD) {
+    console.log(`ℹ️  SEED_ADMIN_PASSWORD not set — generated admin password: ${adminPassword}`);
+  }
   const existing = await User.findOne({ email: adminEmail });
 
   if (existing) {
@@ -32,14 +37,14 @@ async function seed() {
     await User.create({
       name: "Admin",
       email: adminEmail,
-      password: "admin@123",
+      password: adminPassword,
       role: "admin",
       isActive: true,
       isEmailVerified: true,
       cityPreference: "Both",
       categoryPreferences: ["Tech", "Startup", "Hackathon"],
     });
-    console.log("✅ Admin user created:", adminEmail, "/ admin@123");
+    console.log("✅ Admin user created:", adminEmail, "/ (password set via SEED_ADMIN_PASSWORD)");
   }
 
   // ── Insert Sample Events ──────────────────────────────────────
