@@ -850,7 +850,7 @@ git push origin feature/your-amazing-feature
 
 <img src="https://github.com/yuvamk.png" width="100" style="border-radius:50%"/>
 
-### **Yuva MK**
+### **Yuvam**
 
 *Full-Stack Developer & Open Source Enthusiast*
 
