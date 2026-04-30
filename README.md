@@ -10,244 +10,116 @@
 
 ---
 
-## 🚀 Quick Start
+## 🌟 What is this website about?
+
+**Delhi-Noida Events** is a high-performance web platform designed to solve the fragmentation of event discovery in the Delhi-NCR region. It automatically scrapes, cleans, and categorizes events from multiple sources (Eventbrite, Meetup, Unstop, etc.) and presents them in a beautiful, unified interface.
+
+### Key Capabilities:
+- **Real-time Aggregation**: Automatically pulls data from 10+ major event platforms.
+- **AI-Powered Deduplication**: Uses Google Gemini to identify and merge duplicate event listings.
+- **Advanced Filtering**: Filter by city (Delhi/Noida), category, date, and popularity.
+- **User Ecosystem**: Secure login, bookmarking system, and personalized event recommendations.
+- **Admin Control**: A dedicated dashboard to monitor scrapers, view logs, and manually trigger data refreshes.
+- **SEO Optimized**: Dynamic metadata and structured data (JSON-LD) for maximum search engine visibility.
+
+---
+
+## 🏗️ Technical Architecture
+
+The platform is built using a modern, scalable micro-architecture:
+
+- **Frontend**: Next.js 14 (App Router), TypeScript, Tailwind CSS, Zustand for state management.
+- **Backend**: Node.js & Express API, providing a robust RESTful interface.
+- **Scraper**: A powerful Python-based engine using Scrapy and Playwright for complex JavaScript-heavy websites.
+- **Database**: MongoDB Atlas for event storage and Supabase (PostgreSQL) for user-related data.
+- **Proxy**: Nginx configuration included for production routing.
+
+---
+
+## 🚀 How to Run Locally
+
+Follow these steps to get the entire ecosystem running on your machine.
 
 ### Prerequisites
-- Node.js 20+
-- Python 3.11+
-- MongoDB Atlas account (or local MongoDB)
-- Supabase project
+- **Node.js 20+** and **npm**
+- **Python 3.11+**
+- **MongoDB Atlas** account (or a local MongoDB instance)
+- **Supabase** project (for authentication and bookmarks)
+- **Redis** (optional, for high-traffic caching)
 
-### 1. Clone and Install
-
+### 1. Clone the Repository
 ```bash
-git clone https://github.com/your-org/delhi-noida-events.git
-cd delhi-noida-events
-
-# Frontend
-cd frontend && npm install
-
-# Backend
-cd ../backend && npm install
-
-# Python Scraper
-cd ../scraper && pip install -r requirements.txt
+git clone https://github.com/yuvamk/Delhi_Noida_Events.git
+cd Delhi_Noida_Events
 ```
 
-### 2. Configure Environment
-
-```bash
-cp .env.example .env.local
-# Fill in: MONGODB_URI, SUPABASE_URL, SUPABASE_ANON_KEY
-```
-
-### 3. Start Development Servers
-
-```bash
-# Terminal 1 — Frontend
-cd frontend && npm run dev
-# → http://localhost:3000
-
-# Terminal 2 — Backend API
-cd backend && npm run dev
-# → http://localhost:5000
-
-# Terminal 3 — Python Scraper (optional)
-cd scraper && python main.py --once
-```
-
-### 4. Or Use Docker
-
+### 2. Configure Environment Variables
+Copy the example environment file and fill in your credentials:
 ```bash
 cp .env.example .env
+# Open .env and fill in MONGODB_URI, SUPABASE_URL, etc.
+```
+
+### 3. Setup Backend
+```bash
+cd backend
+npm install
+# Seed the database with initial categories/admins
+npm run seed
+# Start development server
+npm run dev
+# API will be at http://localhost:5005
+```
+
+### 4. Setup Frontend
+```bash
+cd ../frontend
+npm install
+# Start development server
+npm run dev
+# Frontend will be at http://localhost:3000
+```
+
+### 5. Setup Scraper (Optional)
+```bash
+cd ../scraper
+pip install -r requirements.txt
+# Run a single scrape cycle
+python main.py --once
+```
+
+### 6. Using Docker (Recommended)
+If you have Docker installed, you can start everything with one command:
+```bash
 docker-compose up --build
 ```
 
 ---
 
-## 🏗️ Architecture
+## 🔌 API Documentation
 
-```
-delhi-noida-events/
-├── frontend/          ← Next.js 14 + TypeScript + Tailwind CSS
-├── backend/           ← Node.js + Express + TypeScript  
-├── scraper/           ← Python + Scrapy + Playwright
-├── docker-compose.yml ← Orchestration
-└── .github/workflows/ ← CI/CD
-```
-
-### Tech Stack
-
-| Layer | Technology |
-|-------|-----------|
-| Frontend | Next.js 14, TypeScript, Tailwind CSS, React Query, Zustand |
-| Backend | Node.js, Express, TypeScript, Mongoose, JWT |
-| Scraper | Python 3.11, Scrapy, Playwright, BeautifulSoup, APScheduler |
-| Primary DB | MongoDB Atlas (Events, Scraper Logs) |
-| Auth DB | Supabase PostgreSQL (Users, Bookmarks, Analytics) |
-| Deployment | Vercel (Frontend), Render (Backend), Background Worker (Scraper) |
+| Endpoint | Description |
+|----------|-------------|
+| `GET /api/v1/events` | Fetch all events (paginated) |
+| `GET /api/v1/events/:id` | Get detailed information for an event |
+| `GET /api/v1/events/featured` | Get events highlighted by editors |
+| `POST /api/v1/auth/login` | User authentication |
+| `POST /api/v1/admin/scraper/trigger` | Manually start the scraper (Admin only) |
 
 ---
 
-## 📄 Pages & Routes
-
-| Route | Description |
-|-------|-------------|
-| `/` | Home — Hero, featured events, categories, stats |
-| `/events` | All events with filters and sort |
-| `/events/[id]` | Event detail with gallery, map, share |
-| `/delhi-events` | SEO city page — Delhi |
-| `/noida-events` | SEO city page — Noida |
-| `/category/[slug]` | Category-filtered events |
-| `/search` | Full-text search with filters |
-| `/bookmarks` | Saved events (auth optional) |
-| `/auth/login` | User login |
-| `/auth/register` | User registration |
-| `/admin` | Admin dashboard with scraper control |
-
----
-
-## 🔌 API Endpoints
-
-Base URL: `http://localhost:5000`
-
-```
-GET  /api/v1/health                     Health check
-GET  /api/v1/events                     All events (filterable, paginated)
-GET  /api/v1/events/featured            Featured events
-GET  /api/v1/events/trending            Trending by bookmarks
-GET  /api/v1/events/:id                 Event detail + related
-GET  /api/v1/events/city/:city          City-specific events
-GET  /api/v1/events/category/:category  Category events
-GET  /api/v1/events/search?q=...        Full-text search
-GET  /api/v1/cities                     Available cities
-GET  /api/v1/categories                 Available categories
-GET  /api/v1/analytics/stats            Platform statistics
-POST /api/v1/auth/login                 User login
-POST /api/v1/auth/register              User registration
-GET  /api/v1/bookmarks                  User bookmarks
-POST /api/v1/bookmarks/:eventId         Add bookmark
-DELETE /api/v1/bookmarks/:eventId       Remove bookmark
-GET  /api/v1/admin/scraper/status       Scraper health
-POST /api/v1/admin/scraper/trigger      Trigger manual scrape
-GET  /api/v1/admin/scraper/logs         Scraper execution logs
-```
-
----
-
-## 🕷️ Scraper Sources
-
-| Source | Type | Status |
-|--------|------|--------|
-| Eventbrite | API + HTML | ✅ Active |
-| MeraEvents | HTML | ✅ Active |
-| Meetup.com | HTML + API | ✅ Active |
-| Unstop | HTML | ✅ Active |
-| LinkedIn Events | Playwright | ⚠️ Login required |
-| IIT Delhi | HTML | ✅ Active |
-| Corporate Events | HTML | ✅ Active |
-| Generic | Configurable | ✅ Active |
-
-### Scraper Schedule
-- **Every 6 hours**: Full scrape from all sources
-- **Daily 2AM**: Data cleanup (remove events older than 60 days)
-- **On-demand**: Admin can trigger via API or Dashboard
-
----
-
-## 🎨 UI Features
-
-- 🌙 Dark mode by default with deep navy + indigo gradient
-- ✨ Glassmorphism cards with hover animations
-- 📱 Mobile-first responsive design
-- ⚡ Animated counters, floating orbs, micro-animations
-- 🔖 Bookmark events with toast notifications
-- 🔍 Real-time search with popular query suggestions
-- 📊 Admin dashboard with live scraper progress
-- 🗂️ Category + city filters with active chip display
-
----
-
-## 🔐 SEO
-
-- Next.js 14 Metadata API
-- JSON-LD structured data (Event, Organization, LocalBusiness)
-- Dynamic OG images
-- `robots.txt` + XML sitemap
-- Canonical URLs, Twitter Cards
-- Keyword targeting: "events in delhi", "events in noida", "tech events delhi"
-
----
-
-## 📦 Deployment
-
-### Frontend → Vercel
-```bash
-cd frontend
-npx vercel --prod
-```
-
-### Backend → Render/Railway
-```bash
-# Push to GitHub → auto-deploy via GitHub Actions
-```
-
-### Scraper → Background Worker
-```bash
-# Deploy as background worker on Render/Railway
-# Set start command: python main.py
-```
-
-### Database
-- **MongoDB Atlas**: Create free cluster at cloud.mongodb.com
-- **Supabase**: Create project at supabase.com and run the SQL from `backend/README.md`
-
----
-
-## 🧪 Testing
-
-```bash
-# Frontend
-cd frontend && npm run build  # Build test
-
-# Backend
-cd backend && npm run build && node dist/server.js
-
-# Scraper
-cd scraper && python main.py --once
-```
-
----
-
-## 📊 Performance Targets
-
-| Metric | Target |
-|--------|--------|
-| Lighthouse Mobile | 90+ |
-| LCP | < 2.5s |
-| FID | < 100ms |
-| CLS | < 0.1 |
-| API Response time | < 500ms p95 |
-| DB Query time | < 200ms p95 |
+## 📱 UI Features
+- **Dark Mode**: Premium deep navy and indigo aesthetic.
+- **Glassmorphism**: Modern, transparent UI elements with blur effects.
+- **Micro-animations**: Smooth transitions and hover effects for a premium feel.
+- **Responsive**: Fully optimized for Mobile, Tablet, and Desktop.
 
 ---
 
 ## 🤝 Contributing
-
-1. Fork the repo
-2. Create feature branch: `git checkout -b feature/amazing-feature`
-3. Commit changes: `git commit -m 'Add amazing feature'`
-4. Push to branch: `git push origin feature/amazing-feature`
-5. Open a Pull Request
-
----
+Contributions are welcome! Please feel free to submit a Pull Request.
 
 ## 📄 License
-
-MIT License — see [LICENSE](LICENSE) for details.
-
----
+This project is licensed under the MIT License.
 
 Built with ❤️ for Delhi-NCR's vibrant events ecosystem. 🇮🇳
-# DE_NE_Events
-# DE_NE_Events

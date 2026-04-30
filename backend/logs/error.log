@@ -402,3 +402,269 @@ Error: Cannot set headers after they are sent to the client
 2026-04-19 01:39:06 [error]: Failed to upsert event "Anime India | Delhi": Event validation failed: category: `Festivals` is not a valid enum value for path `category`.
 2026-04-19 01:39:19 [error]: Failed to upsert event "Anime India | Delhi": Event validation failed: category: `Festivals` is not a valid enum value for path `category`.
 2026-04-19 01:49:53 [error]: Failed to upsert event "Build Autonomous AI Agents: 2-Hour Masterclass": Event validation failed: address: Path `address` is required.
+2026-04-30 20:22:41 [error]: Error: CORS: Origin http://localhost:3002 not allowed
+    at origin (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/src/server.ts:81:14)
+    at /Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/cors/lib/index.js:219:13
+    at optionsCallback (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/cors/lib/index.js:199:9)
+    at corsMiddleware (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/cors/lib/index.js:204:7)
+    at Layer.handle [as handle_request] (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/express/lib/router/index.js:328:13)
+    at /Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/express/lib/router/index.js:346:12)
+    at next (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/express/lib/router/index.js:280:10)
+    at internalNext (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/helmet/index.cjs:537:6)
+2026-04-30 20:22:41 [error]: Error: CORS: Origin http://localhost:3002 not allowed
+    at origin (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/src/server.ts:81:14)
+    at /Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/cors/lib/index.js:219:13
+    at optionsCallback (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/cors/lib/index.js:199:9)
+    at corsMiddleware (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/cors/lib/index.js:204:7)
+    at Layer.handle [as handle_request] (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/express/lib/router/index.js:328:13)
+    at /Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/express/lib/router/index.js:346:12)
+    at next (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/express/lib/router/index.js:280:10)
+    at internalNext (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/helmet/index.cjs:537:6)
+2026-04-30 20:22:41 [error]: Error: CORS: Origin http://localhost:3002 not allowed
+    at origin (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/src/server.ts:81:14)
+    at /Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/cors/lib/index.js:219:13
+    at optionsCallback (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/cors/lib/index.js:199:9)
+    at corsMiddleware (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/cors/lib/index.js:204:7)
+    at Layer.handle [as handle_request] (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/express/lib/router/index.js:328:13)
+    at /Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/express/lib/router/index.js:346:12)
+    at next (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/express/lib/router/index.js:280:10)
+    at internalNext (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/helmet/index.cjs:537:6)
+2026-04-30 20:23:15 [error]: Error: CORS: Origin http://localhost:3002 not allowed
+    at origin (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/src/server.ts:81:14)
+    at /Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/cors/lib/index.js:219:13
+    at optionsCallback (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/cors/lib/index.js:199:9)
+    at corsMiddleware (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/cors/lib/index.js:204:7)
+    at Layer.handle [as handle_request] (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/express/lib/router/index.js:328:13)
+    at /Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/express/lib/router/index.js:346:12)
+    at next (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/express/lib/router/index.js:280:10)
+    at internalNext (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/helmet/index.cjs:537:6)
+2026-04-30 20:23:15 [error]: Error: CORS: Origin http://localhost:3002 not allowed
+    at origin (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/src/server.ts:81:14)
+    at /Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/cors/lib/index.js:219:13
+    at optionsCallback (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/cors/lib/index.js:199:9)
+    at corsMiddleware (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/cors/lib/index.js:204:7)
+    at Layer.handle [as handle_request] (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/express/lib/router/index.js:328:13)
+    at /Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/express/lib/router/index.js:346:12)
+    at next (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/express/lib/router/index.js:280:10)
+    at internalNext (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/helmet/index.cjs:537:6)
+2026-04-30 20:23:48 [error]: Error: CORS: Origin http://localhost:3002 not allowed
+    at origin (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/src/server.ts:81:14)
+    at /Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/cors/lib/index.js:219:13
+    at optionsCallback (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/cors/lib/index.js:199:9)
+    at corsMiddleware (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/cors/lib/index.js:204:7)
+    at Layer.handle [as handle_request] (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/express/lib/router/index.js:328:13)
+    at /Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/express/lib/router/index.js:346:12)
+    at next (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/express/lib/router/index.js:280:10)
+    at internalNext (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/helmet/index.cjs:537:6)
+2026-04-30 20:23:48 [error]: Error: CORS: Origin http://localhost:3002 not allowed
+    at origin (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/src/server.ts:81:14)
+    at /Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/cors/lib/index.js:219:13
+    at optionsCallback (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/cors/lib/index.js:199:9)
+    at corsMiddleware (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/cors/lib/index.js:204:7)
+    at Layer.handle [as handle_request] (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/express/lib/router/index.js:328:13)
+    at /Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/express/lib/router/index.js:346:12)
+    at next (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/express/lib/router/index.js:280:10)
+    at internalNext (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/helmet/index.cjs:537:6)
+2026-04-30 20:23:48 [error]: Error: CORS: Origin http://localhost:3002 not allowed
+    at origin (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/src/server.ts:81:14)
+    at /Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/cors/lib/index.js:219:13
+    at optionsCallback (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/cors/lib/index.js:199:9)
+    at corsMiddleware (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/cors/lib/index.js:204:7)
+    at Layer.handle [as handle_request] (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/express/lib/router/index.js:328:13)
+    at /Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/express/lib/router/index.js:346:12)
+    at next (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/express/lib/router/index.js:280:10)
+    at internalNext (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/helmet/index.cjs:537:6)
+2026-04-30 20:23:53 [error]: Error: CORS: Origin http://localhost:3002 not allowed
+    at origin (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/src/server.ts:81:14)
+    at /Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/cors/lib/index.js:219:13
+    at optionsCallback (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/cors/lib/index.js:199:9)
+    at corsMiddleware (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/cors/lib/index.js:204:7)
+    at Layer.handle [as handle_request] (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/express/lib/router/index.js:328:13)
+    at /Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/express/lib/router/index.js:346:12)
+    at next (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/express/lib/router/index.js:280:10)
+    at internalNext (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/helmet/index.cjs:537:6)
+2026-04-30 20:23:53 [error]: Error: CORS: Origin http://localhost:3002 not allowed
+    at origin (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/src/server.ts:81:14)
+    at /Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/cors/lib/index.js:219:13
+    at optionsCallback (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/cors/lib/index.js:199:9)
+    at corsMiddleware (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/cors/lib/index.js:204:7)
+    at Layer.handle [as handle_request] (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/express/lib/router/index.js:328:13)
+    at /Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/express/lib/router/index.js:346:12)
+    at next (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/express/lib/router/index.js:280:10)
+    at internalNext (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/helmet/index.cjs:537:6)
+2026-04-30 20:23:53 [error]: Error: CORS: Origin http://localhost:3002 not allowed
+    at origin (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/src/server.ts:81:14)
+    at /Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/cors/lib/index.js:219:13
+    at optionsCallback (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/cors/lib/index.js:199:9)
+    at corsMiddleware (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/cors/lib/index.js:204:7)
+    at Layer.handle [as handle_request] (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/express/lib/router/index.js:328:13)
+    at /Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/express/lib/router/index.js:346:12)
+    at next (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/express/lib/router/index.js:280:10)
+    at internalNext (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/helmet/index.cjs:537:6)
+2026-04-30 20:24:01 [error]: Error: CORS: Origin http://localhost:3002 not allowed
+    at origin (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/src/server.ts:81:14)
+    at /Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/cors/lib/index.js:219:13
+    at optionsCallback (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/cors/lib/index.js:199:9)
+    at corsMiddleware (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/cors/lib/index.js:204:7)
+    at Layer.handle [as handle_request] (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/express/lib/router/index.js:328:13)
+    at /Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/express/lib/router/index.js:346:12)
+    at next (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/express/lib/router/index.js:280:10)
+    at internalNext (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/helmet/index.cjs:537:6)
+2026-04-30 20:24:01 [error]: Error: CORS: Origin http://localhost:3002 not allowed
+    at origin (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/src/server.ts:81:14)
+    at /Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/cors/lib/index.js:219:13
+    at optionsCallback (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/cors/lib/index.js:199:9)
+    at corsMiddleware (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/cors/lib/index.js:204:7)
+    at Layer.handle [as handle_request] (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/express/lib/router/index.js:328:13)
+    at /Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/express/lib/router/index.js:346:12)
+    at next (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/express/lib/router/index.js:280:10)
+    at internalNext (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/helmet/index.cjs:537:6)
+2026-04-30 20:24:03 [error]: Error: CORS: Origin http://localhost:3002 not allowed
+    at origin (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/src/server.ts:81:14)
+    at /Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/cors/lib/index.js:219:13
+    at optionsCallback (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/cors/lib/index.js:199:9)
+    at corsMiddleware (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/cors/lib/index.js:204:7)
+    at Layer.handle [as handle_request] (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/express/lib/router/index.js:328:13)
+    at /Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/express/lib/router/index.js:346:12)
+    at next (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/express/lib/router/index.js:280:10)
+    at internalNext (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/helmet/index.cjs:537:6)
+2026-04-30 20:24:03 [error]: Error: CORS: Origin http://localhost:3002 not allowed
+    at origin (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/src/server.ts:81:14)
+    at /Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/cors/lib/index.js:219:13
+    at optionsCallback (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/cors/lib/index.js:199:9)
+    at corsMiddleware (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/cors/lib/index.js:204:7)
+    at Layer.handle [as handle_request] (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/express/lib/router/index.js:328:13)
+    at /Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/express/lib/router/index.js:346:12)
+    at next (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/express/lib/router/index.js:280:10)
+    at internalNext (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/helmet/index.cjs:537:6)
+2026-04-30 20:24:03 [error]: Error: CORS: Origin http://localhost:3002 not allowed
+    at origin (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/src/server.ts:81:14)
+    at /Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/cors/lib/index.js:219:13
+    at optionsCallback (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/cors/lib/index.js:199:9)
+    at corsMiddleware (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/cors/lib/index.js:204:7)
+    at Layer.handle [as handle_request] (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/express/lib/router/index.js:328:13)
+    at /Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/express/lib/router/index.js:346:12)
+    at next (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/express/lib/router/index.js:280:10)
+    at internalNext (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/helmet/index.cjs:537:6)
+2026-04-30 20:24:03 [error]: Error: CORS: Origin http://localhost:3002 not allowed
+    at origin (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/src/server.ts:81:14)
+    at /Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/cors/lib/index.js:219:13
+    at optionsCallback (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/cors/lib/index.js:199:9)
+    at corsMiddleware (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/cors/lib/index.js:204:7)
+    at Layer.handle [as handle_request] (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/express/lib/router/index.js:328:13)
+    at /Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/express/lib/router/index.js:346:12)
+    at next (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/express/lib/router/index.js:280:10)
+    at internalNext (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/helmet/index.cjs:537:6)
+2026-04-30 20:24:03 [error]: Error: CORS: Origin http://localhost:3002 not allowed
+    at origin (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/src/server.ts:81:14)
+    at /Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/cors/lib/index.js:219:13
+    at optionsCallback (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/cors/lib/index.js:199:9)
+    at corsMiddleware (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/cors/lib/index.js:204:7)
+    at Layer.handle [as handle_request] (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/express/lib/router/index.js:328:13)
+    at /Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/express/lib/router/index.js:346:12)
+    at next (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/express/lib/router/index.js:280:10)
+    at internalNext (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/helmet/index.cjs:537:6)
+2026-04-30 20:24:03 [error]: Error: CORS: Origin http://localhost:3002 not allowed
+    at origin (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/src/server.ts:81:14)
+    at /Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/cors/lib/index.js:219:13
+    at optionsCallback (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/cors/lib/index.js:199:9)
+    at corsMiddleware (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/cors/lib/index.js:204:7)
+    at Layer.handle [as handle_request] (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/express/lib/router/index.js:328:13)
+    at /Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/express/lib/router/index.js:346:12)
+    at next (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/express/lib/router/index.js:280:10)
+    at internalNext (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/helmet/index.cjs:537:6)
+2026-04-30 20:24:05 [error]: Error: CORS: Origin http://localhost:3002 not allowed
+    at origin (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/src/server.ts:81:14)
+    at /Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/cors/lib/index.js:219:13
+    at optionsCallback (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/cors/lib/index.js:199:9)
+    at corsMiddleware (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/cors/lib/index.js:204:7)
+    at Layer.handle [as handle_request] (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/express/lib/router/index.js:328:13)
+    at /Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/express/lib/router/index.js:346:12)
+    at next (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/express/lib/router/index.js:280:10)
+    at internalNext (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/helmet/index.cjs:537:6)
+2026-04-30 20:24:05 [error]: Error: CORS: Origin http://localhost:3002 not allowed
+    at origin (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/src/server.ts:81:14)
+    at /Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/cors/lib/index.js:219:13
+    at optionsCallback (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/cors/lib/index.js:199:9)
+    at corsMiddleware (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/cors/lib/index.js:204:7)
+    at Layer.handle [as handle_request] (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/express/lib/router/index.js:328:13)
+    at /Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/express/lib/router/index.js:346:12)
+    at next (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/express/lib/router/index.js:280:10)
+    at internalNext (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/helmet/index.cjs:537:6)
+2026-04-30 20:24:05 [error]: Error: CORS: Origin http://localhost:3002 not allowed
+    at origin (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/src/server.ts:81:14)
+    at /Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/cors/lib/index.js:219:13
+    at optionsCallback (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/cors/lib/index.js:199:9)
+    at corsMiddleware (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/cors/lib/index.js:204:7)
+    at Layer.handle [as handle_request] (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/express/lib/router/index.js:328:13)
+    at /Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/express/lib/router/index.js:346:12)
+    at next (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/express/lib/router/index.js:280:10)
+    at internalNext (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/helmet/index.cjs:537:6)
+2026-04-30 20:24:08 [error]: Error: CORS: Origin http://localhost:3002 not allowed
+    at origin (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/src/server.ts:81:14)
+    at /Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/cors/lib/index.js:219:13
+    at optionsCallback (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/cors/lib/index.js:199:9)
+    at corsMiddleware (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/cors/lib/index.js:204:7)
+    at Layer.handle [as handle_request] (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/express/lib/router/index.js:328:13)
+    at /Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/express/lib/router/index.js:346:12)
+    at next (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/express/lib/router/index.js:280:10)
+    at internalNext (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/helmet/index.cjs:537:6)
+2026-04-30 20:24:08 [error]: Error: CORS: Origin http://localhost:3002 not allowed
+    at origin (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/src/server.ts:81:14)
+    at /Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/cors/lib/index.js:219:13
+    at optionsCallback (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/cors/lib/index.js:199:9)
+    at corsMiddleware (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/cors/lib/index.js:204:7)
+    at Layer.handle [as handle_request] (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/express/lib/router/index.js:328:13)
+    at /Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/express/lib/router/index.js:346:12)
+    at next (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/express/lib/router/index.js:280:10)
+    at internalNext (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/helmet/index.cjs:537:6)
+2026-04-30 20:25:56 [error]: ❌ Supabase Sync Error (profiles): TypeError: fetch failed
+2026-04-30 20:25:56 [error]: Supabase sync failed for yuvamk6@gmail.com: DB Sync Error: TypeError: fetch failed

@@ -2344,3 +2344,483 @@ Error: Cannot set headers after they are sent to the client
 2026-04-19 02:07:22 [info]: GET /api/v1/events/anime-india-delhi-1776543170311 200 - - 38.850 ms [w:0]
 2026-04-19 02:07:22 [info]: POST /api/v1/events/69e3e5c26bae87c39b6db2f4/view 404 112 - 5.310 ms [w:0]
 2026-04-19 02:07:22 [info]: POST /api/v1/events/69e3e5c26bae87c39b6db2f4/view 404 112 - 4.131 ms [w:0]
+2026-04-30 20:21:04 [info]: ✅ Supabase Admin initialized
+2026-04-30 20:21:04 [info]: 
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+2026-04-30 20:21:04 [info]: 🚀 Delhi-Noida Events API  —  v1.0.0
+2026-04-30 20:21:04 [info]: 🌍 http://0.0.0.0:5005/api/v1
+2026-04-30 20:21:04 [info]: 🏥 Health:   http://localhost:5005/api/v1/health
+2026-04-30 20:21:04 [info]: ✅ Ready:    http://localhost:5005/api/v1/ready
+2026-04-30 20:21:04 [info]: 📊 Metrics:  http://localhost:5005/api/v1/metrics
+2026-04-30 20:21:04 [info]: 🌆 ENV:      development
+2026-04-30 20:21:04 [info]: 🔧 Worker:   standalone
+2026-04-30 20:21:04 [warn]: 🛡️  MODE:     SAFE MODE (Database Disconnected)
+2026-04-30 20:21:04 [info]: ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+2026-04-30 20:21:04 [info]: 🔄 Redis reconnecting...
+2026-04-30 20:21:05 [info]: 🔄 Redis reconnecting...
+2026-04-30 20:21:05 [info]: ✅ MongoDB connected — delhi_noida_events (pool: 100)
+2026-04-30 20:21:06 [info]: 🔄 Redis reconnecting...
+2026-04-30 20:21:07 [info]: 🔄 Redis reconnecting...
+2026-04-30 20:21:09 [warn]: 🔴 Redis circuit breaker OPEN — caching paused for 30s
+2026-04-30 20:21:09 [info]: 🔄 Redis reconnecting...
+2026-04-30 20:21:12 [warn]: 🔴 Redis circuit breaker OPEN — caching paused for 30s
+2026-04-30 20:22:41 [error]: Error: CORS: Origin http://localhost:3002 not allowed
+    at origin (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/src/server.ts:81:14)
+    at /Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/cors/lib/index.js:219:13
+    at optionsCallback (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/cors/lib/index.js:199:9)
+    at corsMiddleware (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/cors/lib/index.js:204:7)
+    at Layer.handle [as handle_request] (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/express/lib/router/index.js:328:13)
+    at /Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/express/lib/router/index.js:346:12)
+    at next (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/express/lib/router/index.js:280:10)
+    at internalNext (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/helmet/index.cjs:537:6)
+2026-04-30 20:22:41 [error]: Error: CORS: Origin http://localhost:3002 not allowed
+    at origin (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/src/server.ts:81:14)
+    at /Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/cors/lib/index.js:219:13
+    at optionsCallback (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/cors/lib/index.js:199:9)
+    at corsMiddleware (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/cors/lib/index.js:204:7)
+    at Layer.handle [as handle_request] (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/express/lib/router/index.js:328:13)
+    at /Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/express/lib/router/index.js:346:12)
+    at next (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/express/lib/router/index.js:280:10)
+    at internalNext (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/helmet/index.cjs:537:6)
+2026-04-30 20:22:41 [error]: Error: CORS: Origin http://localhost:3002 not allowed
+    at origin (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/src/server.ts:81:14)
+    at /Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/cors/lib/index.js:219:13
+    at optionsCallback (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/cors/lib/index.js:199:9)
+    at corsMiddleware (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/cors/lib/index.js:204:7)
+    at Layer.handle [as handle_request] (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/express/lib/router/index.js:328:13)
+    at /Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/express/lib/router/index.js:346:12)
+    at next (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/express/lib/router/index.js:280:10)
+    at internalNext (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/helmet/index.cjs:537:6)
+2026-04-30 20:23:15 [error]: Error: CORS: Origin http://localhost:3002 not allowed
+    at origin (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/src/server.ts:81:14)
+    at /Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/cors/lib/index.js:219:13
+    at optionsCallback (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/cors/lib/index.js:199:9)
+    at corsMiddleware (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/cors/lib/index.js:204:7)
+    at Layer.handle [as handle_request] (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/express/lib/router/index.js:328:13)
+    at /Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/express/lib/router/index.js:346:12)
+    at next (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/express/lib/router/index.js:280:10)
+    at internalNext (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/helmet/index.cjs:537:6)
+2026-04-30 20:23:15 [error]: Error: CORS: Origin http://localhost:3002 not allowed
+    at origin (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/src/server.ts:81:14)
+    at /Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/cors/lib/index.js:219:13
+    at optionsCallback (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/cors/lib/index.js:199:9)
+    at corsMiddleware (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/cors/lib/index.js:204:7)
+    at Layer.handle [as handle_request] (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/express/lib/router/index.js:328:13)
+    at /Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/express/lib/router/index.js:346:12)
+    at next (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/express/lib/router/index.js:280:10)
+    at internalNext (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/helmet/index.cjs:537:6)
+2026-04-30 20:23:48 [error]: Error: CORS: Origin http://localhost:3002 not allowed
+    at origin (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/src/server.ts:81:14)
+    at /Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/cors/lib/index.js:219:13
+    at optionsCallback (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/cors/lib/index.js:199:9)
+    at corsMiddleware (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/cors/lib/index.js:204:7)
+    at Layer.handle [as handle_request] (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/express/lib/router/index.js:328:13)
+    at /Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/express/lib/router/index.js:346:12)
+    at next (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/express/lib/router/index.js:280:10)
+    at internalNext (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/helmet/index.cjs:537:6)
+2026-04-30 20:23:48 [error]: Error: CORS: Origin http://localhost:3002 not allowed
+    at origin (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/src/server.ts:81:14)
+    at /Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/cors/lib/index.js:219:13
+    at optionsCallback (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/cors/lib/index.js:199:9)
+    at corsMiddleware (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/cors/lib/index.js:204:7)
+    at Layer.handle [as handle_request] (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/express/lib/router/index.js:328:13)
+    at /Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/express/lib/router/index.js:346:12)
+    at next (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/express/lib/router/index.js:280:10)
+    at internalNext (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/helmet/index.cjs:537:6)
+2026-04-30 20:23:48 [error]: Error: CORS: Origin http://localhost:3002 not allowed
+    at origin (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/src/server.ts:81:14)
+    at /Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/cors/lib/index.js:219:13
+    at optionsCallback (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/cors/lib/index.js:199:9)
+    at corsMiddleware (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/cors/lib/index.js:204:7)
+    at Layer.handle [as handle_request] (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/express/lib/router/index.js:328:13)
+    at /Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/express/lib/router/index.js:346:12)
+    at next (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/express/lib/router/index.js:280:10)
+    at internalNext (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/helmet/index.cjs:537:6)
+2026-04-30 20:23:53 [error]: Error: CORS: Origin http://localhost:3002 not allowed
+    at origin (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/src/server.ts:81:14)
+    at /Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/cors/lib/index.js:219:13
+    at optionsCallback (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/cors/lib/index.js:199:9)
+    at corsMiddleware (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/cors/lib/index.js:204:7)
+    at Layer.handle [as handle_request] (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/express/lib/router/index.js:328:13)
+    at /Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/express/lib/router/index.js:346:12)
+    at next (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/express/lib/router/index.js:280:10)
+    at internalNext (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/helmet/index.cjs:537:6)
+2026-04-30 20:23:53 [error]: Error: CORS: Origin http://localhost:3002 not allowed
+    at origin (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/src/server.ts:81:14)
+    at /Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/cors/lib/index.js:219:13
+    at optionsCallback (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/cors/lib/index.js:199:9)
+    at corsMiddleware (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/cors/lib/index.js:204:7)
+    at Layer.handle [as handle_request] (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/express/lib/router/index.js:328:13)
+    at /Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/express/lib/router/index.js:346:12)
+    at next (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/express/lib/router/index.js:280:10)
+    at internalNext (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/helmet/index.cjs:537:6)
+2026-04-30 20:23:53 [error]: Error: CORS: Origin http://localhost:3002 not allowed
+    at origin (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/src/server.ts:81:14)
+    at /Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/cors/lib/index.js:219:13
+    at optionsCallback (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/cors/lib/index.js:199:9)
+    at corsMiddleware (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/cors/lib/index.js:204:7)
+    at Layer.handle [as handle_request] (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/express/lib/router/index.js:328:13)
+    at /Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/express/lib/router/index.js:346:12)
+    at next (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/express/lib/router/index.js:280:10)
+    at internalNext (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/helmet/index.cjs:537:6)
+2026-04-30 20:24:01 [error]: Error: CORS: Origin http://localhost:3002 not allowed
+    at origin (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/src/server.ts:81:14)
+    at /Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/cors/lib/index.js:219:13
+    at optionsCallback (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/cors/lib/index.js:199:9)
+    at corsMiddleware (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/cors/lib/index.js:204:7)
+    at Layer.handle [as handle_request] (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/express/lib/router/index.js:328:13)
+    at /Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/express/lib/router/index.js:346:12)
+    at next (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/express/lib/router/index.js:280:10)
+    at internalNext (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/helmet/index.cjs:537:6)
+2026-04-30 20:24:01 [error]: Error: CORS: Origin http://localhost:3002 not allowed
+    at origin (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/src/server.ts:81:14)
+    at /Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/cors/lib/index.js:219:13
+    at optionsCallback (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/cors/lib/index.js:199:9)
+    at corsMiddleware (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/cors/lib/index.js:204:7)
+    at Layer.handle [as handle_request] (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/express/lib/router/index.js:328:13)
+    at /Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/express/lib/router/index.js:346:12)
+    at next (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/express/lib/router/index.js:280:10)
+    at internalNext (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/helmet/index.cjs:537:6)
+2026-04-30 20:24:03 [error]: Error: CORS: Origin http://localhost:3002 not allowed
+    at origin (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/src/server.ts:81:14)
+    at /Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/cors/lib/index.js:219:13
+    at optionsCallback (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/cors/lib/index.js:199:9)
+    at corsMiddleware (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/cors/lib/index.js:204:7)
+    at Layer.handle [as handle_request] (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/express/lib/router/index.js:328:13)
+    at /Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/express/lib/router/index.js:346:12)
+    at next (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/express/lib/router/index.js:280:10)
+    at internalNext (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/helmet/index.cjs:537:6)
+2026-04-30 20:24:03 [error]: Error: CORS: Origin http://localhost:3002 not allowed
+    at origin (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/src/server.ts:81:14)
+    at /Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/cors/lib/index.js:219:13
+    at optionsCallback (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/cors/lib/index.js:199:9)
+    at corsMiddleware (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/cors/lib/index.js:204:7)
+    at Layer.handle [as handle_request] (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/express/lib/router/index.js:328:13)
+    at /Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/express/lib/router/index.js:346:12)
+    at next (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/express/lib/router/index.js:280:10)
+    at internalNext (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/helmet/index.cjs:537:6)
+2026-04-30 20:24:03 [error]: Error: CORS: Origin http://localhost:3002 not allowed
+    at origin (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/src/server.ts:81:14)
+    at /Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/cors/lib/index.js:219:13
+    at optionsCallback (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/cors/lib/index.js:199:9)
+    at corsMiddleware (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/cors/lib/index.js:204:7)
+    at Layer.handle [as handle_request] (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/express/lib/router/index.js:328:13)
+    at /Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/express/lib/router/index.js:346:12)
+    at next (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/express/lib/router/index.js:280:10)
+    at internalNext (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/helmet/index.cjs:537:6)
+2026-04-30 20:24:03 [error]: Error: CORS: Origin http://localhost:3002 not allowed
+    at origin (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/src/server.ts:81:14)
+    at /Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/cors/lib/index.js:219:13
+    at optionsCallback (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/cors/lib/index.js:199:9)
+    at corsMiddleware (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/cors/lib/index.js:204:7)
+    at Layer.handle [as handle_request] (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/express/lib/router/index.js:328:13)
+    at /Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/express/lib/router/index.js:346:12)
+    at next (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/express/lib/router/index.js:280:10)
+    at internalNext (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/helmet/index.cjs:537:6)
+2026-04-30 20:24:03 [error]: Error: CORS: Origin http://localhost:3002 not allowed
+    at origin (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/src/server.ts:81:14)
+    at /Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/cors/lib/index.js:219:13
+    at optionsCallback (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/cors/lib/index.js:199:9)
+    at corsMiddleware (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/cors/lib/index.js:204:7)
+    at Layer.handle [as handle_request] (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/express/lib/router/index.js:328:13)
+    at /Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/express/lib/router/index.js:346:12)
+    at next (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/express/lib/router/index.js:280:10)
+    at internalNext (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/helmet/index.cjs:537:6)
+2026-04-30 20:24:03 [error]: Error: CORS: Origin http://localhost:3002 not allowed
+    at origin (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/src/server.ts:81:14)
+    at /Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/cors/lib/index.js:219:13
+    at optionsCallback (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/cors/lib/index.js:199:9)
+    at corsMiddleware (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/cors/lib/index.js:204:7)
+    at Layer.handle [as handle_request] (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/express/lib/router/index.js:328:13)
+    at /Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/express/lib/router/index.js:346:12)
+    at next (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/express/lib/router/index.js:280:10)
+    at internalNext (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/helmet/index.cjs:537:6)
+2026-04-30 20:24:04 [warn]: 🔴 Redis circuit breaker OPEN — caching paused for 30s
+2026-04-30 20:24:05 [error]: Error: CORS: Origin http://localhost:3002 not allowed
+    at origin (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/src/server.ts:81:14)
+    at /Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/cors/lib/index.js:219:13
+    at optionsCallback (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/cors/lib/index.js:199:9)
+    at corsMiddleware (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/cors/lib/index.js:204:7)
+    at Layer.handle [as handle_request] (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/express/lib/router/index.js:328:13)
+    at /Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/express/lib/router/index.js:346:12)
+    at next (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/express/lib/router/index.js:280:10)
+    at internalNext (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/helmet/index.cjs:537:6)
+2026-04-30 20:24:05 [error]: Error: CORS: Origin http://localhost:3002 not allowed
+    at origin (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/src/server.ts:81:14)
+    at /Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/cors/lib/index.js:219:13
+    at optionsCallback (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/cors/lib/index.js:199:9)
+    at corsMiddleware (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/cors/lib/index.js:204:7)
+    at Layer.handle [as handle_request] (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/express/lib/router/index.js:328:13)
+    at /Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/express/lib/router/index.js:346:12)
+    at next (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/express/lib/router/index.js:280:10)
+    at internalNext (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/helmet/index.cjs:537:6)
+2026-04-30 20:24:05 [error]: Error: CORS: Origin http://localhost:3002 not allowed
+    at origin (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/src/server.ts:81:14)
+    at /Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/cors/lib/index.js:219:13
+    at optionsCallback (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/cors/lib/index.js:199:9)
+    at corsMiddleware (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/cors/lib/index.js:204:7)
+    at Layer.handle [as handle_request] (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/express/lib/router/index.js:328:13)
+    at /Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/express/lib/router/index.js:346:12)
+    at next (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/express/lib/router/index.js:280:10)
+    at internalNext (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/helmet/index.cjs:537:6)
+2026-04-30 20:24:08 [error]: Error: CORS: Origin http://localhost:3002 not allowed
+    at origin (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/src/server.ts:81:14)
+    at /Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/cors/lib/index.js:219:13
+    at optionsCallback (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/cors/lib/index.js:199:9)
+    at corsMiddleware (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/cors/lib/index.js:204:7)
+    at Layer.handle [as handle_request] (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/express/lib/router/index.js:328:13)
+    at /Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/express/lib/router/index.js:346:12)
+    at next (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/express/lib/router/index.js:280:10)
+    at internalNext (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/helmet/index.cjs:537:6)
+2026-04-30 20:24:08 [error]: Error: CORS: Origin http://localhost:3002 not allowed
+    at origin (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/src/server.ts:81:14)
+    at /Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/cors/lib/index.js:219:13
+    at optionsCallback (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/cors/lib/index.js:199:9)
+    at corsMiddleware (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/cors/lib/index.js:204:7)
+    at Layer.handle [as handle_request] (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/express/lib/router/index.js:328:13)
+    at /Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/express/lib/router/index.js:346:12)
+    at next (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/express/lib/router/index.js:280:10)
+    at internalNext (/Users/yuvamrajput/Desktop/DE_NE_Events/backend/node_modules/helmet/index.cjs:537:6)
+2026-04-30 20:24:54 [info]: ✅ Supabase Admin initialized
+2026-04-30 20:24:55 [info]: 
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+2026-04-30 20:24:55 [info]: 🚀 Delhi-Noida Events API  —  v1.0.0
+2026-04-30 20:24:55 [info]: 🌍 http://0.0.0.0:5005/api/v1
+2026-04-30 20:24:55 [info]: 🏥 Health:   http://localhost:5005/api/v1/health
+2026-04-30 20:24:55 [info]: ✅ Ready:    http://localhost:5005/api/v1/ready
+2026-04-30 20:24:55 [info]: 📊 Metrics:  http://localhost:5005/api/v1/metrics
+2026-04-30 20:24:55 [info]: 🌆 ENV:      development
+2026-04-30 20:24:55 [info]: 🔧 Worker:   standalone
+2026-04-30 20:24:55 [warn]: 🛡️  MODE:     SAFE MODE (Database Disconnected)
+2026-04-30 20:24:55 [info]: ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+2026-04-30 20:24:55 [info]: 🔄 Redis reconnecting...
+2026-04-30 20:24:55 [info]: ✅ MongoDB connected — delhi_noida_events (pool: 100)
+2026-04-30 20:24:55 [info]: 🔄 Redis reconnecting...
+2026-04-30 20:24:56 [info]: 🔄 Redis reconnecting...
+2026-04-30 20:24:58 [info]: 🔄 Redis reconnecting...
+2026-04-30 20:25:00 [warn]: 🔴 Redis circuit breaker OPEN — caching paused for 30s
+2026-04-30 20:25:00 [info]: 🔄 Redis reconnecting...
+2026-04-30 20:25:02 [warn]: 🔴 Redis circuit breaker OPEN — caching paused for 30s
+2026-04-30 20:25:24 [info]: GET /api/v1/events?page=1&limit=12&sort=date 200 - - 219.373 ms [w:0]
+2026-04-30 20:25:56 [info]: POST /api/v1/auth/login 200 640 - 469.429 ms [w:0]
+2026-04-30 20:25:56 [error]: ❌ Supabase Sync Error (profiles): TypeError: fetch failed
+2026-04-30 20:25:56 [error]: Supabase sync failed for yuvamk6@gmail.com: DB Sync Error: TypeError: fetch failed
+2026-04-30 20:26:09 [info]: GET /api/v1/auth/me 200 537 - 102.942 ms [w:0]
+2026-04-30 20:26:09 [info]: GET /api/v1/events?page=1&limit=12&sort=date 200 - - 167.590 ms [w:0]
+2026-04-30 20:26:09 [info]: GET /api/v1/bookmarks?page=1 200 55 - 97.980 ms [w:0]
+2026-04-30 20:26:09 [info]: GET /api/v1/bookmarks?page=1 304 - - 84.370 ms [w:0]
+2026-04-30 20:26:09 [info]: GET /api/v1/bookmarks?page=1 304 - - 67.368 ms [w:0]
+2026-04-30 20:26:09 [info]: GET /api/v1/bookmarks?page=1 304 - - 69.173 ms [w:0]
+2026-04-30 20:26:10 [info]: GET /api/v1/bookmarks?page=1 304 - - 62.205 ms [w:0]
+2026-04-30 20:26:10 [info]: GET /api/v1/bookmarks?page=1 304 - - 65.452 ms [w:0]
+2026-04-30 20:26:10 [info]: GET /api/v1/bookmarks?page=1 304 - - 62.628 ms [w:0]
+2026-04-30 20:26:10 [info]: GET /api/v1/bookmarks?page=1 304 - - 68.873 ms [w:0]
+2026-04-30 20:26:10 [info]: GET /api/v1/bookmarks?page=1 304 - - 66.774 ms [w:0]
+2026-04-30 20:26:10 [info]: GET /api/v1/bookmarks?page=1 304 - - 66.712 ms [w:0]
+2026-04-30 20:26:10 [info]: GET /api/v1/bookmarks?page=1 304 - - 60.962 ms [w:0]
+2026-04-30 20:26:10 [info]: GET /api/v1/bookmarks?page=1 304 - - 68.791 ms [w:0]
+2026-04-30 20:26:10 [info]: GET /api/v1/bookmarks?page=1 304 - - 66.288 ms [w:0]
+2026-04-30 20:26:10 [info]: GET /api/v1/bookmarks?page=1 304 - - 69.310 ms [w:0]
+2026-04-30 20:26:10 [info]: GET /api/v1/bookmarks?page=1 304 - - 69.720 ms [w:0]
+2026-04-30 20:26:10 [info]: GET /api/v1/bookmarks?page=1 304 - - 64.929 ms [w:0]
+2026-04-30 20:26:10 [info]: GET /api/v1/bookmarks?page=1 304 - - 73.870 ms [w:0]
+2026-04-30 20:26:10 [info]: GET /api/v1/bookmarks?page=1 304 - - 68.224 ms [w:0]
+2026-04-30 20:26:10 [info]: GET /api/v1/bookmarks?page=1 304 - - 69.286 ms [w:0]
+2026-04-30 20:26:11 [info]: GET /api/v1/bookmarks?page=1 304 - - 64.251 ms [w:0]
+2026-04-30 20:26:11 [info]: GET /api/v1/bookmarks?page=1 304 - - 59.149 ms [w:0]
+2026-04-30 20:26:11 [info]: GET /api/v1/bookmarks?page=1 304 - - 67.534 ms [w:0]
+2026-04-30 20:26:11 [info]: GET /api/v1/bookmarks?page=1 304 - - 65.929 ms [w:0]
+2026-04-30 20:26:11 [info]: GET /api/v1/bookmarks?page=1 304 - - 63.728 ms [w:0]
+2026-04-30 20:26:11 [info]: GET /api/v1/bookmarks?page=1 304 - - 68.495 ms [w:0]
+2026-04-30 20:26:11 [info]: GET /api/v1/bookmarks?page=1 304 - - 63.997 ms [w:0]
+2026-04-30 20:26:11 [info]: GET /api/v1/bookmarks?page=1 304 - - 64.617 ms [w:0]
+2026-04-30 20:26:11 [info]: GET /api/v1/bookmarks?page=1 304 - - 67.191 ms [w:0]
+2026-04-30 20:26:11 [info]: GET /api/v1/bookmarks?page=1 304 - - 68.483 ms [w:0]
+2026-04-30 20:26:11 [info]: GET /api/v1/bookmarks?page=1 304 - - 68.707 ms [w:0]
+2026-04-30 20:26:11 [info]: GET /api/v1/bookmarks?page=1 429 73 - 0.813 ms [w:0]
+2026-04-30 20:26:11 [info]: GET /api/v1/bookmarks?page=1 429 73 - 0.332 ms [w:0]
+2026-04-30 20:26:11 [info]: GET /api/v1/bookmarks?page=1 429 73 - 0.961 ms [w:0]
+2026-04-30 20:26:11 [info]: GET /api/v1/bookmarks?page=1 429 73 - 1.000 ms [w:0]
+2026-04-30 20:26:11 [info]: GET /api/v1/bookmarks?page=1 429 73 - 0.402 ms [w:0]
+2026-04-30 20:26:11 [info]: GET /api/v1/bookmarks?page=1 429 73 - 0.522 ms [w:0]
+2026-04-30 20:26:11 [info]: GET /api/v1/bookmarks?page=1 429 73 - 0.694 ms [w:0]
+2026-04-30 20:26:11 [info]: GET /api/v1/bookmarks?page=1 429 73 - 0.361 ms [w:0]
+2026-04-30 20:26:11 [info]: GET /api/v1/bookmarks?page=1 429 73 - 0.521 ms [w:0]
+2026-04-30 20:26:11 [info]: GET /api/v1/bookmarks?page=1 429 73 - 0.792 ms [w:0]
+2026-04-30 20:26:11 [info]: GET /api/v1/bookmarks?page=1 429 73 - 0.220 ms [w:0]
+2026-04-30 20:26:11 [info]: GET /api/v1/bookmarks?page=1 429 73 - 1.117 ms [w:0]
+2026-04-30 20:26:11 [info]: GET /api/v1/bookmarks?page=1 429 73 - 0.294 ms [w:0]
+2026-04-30 20:26:11 [info]: GET /api/v1/bookmarks?page=1 429 73 - 0.567 ms [w:0]
+2026-04-30 20:26:11 [info]: GET /api/v1/bookmarks?page=1 429 73 - 0.211 ms [w:0]
+2026-04-30 20:26:11 [info]: GET /api/v1/bookmarks?page=1 429 73 - 0.223 ms [w:0]
+2026-04-30 20:26:11 [info]: GET /api/v1/bookmarks?page=1 429 73 - 2.266 ms [w:0]
+2026-04-30 20:26:11 [info]: GET /api/v1/bookmarks?page=1 429 73 - 0.247 ms [w:0]
+2026-04-30 20:26:11 [info]: GET /api/v1/bookmarks?page=1 429 73 - 0.836 ms [w:0]
+2026-04-30 20:26:11 [info]: GET /api/v1/bookmarks?page=1 429 73 - 0.317 ms [w:0]
+2026-04-30 20:26:22 [info]: GET /api/v1/events?limit=50&page=1 200 - - 132.323 ms [w:0]
+2026-04-30 20:26:23 [info]: GET /api/v1/events/noida-comedy-show-sec-18-1776543021932 200 - - 41.888 ms [w:0]
+2026-04-30 20:26:23 [info]: GET /api/v1/events/noida-comedy-show-sec-18-1776543021932 200 - - 37.261 ms [w:0]
+2026-04-30 20:26:23 [info]: GET /api/v1/bookmarks?page=1 429 73 - 1.206 ms [w:0]
+2026-04-30 20:26:23 [info]: POST /api/v1/events/69e3e52d63633566bff2760a/view 404 112 - 10.976 ms [w:0]
+2026-04-30 20:26:23 [info]: POST /api/v1/events/69e3e52d63633566bff2760a/view 404 112 - 5.841 ms [w:0]
+2026-04-30 20:26:24 [info]: GET /api/v1/bookmarks?page=1 429 73 - 8.660 ms [w:0]
+2026-04-30 20:26:36 [info]: GET /api/v1/events?page=1&limit=12&city=Delhi&sort=date 200 - - 289.176 ms [w:0]
+2026-04-30 20:26:37 [info]: GET /api/v1/bookmarks?page=1 429 73 - 9.136 ms [w:0]
+2026-04-30 20:26:37 [info]: GET /api/v1/bookmarks?page=1 429 73 - 0.462 ms [w:0]
+2026-04-30 20:26:37 [info]: GET /api/v1/bookmarks?page=1 429 73 - 1.418 ms [w:0]
+2026-04-30 20:26:37 [info]: GET /api/v1/bookmarks?page=1 429 73 - 33.104 ms [w:0]
+2026-04-30 20:26:37 [info]: GET /api/v1/bookmarks?page=1 429 73 - 0.604 ms [w:0]
+2026-04-30 20:26:37 [info]: GET /api/v1/bookmarks?page=1 429 73 - 0.636 ms [w:0]
+2026-04-30 20:26:37 [info]: GET /api/v1/bookmarks?page=1 429 73 - 0.873 ms [w:0]
+2026-04-30 20:26:37 [info]: GET /api/v1/bookmarks?page=1 429 73 - 1.047 ms [w:0]
+2026-04-30 20:26:37 [info]: GET /api/v1/bookmarks?page=1 429 73 - 1.030 ms [w:0]
+2026-04-30 20:26:37 [info]: GET /api/v1/bookmarks?page=1 429 73 - 0.487 ms [w:0]
+2026-04-30 20:26:37 [info]: GET /api/v1/bookmarks?page=1 429 73 - 1.057 ms [w:0]
+2026-04-30 20:26:37 [info]: GET /api/v1/bookmarks?page=1 429 73 - 1.069 ms [w:0]
+2026-04-30 20:26:37 [info]: GET /api/v1/bookmarks?page=1 429 73 - 4.019 ms [w:0]
+2026-04-30 20:26:37 [info]: GET /api/v1/bookmarks?page=1 429 73 - 1.309 ms [w:0]
+2026-04-30 20:26:37 [info]: GET /api/v1/bookmarks?page=1 429 73 - 0.271 ms [w:0]
+2026-04-30 20:26:37 [info]: GET /api/v1/bookmarks?page=1 429 73 - 1.448 ms [w:0]
+2026-04-30 20:26:37 [info]: GET /api/v1/bookmarks?page=1 429 73 - 1.471 ms [w:0]
+2026-04-30 20:26:37 [info]: GET /api/v1/bookmarks?page=1 429 73 - 1.136 ms [w:0]
+2026-04-30 20:26:37 [info]: GET /api/v1/bookmarks?page=1 429 73 - 2.735 ms [w:0]
+2026-04-30 20:26:37 [info]: GET /api/v1/bookmarks?page=1 429 73 - 0.529 ms [w:0]
+2026-04-30 20:26:37 [info]: GET /api/v1/bookmarks?page=1 429 73 - 4.638 ms [w:0]
+2026-04-30 20:26:37 [info]: GET /api/v1/bookmarks?page=1 429 73 - 0.759 ms [w:0]
+2026-04-30 20:26:37 [info]: GET /api/v1/bookmarks?page=1 429 73 - 0.775 ms [w:0]
+2026-04-30 20:26:37 [info]: GET /api/v1/bookmarks?page=1 429 73 - 2.571 ms [w:0]
+2026-04-30 20:26:37 [info]: GET /api/v1/bookmarks?page=1 429 73 - 1.525 ms [w:0]
+2026-04-30 20:26:37 [info]: GET /api/v1/bookmarks?page=1 429 73 - 1.146 ms [w:0]
+2026-04-30 20:26:37 [info]: GET /api/v1/bookmarks?page=1 429 73 - 0.513 ms [w:0]
+2026-04-30 20:26:37 [info]: GET /api/v1/bookmarks?page=1 429 73 - 0.838 ms [w:0]
+2026-04-30 20:26:37 [info]: GET /api/v1/bookmarks?page=1 429 73 - 0.545 ms [w:0]
+2026-04-30 20:26:37 [info]: GET /api/v1/bookmarks?page=1 429 73 - 1.117 ms [w:0]
+2026-04-30 20:26:37 [info]: GET /api/v1/bookmarks?page=1 429 73 - 0.876 ms [w:0]
+2026-04-30 20:26:37 [info]: GET /api/v1/bookmarks?page=1 429 73 - 0.672 ms [w:0]
+2026-04-30 20:26:37 [info]: GET /api/v1/bookmarks?page=1 429 73 - 2.223 ms [w:0]
+2026-04-30 20:26:37 [info]: GET /api/v1/bookmarks?page=1 429 73 - 2.277 ms [w:0]
+2026-04-30 20:26:37 [info]: GET /api/v1/bookmarks?page=1 429 73 - 4.626 ms [w:0]
+2026-04-30 20:26:37 [info]: GET /api/v1/bookmarks?page=1 429 73 - 1.541 ms [w:0]
+2026-04-30 20:26:37 [info]: GET /api/v1/bookmarks?page=1 429 73 - 0.582 ms [w:0]
+2026-04-30 20:26:37 [info]: GET /api/v1/bookmarks?page=1 429 73 - 8.648 ms [w:0]
+2026-04-30 20:26:37 [info]: GET /api/v1/bookmarks?page=1 429 73 - 0.783 ms [w:0]
+2026-04-30 20:26:37 [info]: GET /api/v1/bookmarks?page=1 429 73 - 1.880 ms [w:0]
+2026-04-30 20:26:37 [info]: GET /api/v1/bookmarks?page=1 429 73 - 1.400 ms [w:0]
+2026-04-30 20:26:37 [info]: GET /api/v1/bookmarks?page=1 429 73 - 1.154 ms [w:0]
+2026-04-30 20:26:37 [info]: GET /api/v1/bookmarks?page=1 429 73 - 0.486 ms [w:0]
+2026-04-30 20:26:37 [info]: GET /api/v1/bookmarks?page=1 429 73 - 0.585 ms [w:0]
+2026-04-30 20:26:37 [info]: GET /api/v1/bookmarks?page=1 429 73 - 1.359 ms [w:0]
+2026-04-30 20:26:37 [info]: GET /api/v1/bookmarks?page=1 429 73 - 0.890 ms [w:0]
+2026-04-30 20:26:37 [info]: GET /api/v1/bookmarks?page=1 429 73 - 0.799 ms [w:0]
+2026-04-30 20:26:37 [info]: GET /api/v1/bookmarks?page=1 429 73 - 0.908 ms [w:0]
+2026-04-30 20:26:37 [info]: GET /api/v1/bookmarks?page=1 429 73 - 2.675 ms [w:0]
+2026-04-30 20:26:37 [info]: GET /api/v1/bookmarks?page=1 429 73 - 0.300 ms [w:0]
+2026-04-30 20:26:45 [info]: GET /api/v1/events?page=1&limit=12&city=Noida&sort=date 200 - - 118.855 ms [w:0]
+2026-04-30 20:26:45 [info]: GET /api/v1/bookmarks?page=1 429 73 - 1.338 ms [w:0]
+2026-04-30 20:26:45 [info]: GET /api/v1/bookmarks?page=1 429 73 - 0.670 ms [w:0]
+2026-04-30 20:26:45 [info]: GET /api/v1/bookmarks?page=1 429 73 - 0.377 ms [w:0]
+2026-04-30 20:26:45 [info]: GET /api/v1/bookmarks?page=1 429 73 - 0.542 ms [w:0]
+2026-04-30 20:26:45 [info]: GET /api/v1/bookmarks?page=1 429 73 - 0.478 ms [w:0]
+2026-04-30 20:26:45 [info]: GET /api/v1/bookmarks?page=1 429 73 - 0.892 ms [w:0]
+2026-04-30 20:26:45 [info]: GET /api/v1/bookmarks?page=1 429 73 - 0.417 ms [w:0]
+2026-04-30 20:26:45 [info]: GET /api/v1/bookmarks?page=1 429 73 - 0.322 ms [w:0]
+2026-04-30 20:26:45 [info]: GET /api/v1/bookmarks?page=1 429 73 - 0.439 ms [w:0]
+2026-04-30 20:26:45 [info]: GET /api/v1/bookmarks?page=1 429 73 - 0.319 ms [w:0]
+2026-04-30 20:26:45 [info]: GET /api/v1/bookmarks?page=1 429 73 - 0.520 ms [w:0]
+2026-04-30 20:26:45 [info]: GET /api/v1/bookmarks?page=1 429 73 - 1.591 ms [w:0]
+2026-04-30 20:26:45 [info]: GET /api/v1/bookmarks?page=1 429 73 - 1.463 ms [w:0]
+2026-04-30 20:26:45 [info]: GET /api/v1/bookmarks?page=1 429 73 - 0.642 ms [w:0]
+2026-04-30 20:26:45 [info]: GET /api/v1/bookmarks?page=1 429 73 - 0.517 ms [w:0]
+2026-04-30 20:26:45 [info]: GET /api/v1/bookmarks?page=1 429 73 - 0.539 ms [w:0]
+2026-04-30 20:26:45 [info]: GET /api/v1/bookmarks?page=1 429 73 - 0.484 ms [w:0]
+2026-04-30 20:26:45 [info]: GET /api/v1/bookmarks?page=1 429 73 - 0.401 ms [w:0]
+2026-04-30 20:26:45 [info]: GET /api/v1/bookmarks?page=1 429 73 - 0.251 ms [w:0]
+2026-04-30 20:26:45 [info]: GET /api/v1/bookmarks?page=1 429 73 - 0.762 ms [w:0]
+2026-04-30 20:26:45 [info]: GET /api/v1/bookmarks?page=1 429 73 - 0.299 ms [w:0]
+2026-04-30 20:26:45 [info]: GET /api/v1/bookmarks?page=1 429 73 - 0.334 ms [w:0]
+2026-04-30 20:26:45 [info]: GET /api/v1/bookmarks?page=1 429 73 - 1.269 ms [w:0]
+2026-04-30 20:26:45 [info]: GET /api/v1/bookmarks?page=1 429 73 - 0.347 ms [w:0]
+2026-04-30 20:26:45 [info]: GET /api/v1/bookmarks?page=1 429 73 - 0.313 ms [w:0]
+2026-04-30 20:26:45 [info]: GET /api/v1/bookmarks?page=1 429 73 - 0.478 ms [w:0]
+2026-04-30 20:26:45 [info]: GET /api/v1/bookmarks?page=1 429 73 - 0.856 ms [w:0]
+2026-04-30 20:26:45 [info]: GET /api/v1/bookmarks?page=1 429 73 - 0.214 ms [w:0]
+2026-04-30 20:26:46 [info]: GET /api/v1/bookmarks?page=1 429 73 - 0.274 ms [w:0]
+2026-04-30 20:26:46 [info]: GET /api/v1/bookmarks?page=1 429 73 - 0.434 ms [w:0]
+2026-04-30 20:26:46 [info]: GET /api/v1/bookmarks?page=1 429 73 - 0.275 ms [w:0]
+2026-04-30 20:26:46 [info]: GET /api/v1/bookmarks?page=1 429 73 - 0.320 ms [w:0]
+2026-04-30 20:26:46 [info]: GET /api/v1/bookmarks?page=1 429 73 - 0.252 ms [w:0]
+2026-04-30 20:26:46 [info]: GET /api/v1/bookmarks?page=1 429 73 - 0.202 ms [w:0]
+2026-04-30 20:26:46 [info]: GET /api/v1/bookmarks?page=1 429 73 - 0.233 ms [w:0]
+2026-04-30 20:26:46 [info]: GET /api/v1/bookmarks?page=1 429 73 - 0.475 ms [w:0]
+2026-04-30 20:26:46 [info]: GET /api/v1/bookmarks?page=1 429 73 - 0.214 ms [w:0]
+2026-04-30 20:26:46 [info]: GET /api/v1/bookmarks?page=1 429 73 - 0.815 ms [w:0]
+2026-04-30 20:26:46 [info]: GET /api/v1/bookmarks?page=1 429 73 - 0.257 ms [w:0]
+2026-04-30 20:26:46 [info]: GET /api/v1/bookmarks?page=1 429 73 - 1.171 ms [w:0]
+2026-04-30 20:26:46 [info]: GET /api/v1/bookmarks?page=1 429 73 - 0.580 ms [w:0]
+2026-04-30 20:26:46 [info]: GET /api/v1/bookmarks?page=1 429 73 - 0.228 ms [w:0]
+2026-04-30 20:26:46 [info]: GET /api/v1/bookmarks?page=1 429 73 - 1.133 ms [w:0]
+2026-04-30 20:26:46 [info]: GET /api/v1/bookmarks?page=1 429 73 - 0.302 ms [w:0]
+2026-04-30 20:26:46 [info]: GET /api/v1/bookmarks?page=1 429 77 - 0.296 ms [w:0]
+2026-04-30 20:26:46 [info]: GET /api/v1/bookmarks?page=1 429 77 - 0.277 ms [w:0]
+2026-04-30 20:26:46 [info]: GET /api/v1/bookmarks?page=1 429 77 - 0.205 ms [w:0]
+2026-04-30 20:26:46 [info]: GET /api/v1/bookmarks?page=1 429 77 - 0.548 ms [w:0]
+2026-04-30 20:26:46 [info]: GET /api/v1/bookmarks?page=1 429 77 - 0.224 ms [w:0]
+2026-04-30 20:26:46 [info]: GET /api/v1/bookmarks?page=1 429 77 - 0.275 ms [w:0]
+2026-04-30 20:27:00 [info]: GET /api/v1/events/featured 429 77 - 1.593 ms [w:0]
+2026-04-30 20:27:00 [info]: GET /api/v1/events/trending 429 77 - 0.544 ms [w:0]
+2026-04-30 20:27:00 [info]: GET /api/v1/events?page=1&limit=12 429 77 - 0.312 ms [w:0]
+2026-04-30 20:27:21 [info]: POST /api/v1/admin/scraper/callback/events 429 77 - 1.993 ms [w:0]
+2026-04-30 20:27:23 [info]: POST /api/v1/admin/scraper/callback/events 429 77 - 0.169 ms [w:0]
+2026-04-30 20:27:25 [warn]: ❌ Unauthorized scraper attempt from IP: 127.0.0.1
+2026-04-30 20:27:25 [info]: POST /api/v1/admin/scraper/callback/events 401 81 - 10.500 ms [w:0]
+2026-04-30 20:27:55 [warn]: 🔴 Redis circuit breaker OPEN — caching paused for 30s

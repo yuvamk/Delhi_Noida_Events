@@ -1,0 +1,254 @@
+2026-04-30 20:21:55 | INFO | utils.logger — Logger initialized for Delhi-Noida Events Scraper
+2026-04-30 20:21:55 | INFO | __main__ — 
+============================================================
+2026-04-30 20:21:55 | INFO | __main__ — 🚀 SCRAPER PIPELINE STARTED — Job: job-98434718a6e7
+2026-04-30 20:21:55 | INFO | __main__ — 📅 2026-04-30 20:21:55 IST
+2026-04-30 20:21:55 | INFO | __main__ — ============================================================
+2026-04-30 20:21:55 | INFO | __main__ — 📦 Running 8 scrapers: ['eventbrite', 'meraevents', 'meetup', 'unstop', 'iit_delhi', 'linkedin', 'corporate', 'dynamic']
+2026-04-30 20:21:55 | INFO | scrapers.base_scraper — 🚀 Starting eventbrite scraper...
+2026-04-30 20:21:55 | INFO | scrapers.eventbrite_scraper — Scraping Eventbrite: Delhi
+2026-04-30 20:21:55 | INFO | scrapers.base_scraper — 🚀 Starting meraevents scraper...
+2026-04-30 20:21:55 | INFO | scrapers.meraevents_scraper — Scraping MeraEvents: https://www.meraevents.com/events/delhi
+2026-04-30 20:21:55 | INFO | scrapers.base_scraper — 🚀 Starting meetup scraper...
+2026-04-30 20:21:55 | INFO | scrapers.meetup_scraper — Scraping Meetup for Delhi...
+2026-04-30 20:21:55 | INFO | scrapers.base_scraper — 🚀 Starting unstop scraper...
+2026-04-30 20:21:55 | INFO | scrapers.unstop_scraper — Scraping Unstop: hackathon
+2026-04-30 20:21:55 | INFO | scrapers.base_scraper — 🚀 Starting iit_delhi scraper...
+2026-04-30 20:21:55 | INFO | scrapers.university_scraper — Scraping IIT Delhi...
+2026-04-30 20:21:55 | INFO | scrapers.base_scraper — 🚀 Starting linkedin scraper...
+2026-04-30 20:21:55 | WARNING | scrapers.linkedin_scraper — No LinkedIn session found. Run save_session() first. Skipping.
+2026-04-30 20:21:55 | SUCCESS | scrapers.base_scraper — ✅ linkedin: 0/0 events scraped in 0.0s
+2026-04-30 20:21:55 | INFO | scrapers.base_scraper — 🚀 Starting corporate scraper...
+2026-04-30 20:21:55 | INFO | scrapers.corporate_scraper — Scraping Google Developers...
+2026-04-30 20:21:55 | ERROR | utils.ai_extractor — GEMINI_API_KEY not found in environment
+2026-04-30 20:21:55 | INFO | scrapers.base_scraper — 🚀 Starting ai_discovery scraper...
+2026-04-30 20:21:55 | ERROR | scrapers.meetup_scraper — Meetup GQL error for Delhi: Cannot connect to host www.meetup.com:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1000)')]
+2026-04-30 20:21:56 | ERROR | scrapers.unstop_scraper — Unstop fetch error: Cannot connect to host unstop.com:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1000)')]
+2026-04-30 20:21:56 | ERROR | scrapers.base_scraper — HTTP 404 from https://events.google.com/u/0/?region=IN-DL
+2026-04-30 20:21:56 | INFO | scrapers.university_scraper —   → 0 events from IIT Delhi
+2026-04-30 20:21:56 | ERROR | scrapers.base_scraper — Error fetching https://www.meraevents.com/events/delhi: 400, message='Can not decode content-encoding: brotli (br). Please install `Brotli`', url=URL('https://www.meraevents.com/')
+2026-04-30 20:21:57 | INFO | scrapers.dynamic_browser_scraper — 🔗 Connected to backend: http://localhost:5005/api/v1
+2026-04-30 20:21:57 | INFO | scrapers.dynamic_browser_scraper — 
+==================================================
+2026-04-30 20:21:57 | INFO | scrapers.dynamic_browser_scraper — 🔄  ROUND 1 — Scraping all sources...
+2026-04-30 20:21:57 | INFO | scrapers.dynamic_browser_scraper — ==================================================
+2026-04-30 20:21:57 | INFO | scrapers.dynamic_browser_scraper — 🔄 Launching fresh browser instance...
+2026-04-30 20:21:57 | INFO | scrapers.dynamic_browser_scraper — 🌐 Found System Chrome at /Applications/Google Chrome.app/Contents/MacOS/Google Chrome...
+2026-04-30 20:21:57 | INFO | scrapers.meetup_scraper — Scraping Meetup for Noida...
+2026-04-30 20:21:57 | ERROR | scrapers.meetup_scraper — Meetup GQL error for Noida: Cannot connect to host www.meetup.com:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1000)')]
+2026-04-30 20:21:58 | INFO | scrapers.unstop_scraper — Scraping Unstop: competition
+2026-04-30 20:21:58 | ERROR | scrapers.unstop_scraper — Unstop fetch error: Cannot connect to host unstop.com:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1000)')]
+2026-04-30 20:21:58 | ERROR | scrapers.base_scraper — Error fetching https://www.meraevents.com/events/delhi: 400, message='Can not decode content-encoding: brotli (br). Please install `Brotli`', url=URL('https://www.meraevents.com/')
+2026-04-30 20:21:59 | INFO | scrapers.eventbrite_scraper — Found 0 event cards on page
+2026-04-30 20:21:59 | INFO | scrapers.eventbrite_scraper — Found 0 events for Delhi
+2026-04-30 20:21:59 | SUCCESS | scrapers.base_scraper — ✅ meetup: 0/0 events scraped in 4.2s
+2026-04-30 20:22:00 | INFO | scrapers.corporate_scraper — Scraping Microsoft Events...
+2026-04-30 20:22:00 | INFO | scrapers.unstop_scraper — Scraping Unstop: workshop
+2026-04-30 20:22:00 | INFO | scrapers.university_scraper — Scraping IIIT Delhi...
+2026-04-30 20:22:00 | ERROR | scrapers.unstop_scraper — Unstop fetch error: Cannot connect to host unstop.com:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1000)')]
+2026-04-30 20:22:00 | ERROR | scrapers.base_scraper — HTTP 404 from https://iiitd.ac.in/events
+2026-04-30 20:22:01 | ERROR | scrapers.base_scraper — Error fetching https://www.meraevents.com/events/delhi: 400, message='Can not decode content-encoding: brotli (br). Please install `Brotli`', url=URL('https://www.meraevents.com/')
+2026-04-30 20:22:01 | ERROR | scrapers.meraevents_scraper — MeraEvents error for https://www.meraevents.com/events/delhi: RetryError[<Future at 0x1118fffe0 state=finished raised ClientResponseError>]
+2026-04-30 20:22:01 | INFO | scrapers.meraevents_scraper — Scraping MeraEvents: https://www.meraevents.com/events/noida
+2026-04-30 20:22:01 | ERROR | scrapers.base_scraper — HTTP 404 from https://events.microsoft.com/en-us/allevents/?clientTimeZone=1&country=India&region=Delhi
+2026-04-30 20:22:01 | ERROR | scrapers.base_scraper — Error fetching https://www.meraevents.com/events/noida: 400, message='Can not decode content-encoding: brotli (br). Please install `Brotli`', url=URL('https://www.meraevents.com/')
+2026-04-30 20:22:02 | INFO | scrapers.unstop_scraper — Scraping Unstop: case-study
+2026-04-30 20:22:02 | ERROR | scrapers.unstop_scraper — Unstop fetch error: Cannot connect to host unstop.com:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1000)')]
+2026-04-30 20:22:02 | INFO | scrapers.eventbrite_scraper — Scraping Eventbrite: Delhi
+2026-04-30 20:22:03 | SUCCESS | scrapers.dynamic_browser_scraper — ✅ System Chrome launched!
+2026-04-30 20:22:03 | INFO | scrapers.dynamic_browser_scraper — 📍 Opening: Insider.in Delhi → https://insider.in/delhi
+2026-04-30 20:22:03 | ERROR | scrapers.base_scraper — Error fetching https://www.meraevents.com/events/noida: 400, message='Can not decode content-encoding: brotli (br). Please install `Brotli`', url=URL('https://www.meraevents.com/')
+2026-04-30 20:22:04 | INFO | scrapers.unstop_scraper — Scraping Unstop: quiz
+2026-04-30 20:22:04 | ERROR | scrapers.unstop_scraper — Unstop fetch error: Cannot connect to host unstop.com:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1000)')]
+2026-04-30 20:22:04 | INFO | scrapers.university_scraper — Scraping Delhi University...
+2026-04-30 20:22:04 | INFO | scrapers.eventbrite_scraper — Found 0 event cards on page
+2026-04-30 20:22:04 | INFO | scrapers.eventbrite_scraper — Found 0 events for Delhi
+2026-04-30 20:22:05 | INFO | scrapers.corporate_scraper — Scraping Nasscom Events...
+2026-04-30 20:22:06 | SUCCESS | scrapers.base_scraper — ✅ unstop: 0/0 events scraped in 10.5s
+2026-04-30 20:22:06 | ERROR | scrapers.base_scraper — Error fetching https://www.meraevents.com/events/noida: 400, message='Can not decode content-encoding: brotli (br). Please install `Brotli`', url=URL('https://www.meraevents.com/')
+2026-04-30 20:22:06 | ERROR | scrapers.meraevents_scraper — MeraEvents error for https://www.meraevents.com/events/noida: RetryError[<Future at 0x107a78ec0 state=finished raised ClientResponseError>]
+2026-04-30 20:22:06 | INFO | scrapers.meraevents_scraper — Scraping MeraEvents: https://www.meraevents.com/tech-events/delhi
+2026-04-30 20:22:06 | INFO | scrapers.corporate_scraper —   → 4 events from Nasscom Events
+2026-04-30 20:22:06 | ERROR | scrapers.base_scraper — Error fetching https://www.meraevents.com/tech-events/delhi: 400, message='Can not decode content-encoding: brotli (br). Please install `Brotli`', url=URL('https://www.meraevents.com/')
+2026-04-30 20:22:07 | INFO | scrapers.eventbrite_scraper — Scraping Eventbrite: Delhi
+2026-04-30 20:22:09 | ERROR | scrapers.base_scraper — Error fetching https://www.meraevents.com/tech-events/delhi: 400, message='Can not decode content-encoding: brotli (br). Please install `Brotli`', url=URL('https://www.meraevents.com/')
+2026-04-30 20:22:10 | INFO | scrapers.eventbrite_scraper — Found 0 event cards on page
+2026-04-30 20:22:10 | INFO | scrapers.eventbrite_scraper — Found 0 events for Delhi
+2026-04-30 20:22:10 | INFO | scrapers.dynamic_browser_scraper —   📄 Page loaded: 'Get Upcoming Events Tickets & Enjoy Live Events | District' (4802 chars)
+2026-04-30 20:22:10 | INFO | scrapers.dynamic_browser_scraper —   🔗 Found 50 potential event links
+2026-04-30 20:22:10 | INFO | scrapers.dynamic_browser_scraper —   🕷️  Crawling 8 individual event pages...
+2026-04-30 20:22:10 | INFO | scrapers.dynamic_browser_scraper —     🌐 Crawling: https://www.district.in/events/adda-at-sidecar-may3-2026-buy-tickets...
+2026-04-30 20:22:10 | INFO | scrapers.corporate_scraper — Scraping CII Events...
+2026-04-30 20:22:10 | INFO | scrapers.corporate_scraper —   → 0 events from CII Events
+2026-04-30 20:22:11 | ERROR | scrapers.base_scraper — Error fetching https://www.meraevents.com/tech-events/delhi: 400, message='Can not decode content-encoding: brotli (br). Please install `Brotli`', url=URL('https://www.meraevents.com/')
+2026-04-30 20:22:11 | ERROR | scrapers.meraevents_scraper — MeraEvents error for https://www.meraevents.com/tech-events/delhi: RetryError[<Future at 0x111beae40 state=finished raised ClientResponseError>]
+2026-04-30 20:22:11 | INFO | scrapers.meraevents_scraper — Scraping MeraEvents: https://www.meraevents.com/tech-events/noida
+2026-04-30 20:22:12 | ERROR | scrapers.base_scraper — Error fetching https://www.meraevents.com/tech-events/noida: 400, message='Can not decode content-encoding: brotli (br). Please install `Brotli`', url=URL('https://www.meraevents.com/')
+2026-04-30 20:22:12 | INFO | scrapers.dynamic_browser_scraper —     🖼️  Found 1 image candidates
+2026-04-30 20:22:13 | INFO | scrapers.eventbrite_scraper — Scraping Eventbrite: Delhi
+2026-04-30 20:22:14 | INFO | scrapers.dynamic_browser_scraper —     🌐 Crawling: https://www.district.in/events/asian-food-festival-the-barbeque-times-apr19-2026...
+2026-04-30 20:22:14 | INFO | scrapers.eventbrite_scraper — Found 0 event cards on page
+2026-04-30 20:22:14 | INFO | scrapers.eventbrite_scraper — Found 0 events for Delhi
+2026-04-30 20:22:14 | ERROR | scrapers.base_scraper — Error fetching https://www.meraevents.com/tech-events/noida: 400, message='Can not decode content-encoding: brotli (br). Please install `Brotli`', url=URL('https://www.meraevents.com/')
+2026-04-30 20:22:14 | INFO | scrapers.corporate_scraper — Scraping FICCI Events...
+2026-04-30 20:22:15 | ERROR | scrapers.base_scraper — HTTP 404 from https://ficci.in/events.asp
+2026-04-30 20:22:16 | INFO | scrapers.dynamic_browser_scraper —     🖼️  Found 1 image candidates
+2026-04-30 20:22:17 | ERROR | scrapers.base_scraper — Error fetching https://www.meraevents.com/tech-events/noida: 400, message='Can not decode content-encoding: brotli (br). Please install `Brotli`', url=URL('https://www.meraevents.com/')
+2026-04-30 20:22:17 | ERROR | scrapers.meraevents_scraper — MeraEvents error for https://www.meraevents.com/tech-events/noida: RetryError[<Future at 0x11066bad0 state=finished raised ClientResponseError>]
+2026-04-30 20:22:17 | INFO | scrapers.meraevents_scraper — Scraping MeraEvents: https://www.meraevents.com/business-events/delhi
+2026-04-30 20:22:17 | SUCCESS | scrapers.base_scraper — ✅ eventbrite: 0/0 events scraped in 21.8s
+2026-04-30 20:22:17 | ERROR | scrapers.base_scraper — Error fetching https://www.meraevents.com/business-events/delhi: 400, message='Can not decode content-encoding: brotli (br). Please install `Brotli`', url=URL('https://www.meraevents.com/')
+2026-04-30 20:22:18 | INFO | scrapers.dynamic_browser_scraper —     🌐 Crawling: https://www.district.in/events/comedy-circus-gurgaon-a-standup-comedy-lineup-sho...
+2026-04-30 20:22:19 | SUCCESS | scrapers.base_scraper — ✅ corporate: 4/4 events scraped in 23.8s
+2026-04-30 20:22:20 | ERROR | scrapers.base_scraper — Error fetching https://www.meraevents.com/business-events/delhi: 400, message='Can not decode content-encoding: brotli (br). Please install `Brotli`', url=URL('https://www.meraevents.com/')
+2026-04-30 20:22:20 | INFO | scrapers.dynamic_browser_scraper —     🖼️  Found 1 image candidates
+2026-04-30 20:22:21 | INFO | scrapers.dynamic_browser_scraper —     🌐 Crawling: https://www.district.in/events/mochakk-india-tour-delhi-ncr-2026-buy-tickets...
+2026-04-30 20:22:22 | ERROR | scrapers.base_scraper — Error fetching https://www.meraevents.com/business-events/delhi: 400, message='Can not decode content-encoding: brotli (br). Please install `Brotli`', url=URL('https://www.meraevents.com/')
+2026-04-30 20:22:22 | ERROR | scrapers.meraevents_scraper — MeraEvents error for https://www.meraevents.com/business-events/delhi: RetryError[<Future at 0x11197c7a0 state=finished raised ClientResponseError>]
+2026-04-30 20:22:22 | INFO | scrapers.meraevents_scraper — Scraping MeraEvents: https://www.meraevents.com/cultural-events/delhi
+2026-04-30 20:22:23 | ERROR | scrapers.base_scraper — Error fetching https://www.meraevents.com/cultural-events/delhi: 400, message='Can not decode content-encoding: brotli (br). Please install `Brotli`', url=URL('https://www.meraevents.com/')
+2026-04-30 20:22:24 | INFO | scrapers.dynamic_browser_scraper —     🖼️  Found 1 image candidates
+2026-04-30 20:22:25 | ERROR | scrapers.base_scraper — Error fetching https://www.meraevents.com/cultural-events/delhi: 400, message='Can not decode content-encoding: brotli (br). Please install `Brotli`', url=URL('https://www.meraevents.com/')
+2026-04-30 20:22:25 | INFO | scrapers.dynamic_browser_scraper —     🌐 Crawling: https://www.district.in/events/anantams-sundowner-may2-2026-buy-tickets...
+2026-04-30 20:22:27 | INFO | scrapers.dynamic_browser_scraper —     🖼️  Found 1 image candidates
+2026-04-30 20:22:27 | ERROR | scrapers.base_scraper — Error fetching https://www.meraevents.com/cultural-events/delhi: 400, message='Can not decode content-encoding: brotli (br). Please install `Brotli`', url=URL('https://www.meraevents.com/')
+2026-04-30 20:22:27 | ERROR | scrapers.meraevents_scraper — MeraEvents error for https://www.meraevents.com/cultural-events/delhi: RetryError[<Future at 0x110a78860 state=finished raised ClientResponseError>]
+2026-04-30 20:22:27 | SUCCESS | scrapers.base_scraper — ✅ meraevents: 0/0 events scraped in 32.1s
+2026-04-30 20:22:29 | INFO | scrapers.dynamic_browser_scraper —     🌐 Crawling: https://www.district.in/events/dnbindia-friends-x-delhi-shuffler-at-auro-apr30-2...
+2026-04-30 20:22:31 | INFO | scrapers.dynamic_browser_scraper —     🖼️  Found 1 image candidates
+2026-04-30 20:22:33 | INFO | scrapers.dynamic_browser_scraper —     🌐 Crawling: https://www.district.in/events/saath-saath-india-tour-delhi-2026-buy-tickets...
+2026-04-30 20:22:35 | INFO | scrapers.dynamic_browser_scraper —     🖼️  Found 1 image candidates
+2026-04-30 20:22:35 | ERROR | scrapers.base_scraper — Error fetching http://www.du.ac.in/du/index.php?page=events: 
+2026-04-30 20:22:36 | INFO | scrapers.dynamic_browser_scraper —     🌐 Crawling: https://www.district.in/events/tata-ipl-2026-match-51---delhi-capitals-vs-kolkat...
+2026-04-30 20:22:39 | INFO | scrapers.dynamic_browser_scraper —     🖼️  Found 1 image candidates
+2026-04-30 20:22:42 | INFO | scrapers.dynamic_browser_scraper — 📍 Opening: BookMyShow Delhi Events → https://in.bookmyshow.com/explore/events-delhi
+2026-04-30 20:22:48 | INFO | scrapers.dynamic_browser_scraper —   📄 Page loaded: 'Top Upcoming Events in Delhi | Best Live Events in Delhi - BookMyShow' (6845 chars)
+2026-04-30 20:22:48 | INFO | scrapers.dynamic_browser_scraper —   🔗 Found 50 potential event links
+2026-04-30 20:22:48 | INFO | scrapers.dynamic_browser_scraper —   🕷️  Crawling 8 individual event pages...
+2026-04-30 20:22:48 | INFO | scrapers.dynamic_browser_scraper —     🌐 Crawling: https://in.bookmyshow.com/sports/tata-ipl-2026/ET00491491...
+2026-04-30 20:22:50 | INFO | scrapers.dynamic_browser_scraper —     🖼️  Found 1 image candidates
+2026-04-30 20:22:52 | INFO | scrapers.dynamic_browser_scraper —     🌐 Crawling: https://in.bookmyshow.com/list-your-show/...
+2026-04-30 20:22:54 | INFO | scrapers.dynamic_browser_scraper —     🖼️  Found 0 image candidates
+2026-04-30 20:22:56 | INFO | scrapers.dynamic_browser_scraper —     🌐 Crawling: https://in.bookmyshow.com/events/vir-das-sounds-of-india-delhi/ET00490276...
+2026-04-30 20:22:58 | INFO | scrapers.dynamic_browser_scraper —     🖼️  Found 1 image candidates
+2026-04-30 20:22:59 | INFO | scrapers.dynamic_browser_scraper —     🌐 Crawling: https://in.bookmyshow.com/events/carry-on-mummy-by-harpriya-bains/ET00458346...
+2026-04-30 20:23:02 | INFO | scrapers.dynamic_browser_scraper —     🖼️  Found 0 image candidates
+2026-04-30 20:23:03 | INFO | scrapers.dynamic_browser_scraper —     🌐 Crawling: https://in.bookmyshow.com/events/improv-comedy-jam/ET00381880...
+2026-04-30 20:23:05 | INFO | scrapers.dynamic_browser_scraper —     🖼️  Found 1 image candidates
+2026-04-30 20:23:07 | INFO | scrapers.dynamic_browser_scraper —     🌐 Crawling: https://in.bookmyshow.com/events/kisi-ko-batana-mat-by-anubhav-singh-bassi/ET003...
+2026-04-30 20:23:08 | ERROR | scrapers.base_scraper — Error fetching http://www.du.ac.in/du/index.php?page=events: 
+2026-04-30 20:23:09 | INFO | scrapers.dynamic_browser_scraper —     🖼️  Found 1 image candidates
+2026-04-30 20:23:11 | INFO | scrapers.dynamic_browser_scraper —     🌐 Crawling: https://in.bookmyshow.com/events/pranav-sharma-live/ET00457437...
+2026-04-30 20:23:13 | INFO | scrapers.dynamic_browser_scraper —     🖼️  Found 1 image candidates
+2026-04-30 20:23:14 | INFO | scrapers.dynamic_browser_scraper —     🌐 Crawling: https://in.bookmyshow.com/events/pottery-workshop/ET00491530...
+2026-04-30 20:23:17 | INFO | scrapers.dynamic_browser_scraper —     🖼️  Found 0 image candidates
+2026-04-30 20:23:20 | INFO | scrapers.dynamic_browser_scraper — 📍 Opening: Insider.in Noida → https://insider.in/noida
+2026-04-30 20:23:26 | INFO | scrapers.dynamic_browser_scraper —   📄 Page loaded: 'Not Found' (806 chars)
+2026-04-30 20:23:26 | INFO | scrapers.dynamic_browser_scraper —   🔗 Found 7 potential event links
+2026-04-30 20:23:26 | INFO | scrapers.dynamic_browser_scraper —   🕷️  Crawling 5 individual event pages...
+2026-04-30 20:23:26 | INFO | scrapers.dynamic_browser_scraper —     🌐 Crawling: https://insider.in/all-events-in-delhi...
+2026-04-30 20:23:28 | INFO | scrapers.dynamic_browser_scraper —     🖼️  Found 0 image candidates
+2026-04-30 20:23:30 | INFO | scrapers.dynamic_browser_scraper —     🌐 Crawling: https://insider.in/list-your-events...
+2026-04-30 20:23:32 | INFO | scrapers.dynamic_browser_scraper —     🖼️  Found 0 image candidates
+2026-04-30 20:23:34 | INFO | scrapers.dynamic_browser_scraper —     🌐 Crawling: https://insider.in/terms...
+2026-04-30 20:23:36 | INFO | scrapers.dynamic_browser_scraper —     🖼️  Found 1 image candidates
+2026-04-30 20:23:37 | INFO | scrapers.dynamic_browser_scraper —     🌐 Crawling: https://insider.in/privacy...
+2026-04-30 20:23:40 | INFO | scrapers.dynamic_browser_scraper —     🖼️  Found 1 image candidates
+2026-04-30 20:23:41 | INFO | scrapers.dynamic_browser_scraper —     🌐 Crawling: https://insider.in/list-your-online-events...
+2026-04-30 20:23:41 | ERROR | scrapers.base_scraper — Error fetching http://www.du.ac.in/du/index.php?page=events: 
+2026-04-30 20:23:41 | WARNING | scrapers.university_scraper — Failed to scrape Delhi University: RetryError[<Future at 0x111c83bf0 state=finished raised TimeoutError>]
+2026-04-30 20:23:41 | INFO | scrapers.university_scraper — Scraping Amity University Noida...
+2026-04-30 20:23:43 | INFO | scrapers.dynamic_browser_scraper —     🖼️  Found 0 image candidates
+2026-04-30 20:23:45 | INFO | scrapers.university_scraper — Scraping Jaypee Institute...
+2026-04-30 20:23:46 | ERROR | scrapers.base_scraper — Error fetching https://www.jiit.ac.in/events: 400, message='Can not decode content-encoding: brotli (br). Please install `Brotli`', url=URL('https://www.jiit.ac.in/events')
+2026-04-30 20:23:47 | INFO | scrapers.dynamic_browser_scraper — 📍 Opening: Meetup Delhi Tech → https://www.meetup.com/find/?keywords=tech&location=Delhi%2C+India
+2026-04-30 20:23:48 | ERROR | scrapers.base_scraper — Error fetching https://www.jiit.ac.in/events: 400, message='Can not decode content-encoding: brotli (br). Please install `Brotli`', url=URL('https://www.jiit.ac.in/events')
+2026-04-30 20:23:51 | ERROR | scrapers.base_scraper — Error fetching https://www.jiit.ac.in/events: 400, message='Can not decode content-encoding: brotli (br). Please install `Brotli`', url=URL('https://www.jiit.ac.in/events')
+2026-04-30 20:23:51 | WARNING | scrapers.university_scraper — Failed to scrape Jaypee Institute: RetryError[<Future at 0x111beb2f0 state=finished raised ClientResponseError>]
+2026-04-30 20:23:51 | SUCCESS | scrapers.base_scraper — ✅ iit_delhi: 0/0 events scraped in 115.2s
+2026-04-30 20:23:57 | INFO | scrapers.dynamic_browser_scraper —   📄 Page loaded: 'Find Events & Groups | Meetup' (5261 chars)
+2026-04-30 20:23:57 | INFO | scrapers.dynamic_browser_scraper —   🔗 Found 28 potential event links
+2026-04-30 20:23:57 | INFO | scrapers.dynamic_browser_scraper —   🕷️  Crawling 8 individual event pages...
+2026-04-30 20:23:57 | INFO | scrapers.dynamic_browser_scraper —     🌐 Crawling: https://www.meetup.com/investor/events/313443231/?recId=c6dba150-b2a2-4937-b9f6-...
+2026-04-30 20:24:00 | INFO | scrapers.dynamic_browser_scraper —     🖼️  Found 4 image candidates
+2026-04-30 20:24:01 | INFO | scrapers.dynamic_browser_scraper —     🌐 Crawling: https://www.meetup.com/investor/events/313708243/?recId=c6dba150-b2a2-4937-b9f6-...
+2026-04-30 20:24:04 | INFO | scrapers.dynamic_browser_scraper —     🖼️  Found 10 image candidates
+2026-04-30 20:24:06 | INFO | scrapers.dynamic_browser_scraper —     🌐 Crawling: https://www.meetup.com/up-powerbiclub/events/314480286/?recId=c6dba150-b2a2-4937...
+2026-04-30 20:24:09 | INFO | scrapers.dynamic_browser_scraper —     🖼️  Found 6 image candidates
+2026-04-30 20:24:10 | INFO | scrapers.dynamic_browser_scraper —     🌐 Crawling: https://www.meetup.com/graphdb-delhi-ncr/events/314404784/?recId=c6dba150-b2a2-4...
+2026-04-30 20:24:13 | INFO | scrapers.dynamic_browser_scraper —     🖼️  Found 6 image candidates
+2026-04-30 20:24:15 | INFO | scrapers.dynamic_browser_scraper —     🌐 Crawling: https://www.meetup.com/delhi-data-and-ai-collaboraters-meetup/events/314177316/?...
+2026-04-30 20:24:17 | INFO | scrapers.dynamic_browser_scraper —     🖼️  Found 4 image candidates
+2026-04-30 20:24:19 | INFO | scrapers.dynamic_browser_scraper —     🌐 Crawling: https://www.meetup.com/startupdelhincr/events/314492794/?recId=c6dba150-b2a2-493...
+2026-04-30 20:24:21 | INFO | scrapers.dynamic_browser_scraper —     🖼️  Found 7 image candidates
+2026-04-30 20:24:23 | INFO | scrapers.dynamic_browser_scraper —     🌐 Crawling: https://www.meetup.com/agilewow/events/313393039/?recId=c6dba150-b2a2-4937-b9f6-...
+2026-04-30 20:24:26 | INFO | scrapers.dynamic_browser_scraper —     🖼️  Found 7 image candidates
+2026-04-30 20:24:27 | INFO | scrapers.dynamic_browser_scraper —     🌐 Crawling: https://www.meetup.com/ai-circle-meetup-group/events/314278285/?recId=c6dba150-b...
+2026-04-30 20:24:30 | INFO | scrapers.dynamic_browser_scraper —     🖼️  Found 7 image candidates
+2026-04-30 20:24:34 | INFO | scrapers.dynamic_browser_scraper — 📍 Opening: Nasscom Events → https://nasscom.in/events/
+2026-04-30 20:24:42 | INFO | scrapers.dynamic_browser_scraper —   📄 Page loaded: 'Upcoming Tech Events in Bangalore, India | National Technology Awards' (5840 chars)
+2026-04-30 20:24:42 | INFO | scrapers.dynamic_browser_scraper —   🔗 Found 50 potential event links
+2026-04-30 20:24:42 | INFO | scrapers.dynamic_browser_scraper —   🕷️  Crawling 8 individual event pages...
+2026-04-30 20:24:42 | INFO | scrapers.dynamic_browser_scraper —     🌐 Crawling: https://nasscom.in/events...
+2026-04-30 20:24:45 | INFO | scrapers.dynamic_browser_scraper —     🖼️  Found 10 image candidates
+2026-04-30 20:24:48 | INFO | scrapers.dynamic_browser_scraper —     🌐 Crawling: https://nasscom.in/events#...
+2026-04-30 20:24:50 | INFO | scrapers.dynamic_browser_scraper —     🖼️  Found 10 image candidates
+2026-04-30 20:24:53 | INFO | scrapers.dynamic_browser_scraper —     🌐 Crawling: https://nasscom.in/events/genai-talent-imperative-building-global-future-workfor...
+2026-04-30 20:24:57 | INFO | scrapers.dynamic_browser_scraper —     🖼️  Found 2 image candidates
+2026-04-30 20:24:58 | INFO | scrapers.dynamic_browser_scraper —     🌐 Crawling: https://nasscom.in/events/ai-x-creativity-skilling-innovation-intelligent-econom...
+2026-04-30 20:25:01 | INFO | scrapers.dynamic_browser_scraper —     🖼️  Found 2 image candidates
+2026-04-30 20:25:03 | INFO | scrapers.dynamic_browser_scraper —     🌐 Crawling: https://nasscom.in/events/pathways-eu-india-ai-skills-and-talent-mobility...
+2026-04-30 20:25:06 | INFO | scrapers.dynamic_browser_scraper —     🖼️  Found 2 image candidates
+2026-04-30 20:25:07 | INFO | scrapers.dynamic_browser_scraper —     🌐 Crawling: https://nasscom.in/events/building-bridges-through-ai-india-and-germany...
+2026-04-30 20:25:10 | INFO | scrapers.dynamic_browser_scraper —     🖼️  Found 2 image candidates
+2026-04-30 20:25:14 | INFO | scrapers.dynamic_browser_scraper — 📍 Opening: Eventbrite Delhi → https://www.eventbrite.com/d/india--delhi/events/
+2026-04-30 20:25:21 | INFO | scrapers.dynamic_browser_scraper —   📄 Page loaded: 'Delhi, India Events, Calendar & Tickets | Eventbrite' (9856 chars)
+2026-04-30 20:25:21 | INFO | scrapers.dynamic_browser_scraper —   🔗 Found 50 potential event links
+2026-04-30 20:25:21 | INFO | scrapers.dynamic_browser_scraper —   🕷️  Crawling 8 individual event pages...
+2026-04-30 20:25:21 | INFO | scrapers.dynamic_browser_scraper —     🌐 Crawling: https://www.eventbrite.com/d/local/events/...
+2026-04-30 20:25:26 | INFO | scrapers.dynamic_browser_scraper —     🖼️  Found 10 image candidates
+2026-04-30 20:25:28 | INFO | scrapers.dynamic_browser_scraper —     🌐 Crawling: https://www.eventbrite.com/organizer/features/event-marketing-platform/...
+2026-04-30 20:25:33 | INFO | scrapers.dynamic_browser_scraper —     🖼️  Found 10 image candidates
+2026-04-30 20:25:34 | INFO | scrapers.dynamic_browser_scraper —     🌐 Crawling: https://www.eventbrite.com/organizer/features/eventbrite-ads/...
+2026-04-30 20:25:39 | INFO | scrapers.dynamic_browser_scraper —     🖼️  Found 9 image candidates
+2026-04-30 20:25:40 | INFO | scrapers.dynamic_browser_scraper —     🌐 Crawling: https://www.eventbrite.com/organizer/event-industry/food-drink-event-ticketing/...
+2026-04-30 20:25:45 | INFO | scrapers.dynamic_browser_scraper —     🖼️  Found 10 image candidates
+2026-04-30 20:25:46 | INFO | scrapers.dynamic_browser_scraper —     🌐 Crawling: https://www.eventbrite.com/organizer/event-industry/performing-arts/...
+2026-04-30 20:25:50 | INFO | scrapers.dynamic_browser_scraper —     🖼️  Found 8 image candidates
+2026-04-30 20:25:52 | INFO | scrapers.dynamic_browser_scraper —     🌐 Crawling: https://www.eventbrite.com/organizer/event-type/npo/...
+2026-04-30 20:25:55 | INFO | scrapers.dynamic_browser_scraper —     🖼️  Found 8 image candidates
+2026-04-30 20:25:57 | INFO | scrapers.dynamic_browser_scraper —     🌐 Crawling: https://www.eventbrite.com/organizer/event-type/create-a-workshop/...
+2026-04-30 20:26:02 | INFO | scrapers.dynamic_browser_scraper —     🖼️  Found 5 image candidates
+2026-04-30 20:26:04 | INFO | scrapers.dynamic_browser_scraper —     🌐 Crawling: https://www.eventbrite.com/organizer/event-type/festival-solutions/...
+2026-04-30 20:26:09 | INFO | scrapers.dynamic_browser_scraper —     🖼️  Found 10 image candidates
+2026-04-30 20:26:12 | INFO | scrapers.dynamic_browser_scraper — 🔍 Google: 'site:insider.in events in Delhi 2026'
+2026-04-30 20:26:17 | INFO | scrapers.dynamic_browser_scraper —   🔗 0 Google results found
+2026-04-30 20:26:20 | INFO | scrapers.dynamic_browser_scraper — 🔍 Google: 'site:in.bookmyshow.com events delhi 2026'
+2026-04-30 20:26:26 | INFO | scrapers.dynamic_browser_scraper —   🔗 0 Google results found
+2026-04-30 20:26:29 | INFO | scrapers.dynamic_browser_scraper — 🔍 Google: 'events in Delhi NCR this weekend'
+2026-04-30 20:26:35 | INFO | scrapers.dynamic_browser_scraper —   🔗 0 Google results found
+2026-04-30 20:26:38 | INFO | scrapers.dynamic_browser_scraper — 🔍 Google: 'upcoming tech meetups Delhi 2026'
+2026-04-30 20:26:43 | INFO | scrapers.dynamic_browser_scraper —   🔗 0 Google results found
+2026-04-30 20:26:46 | INFO | scrapers.dynamic_browser_scraper — 🔍 Google: 'concerts Delhi Noida 2026'
+2026-04-30 20:26:52 | INFO | scrapers.dynamic_browser_scraper —   🔗 0 Google results found
+2026-04-30 20:26:55 | INFO | scrapers.dynamic_browser_scraper — 🔍 Google: 'hackathon delhi 2026'
+2026-04-30 20:27:00 | INFO | scrapers.dynamic_browser_scraper —   🔗 0 Google results found
+2026-04-30 20:27:03 | INFO | scrapers.dynamic_browser_scraper — 🔍 Google: 'comedy show delhi this month'
+2026-04-30 20:27:09 | INFO | scrapers.dynamic_browser_scraper —   🔗 0 Google results found
+2026-04-30 20:27:12 | INFO | scrapers.dynamic_browser_scraper — 🔍 Google: 'food festival noida 2026'
+2026-04-30 20:27:17 | INFO | scrapers.dynamic_browser_scraper —   🔗 0 Google results found
+2026-04-30 20:27:20 | SUCCESS | scrapers.dynamic_browser_scraper — ✅ Round 1 done. Total events found so far: 0
+2026-04-30 20:27:20 | INFO | scrapers.dynamic_browser_scraper — Single-run mode. Done.
+2026-04-30 20:27:21 | SUCCESS | scrapers.dynamic_browser_scraper — 🏁 Browser closed. Total events scraped: 0
+2026-04-30 20:27:21 | SUCCESS | scrapers.base_scraper — ✅ ai_discovery: 0/0 events scraped in 325.7s
+2026-04-30 20:27:21 | DEBUG | processors.deduplicator — Duplicate URL: Diversity and Inclusion
+2026-04-30 20:27:21 | DEBUG | processors.deduplicator — Duplicate URL: Policy Advocacy
+2026-04-30 20:27:21 | DEBUG | processors.deduplicator — Duplicate URL: Events & Awards
+2026-04-30 20:27:21 | INFO | processors.deduplicator — Deduplication: 3 duplicates removed from 4 events → 1 unique
+2026-04-30 20:27:25 | ERROR | utils.api_client — Failed to send batch 1: RetryError[<Future at 0x112093c80 state=finished raised Exception>]
+2026-04-30 20:27:25 | INFO | __main__ — 
+============================================================
+2026-04-30 20:27:25 | INFO | __main__ — ✅ PIPELINE COMPLETE — Job: job-98434718a6e7
+2026-04-30 20:27:25 | INFO | __main__ —    Found: 4 | Sent: 0
+2026-04-30 20:27:25 | INFO | __main__ — ============================================================
+
