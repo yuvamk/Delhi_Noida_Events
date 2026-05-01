@@ -46,15 +46,9 @@ function BookmarkCard({
 
   return (
     <TouchableOpacity style={styles.card} onPress={onPress} activeOpacity={0.85}>
-      {event.images?.[0] ? (
-        <View style={styles.cardImagePlaceholder}>
-          <Text style={styles.cardImageEmoji}>🎪</Text>
-        </View>
-      ) : (
-        <View style={styles.cardImagePlaceholder}>
-          <Text style={styles.cardImageEmoji}>🎪</Text>
-        </View>
-      )}
+      <View style={styles.cardImagePlaceholder}>
+        <Text style={styles.cardImageEmoji}>🎪</Text>
+      </View>
       <View style={styles.cardBody}>
         <Text style={styles.cardTitle} numberOfLines={2}>{event.title || 'Event'}</Text>
         <Text style={styles.cardMeta}>📅 {event.date ? formatDate(event.date) : '—'}</Text>

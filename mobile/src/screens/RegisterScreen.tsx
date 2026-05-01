@@ -12,12 +12,14 @@ import {
   Platform,
 } from 'react-native';
 import { useAuth } from '../contexts/AuthContext';
+import { authApi, setToken, setStoredUser } from '../api/client';
 import { colors } from '../theme/colors';
 
 const CITY_OPTIONS = ['Delhi', 'Noida', 'Both'];
 
 export default function RegisterScreen({ navigation }: any) {
   const auth = useAuth();
+  const { updateUser } = auth;
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -38,8 +40,12 @@ export default function RegisterScreen({ navigation }: any) {
     setLoading(true);
     setError('');
     try {
-      const ok = await auth.register(name.trim(), email.trim(), password);
-      if (ok) {
+      const res = await authApi.register(name.trim(), email.trim(), password, cityPreference);
+      if (res.success) {
+        const { token, refreshToken, user: userData } = res as any;
+        await setToken(token, refreshToken);
+        await setStoredUser(userData);
+        await updateUser(userData);
         navigation.goBack();
       } else {
         setError('Registration failed. Email may already be in use.');

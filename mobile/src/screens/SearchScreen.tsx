@@ -81,9 +81,9 @@ export default function SearchScreen({ navigation, route }: any) {
       </ScrollView>
 
       {/* Results info */}
-      {query.length > 0 && !loading && (
+      {query.length > 0 && !loading && total > 0 && (
         <Text style={styles.resultsInfo}>
-          {total > 0 ? `${total} result${total !== 1 ? 's' : ''} for "${query}"` : ''}
+          {total} result{total !== 1 ? 's' : ''} for &quot;{query}&quot;
         </Text>
       )}
 

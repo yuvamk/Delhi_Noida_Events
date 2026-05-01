@@ -41,7 +41,7 @@ export default function ProfileScreen({ navigation }: any) {
   const [pwdMsg, setPwdMsg] = useState('');
   const [changingPwd, setChangingPwd] = useState(false);
 
-  // Notification toggles (UI-only)
+  // Notification toggles — UI state only; backend persistence not yet implemented
   const [notifAlerts, setNotifAlerts] = useState(true);
   const [notifOrganizer, setNotifOrganizer] = useState(true);
   const [notifVibe, setNotifVibe] = useState(false);
