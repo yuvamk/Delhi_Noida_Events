@@ -8,6 +8,7 @@ import {
   StyleSheet,
   StatusBar,
   ActivityIndicator,
+  Alert,
   Switch,
 } from 'react-native';
 import { useAuth } from '../contexts/AuthContext';
@@ -387,7 +388,10 @@ export default function ProfileScreen({ navigation }: any) {
               <Text style={styles.emptyPaymentsSubtitle}>
                 Add a payment method to register for paid events
               </Text>
-              <TouchableOpacity style={styles.addPaymentBtn}>
+              <TouchableOpacity
+                style={styles.addPaymentBtn}
+                onPress={() => Alert.alert('Coming Soon', 'Payment methods will be available in a future update.')}
+              >
                 <Text style={styles.addPaymentBtnText}>+ Add Payment Method</Text>
               </TouchableOpacity>
             </View>
